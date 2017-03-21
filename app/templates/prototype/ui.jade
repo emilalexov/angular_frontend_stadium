@@ -1,0 +1,702 @@
+h1.gc-prototype-title GymCloud UI Kit
+
+.gc-component
+  .gc-component-name Normal Button
+  a.btn.btn-primary.gc-custom(href='#') sample button
+
+.gc-component
+  .gc-component-name Disabled Button
+  a.btn.btn-primary.gc-custom(href='#', disabled='') sample button
+
+.gc-component.gc-bg-inverse
+  .gc-component-name Inversed Button
+  a.btn.btn-inverse.gc-custom(href='#') sample button
+
+.gc-component
+  .gc-component-name Big Button
+  a.btn.btn-primary.btn-lg.gc-custom(href='#') sample button
+
+.gc-component
+  .gc-component-name Dropdown
+  .form-group
+    label Label
+    select.form-control
+      option default
+
+.gc-component
+  .gc-component-name  Dropdown
+  ul.dropdown-menu.gc-dropdown.gc-sample-active
+    li
+      a(href='#') Add Note
+    li
+      a(href='#') Edit Description
+    li
+      a(href='#') Add Video
+    li
+      a(href='#') Save Workout
+    li
+      a(href='#') Duplicate
+    li.gc-danger
+      a(href='#') Another link
+.gc-component
+  .gc-component-name Small Text Buttons
+  a.gc-text-link(href='#')
+    | upgrade
+  br
+  a.gc-text-link.gc-danger(href='#')
+    | discard
+.gc-component
+  .gc-component-name Iconic Buttons
+  a.gc-text-link.gc-capitalize(href='#')
+    span.gc-icon-link.gc-icon-exercises-add
+    |     Add Exercise
+  br
+  a.gc-text-link.gc-capitalize(href='#')
+    span.gc-icon-link.gc-icon-add-property
+    |     Add New Property
+  br
+  a.gc-text-link(href='#')
+    span.gc-icon-link.gc-icon-load-more
+    |     Load more...
+  br
+  a.gc-text-link(href='#')
+    span.gc-icon-link.gc-icon-exercises
+    |     List of Exercises
+  br
+  a.gc-text-link(href='#')
+    span.gc-icon-link.gc-icon-workouts
+    |     List of Workouts
+  br
+  a.gc-text-link(href='#')
+    span.gc-icon-link.gc-icon-programs
+    |     List of Programs
+
+.gc-component
+  .gc-component-name Inputs
+  .form-group
+    label Inactive
+    input.form-control(type='text', placeholder='Inactive')
+  .form-group.gc-form-alert(data-error='Empty Field')
+    label Alert
+    input.form-control.gc-alert(type='text')
+  .form-group.gc-form-active
+    label Active
+    input.form-control.gc-active(type='text', placeholder='Active')
+  .form-group.gc-form-disabled
+    label Disabled
+    input.form-control(type='text', placeholder='Disabled', disabled='')
+
+.gc-component
+  .gc-component-name Input Variants
+  .form-group
+    label Date & timepicker
+    .input-group.gc-datetime
+      input.form-control(type='text', placeholder='mm/dd/yyyy hh:mm')
+      span.input-group-btn
+        button.btn.btn-default
+          span.gc-datetime-calendar-icon
+          span.gc-datetime-clock-icon
+  .form-group
+    label Tabs
+    .btn-group.clearfix.gc-tabs
+      button.btn.btn-default Left
+      button.btn.btn-default.active Middle
+      button.btn.btn-default Right
+  .form-group
+    label Counter
+    .gc-counter
+      input.form-control.gc-counter-input
+      .gc-counter-control
+        a.gc-caret.gc-up(href='#')
+          i.fa.fa-caret-up
+        a.gc-caret.gc-down(href='#')
+          i.fa.fa-caret-down
+
+.gc-component
+  .gc-component-name Textarea
+  .form-group
+    label No Border
+    textarea.form-control.gc-textarea-no-border(placeholder='Start typing a description here...')
+  .form-group
+    label Normal
+    textarea.form-control.gc-textarea(placeholder='Start typing a description here...')
+
+.gc-component
+  .gc-component-name Complex Tag/Settings
+  span.gc-tag.gc-property
+    i.gc-icon-bars
+    |     10 Reps
+  br
+  span.gc-tag.gc-tag-highlight.gc-property
+    i.gc-icon-bars
+    |     10 Reps
+  br
+  .btn-group.clearfix.gc-property.editable
+    .btn-group(role='group')
+      button.btn.btn-sm.btn-primary.gc-custom
+        i.gc-icon-bars
+        span(contenteditable='true') 10
+    .btn-group(role='group')
+      button.btn.btn-sm.btn-primary.gc-custom.dropdown-toggle(data-toggle='dropdown')
+        span Reps
+        i.fa.fa-sort
+      ul.dropdown-menu.gc-dropdown
+        li
+          a(href='#') Dropdown link
+        li
+          a(href='#') Dropdown link
+
+.gc-component
+  .gc-progress-panel
+    label 57%
+    .gc-progress-bar
+      .gc-progress(style='width: 50%')
+
+.gc-component
+  .gc-component-name Autocomplete
+  .selectize-control.form-control.live-search.gc-demo
+    .selectize-input.items.not-full.has-options
+      input(type='text', autocomplete='off', tabindex='', placeholder='Search Autocomplete')
+    .selectize-dropdown.multi.gc-exercises-assign-input.form-control.live-search
+      .selectize-dropdown-content
+        div
+          span.label er
+          span Search Result 1
+      .selectize-dropdown-content
+        div
+          span.label er
+          span Search Result 2
+      .selectize-dropdown-content
+        div
+          span.label er
+          span Search Result 3
+
+.gc-component
+  .gc-component-name Checkboxes
+  .checkbox
+    label.gc-checkbox
+      input(type='checkbox')
+      |  Unchecked
+      span.gc-checkbox-clone
+  .checkbox(checked='')
+    label.gc-checkbox
+      input(type='checkbox')
+      |  Checked
+      span.gc-checkbox-clone
+  .checkbox
+    label.gc-checkbox
+      input(type='checkbox', disabled='')
+      |  Disabled
+      span.gc-checkbox-clone
+  .gc-component-name Alternate Checkbox
+  .checkbox
+    label.gc-checkbox.gc-alt-checkbox
+      input(type='checkbox')
+      |  Alternate Unchecked
+      span.gc-checkbox-clone
+  .checkbox
+    label.gc-checkbox.gc-alt-checkbox
+      input(type='checkbox', checked='')
+      |  Alternate Checked
+      span.gc-checkbox-clone
+
+.gc-component
+  .gc-component-name Radio-buttons
+  .radio
+    label.gc-radio
+      input#optionsRadios1(type='radio', value='option3', checked='')
+      |       Checked
+      span.gc-radio-clone
+  .radio
+    label.gc-radio
+      input#optionsRadios1(type='radio', value='option2')
+      |       Unchecked
+      span.gc-radio-clone
+  .radio
+    label.gc-radio
+      input#optionsRadios1(type='radio', value='option1', checked='', disabled='')
+      |       Disabled
+      span.gc-radio-clone
+.gc-component.clearfix
+  .gc-component-name Navigation
+  ul.gc-content-nav
+    li.active
+      a Exercise
+    li
+      a Add video
+    li
+      a Assign
+  br
+  .gc-nav-breadcrumbs
+    a.gc-content-nav-back
+      span.fa.fa-chevron-left
+    .gc-breadcrumbs
+      div
+        h2.gc-breadcrumbs-title
+          span exercises
+          span spiderman plank crunch
+  br
+  .row
+    .col-xs-3
+      .gc-component-name Left Align
+      .gc-topbar-item.gc-topbar-avatar.gc-topbar-dropdown
+        a(href='#', data-toggle='dropdown')
+          img(src='', alt='')
+        ul.dropdown-menu.pull-left
+          li
+            a.row(href='#')
+              span.col-xs-3
+                span.gc-topbar-dropdown-icon.gc-topbar-dropdown-icon-profile
+              span.col-xs-9 Profile
+          li
+            a.row(href='#')
+              span.col-xs-3
+                span.gc-topbar-dropdown-icon.gc-topbar-dropdown-icon-clients
+              span.col-xs-9 Clients
+          li
+            a.row(href='#')
+              span.col-xs-3
+                span.gc-topbar-dropdown-icon.gc-topbar-dropdown-icon-trainigs
+              span.col-xs-9 Trainings
+          li
+            a.row(href='#')
+              span.col-xs-3
+                span.gc-topbar-dropdown-icon.gc-topbar-dropdown-icon-measurements
+              span.col-xs-9 Measurements
+          li
+            a.row(href='#')
+              span.col-xs-3
+                span.gc-topbar-dropdown-icon.gc-topbar-dropdown-icon-payment
+              span.col-xs-9 Payments
+          li
+            a.row(href='#')
+              span.col-xs-3
+                span.gc-topbar-dropdown-icon.gc-topbar-dropdown-icon-signout
+              span.col-xs-9 Sign out
+    .col-xs-9
+      .gc-component-name Right Align
+      .gc-topbar-item.gc-topbar-avatar.gc-topbar-dropdown
+        a(href='#', data-toggle='dropdown')
+          img(src='', alt='')
+        ul.dropdown-menu.pull-right
+          li
+            a.row(href='#')
+              span.col-xs-3
+                span.gc-topbar-dropdown-icon.gc-topbar-dropdown-icon-profile
+              span.col-xs-9 Profile
+          li
+            a.row(href='#')
+              span.col-xs-3
+                span.gc-topbar-dropdown-icon.gc-topbar-dropdown-icon-clients
+              span.col-xs-9 Clients
+          li
+            a.row(href='#')
+              span.col-xs-3
+                span.gc-topbar-dropdown-icon.gc-topbar-dropdown-icon-trainigs
+              span.col-xs-9 Trainings
+          li
+            a.row(href='#')
+              span.col-xs-3
+                span.gc-topbar-dropdown-icon.gc-topbar-dropdown-icon-measurements
+              span.col-xs-9 Measurements
+          li
+            a.row(href='#')
+              span.col-xs-3
+                span.gc-topbar-dropdown-icon.gc-topbar-dropdown-icon-payment
+              span.col-xs-9 Payments
+          li
+            a.row(href='#')
+              span.col-xs-3
+                span.gc-topbar-dropdown-icon.gc-topbar-dropdown-icon-signout
+              span.col-xs-9 Sign out
+
+.gc-component
+  .gc-component-name Pagination With Border
+  nav
+    ul.pagination.gc-pagination-bordered
+      li
+        a(href='#', aria-label='Previous')
+          i.fa.fa-angle-left
+      li
+        a(href='#') 1
+      li
+        a(href='#') 2
+      li
+        a(href='#') 3
+      li
+        a(href='#') 4
+      li
+        a(href='#') 5
+      li
+        a(href='#', aria-label='Next')
+          i.fa.fa-angle-right
+  nav
+    ul.pagination.gc-pagination
+      li
+        a(href='#', aria-label='Previous')
+          i.fa.fa-angle-left
+          |           Prev
+      li
+        a(href='#') 1
+      li
+        a(href='#') 2
+      li
+        a(href='#') 3
+      li
+        a(href='#') 4
+      li
+        a(href='#') 5
+      li
+        a(href='#', aria-label='Next')
+          | Next
+          i.fa.fa-angle-right
+
+.gc-component
+  .gc-component-name Tooltips
+  .popover.bottom.gc-tooltip.gc-demo
+    .arrow
+    h3.popover-title Popover top
+    .popover-content
+      p
+        | Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+      a.btn.btn-primary.gc-custom(href='#') sample button
+  br
+  .popover.bottom.gc-tooltip.gc-tooltip-no-header.gc-demo
+    .arrow
+    .popover-content
+      p
+        | Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+      a.btn.btn-primary.gc-custom(href='#') sample button
+  br
+  .popover.top.gc-tooltip.gc-tooltip-no-header.gc-demo
+    .arrow
+    .popover-content
+      p
+        | Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+      a.btn.btn-primary.gc-custom(href='#') sample button
+  br
+  .popover.left.gc-tooltip.gc-tooltip-no-header.gc-demo
+    .arrow
+    .popover-content
+      p
+        | Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+      a.btn.btn-primary.gc-custom(href='#') sample button
+  br
+  .popover.right.gc-tooltip.gc-tooltip-no-header.gc-demo
+    .arrow
+    .popover-content
+      p
+        | Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+      a.btn.btn-primary.gc-custom(href='#') sample button
+
+.gc-component
+  .gc-component-name Alerts
+  .gc-alert-message.gc-error
+    .gc-alert-icon
+      span ×
+    p Exercise was assigned to Alex Smith
+  .gc-alert-message.gc-warning
+    .gc-alert-icon
+      span !
+    p Exercise was deleted from the list
+  .gc-alert-message.gc-success
+    .gc-alert-icon.workout
+      span
+    p Exercise was deleted from the list
+  ul.gc-demo-list
+    li
+      .gc-alert-icon.gc-demo.message.success
+        span
+    li
+      .gc-alert-icon.gc-demo.calendar.primary
+        span
+    li
+      .gc-alert-icon.gc-demo.flag.warning
+        span
+    li
+      .gc-alert-icon.gc-demo.comment.danger
+        span
+    li
+      .gc-alert-icon.gc-demo.like.info
+        span
+
+.gc-component
+  .gc-component-name Tables
+  table.gc-table
+    thead
+      tr
+        td Date
+        td Desription
+        td.center Status
+    tbody
+      tr
+        td 21 Feb 2015
+        td Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        td.center
+          i.gc-status-icon
+      tr
+        td 21 Feb 2015
+        td Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        td.center
+          i.gc-status-icon.gc-status-cancel
+  .gc-table-holder
+    .gc-table-title
+      span latest entries
+    .gc-table-container
+      table.gc-table.gc-demo
+        thead
+          tr
+            td Date
+            td Weight
+            td
+        tbody
+          tr
+            td 21 Feb 2015
+            td 255 lbs
+            td
+              span.gc-label-success
+                | + 1 
+                i.fa.fa-long-arrow-up
+          tr
+            td 19 Feb 2015
+            td 252 lbs
+            td
+              span.gc-label-danger
+                | - 1 
+                i.fa.fa-long-arrow-down
+
+.gc-component
+  .gc-component-name Heading & Paragraphs
+  table.gc-table.gc-demo
+    thead
+      tr
+        td Element
+        td Sample Text
+    tbody
+      tr
+        td Heading 1
+        td
+          h1.gc-heading-1
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            h1
+      tr
+        td Heading 2
+        td
+          h2.gc-heading-2 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      tr
+        td Paragraph
+        td
+          p.gc-paragraph
+            | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+
+.gc-component
+  .gc-component-name Empty States
+  .gc-row-4
+    .gc-col
+      div
+        .gc-empty-state
+          .gc-empty-state-image
+            img(src='app/images/prototypes/file-icon.png')
+          div
+            p.gc-empty-description Looks like you don’t any  programs assigned
+    .gc-col
+      div
+        .gc-empty-state
+          .gc-empty-state-image
+            img(src='app/images/prototypes/clock-icon.png')
+          p.gc-empty-description Looks like you don’t any  workouts assigned
+    .gc-col
+      div
+        .gc-empty-state
+          .gc-empty-state-image
+            img(src='app/images/prototypes/workout-icon.png')
+          p.gc-empty-description Looks like you don’t any  exercises assigned
+    .gc-col
+      div
+        .gc-empty-state
+          .gc-empty-state-image
+            img(src='app/images/prototypes/folder-icon.png')
+          p.gc-empty-description You don’t have  anything inside this folder
+  .clearfix
+  .gc-row-4
+    .gc-col
+      div
+        .gc-empty-state
+          .gc-empty-state-image
+            img(src='app/images/prototypes/heartbeat-icon.png')
+          div
+            p.gc-empty-description You don’t have any warmup assigned
+    .gc-col
+      div
+        .gc-empty-state
+          .gc-empty-state-image
+            img(src='app/images/prototypes/bar-icon.png')
+          p.gc-empty-description Looks like you don’t any  measurements added 
+    .gc-col
+      div
+    .gc-col
+      div
+
+.gc-component
+  .gc-component-name Building Blocks
+  .gc-exercise-author-info
+    a.gc-exercise-author-avatar(href='#')
+      img(src='app/images/portrait.jpg')
+    p.gc-exercise-author-name
+      | Trainer
+      br
+      a(href='#') john doe
+  br
+  br
+  .gc-exercise-author-info
+    a.gc-exercise-author-avatar.gc-exercise-author-avatar-exist(href='#')
+      img(src='app/images/portrait.jpg')
+    p.gc-exercise-author-name
+      | Trainer
+      br
+      a(href='#') john doe
+  br
+  br
+  .gc-exercise-author-info
+    a.gc-exercise-author-avatar.gc-exercise-author-avatar-exist(href='#')
+      img(src='app/images/portrait.jpg')
+    p.gc-exercise-author-name
+      br
+      a(href='#') john doe
+  br
+  br
+  i.gc-icon-client-group
+  br
+  .gc-rating
+    div
+      span.gc-rating-count 25
+      ul.gc-rating-stars
+        li
+          i.fa.fa-star
+        li
+          i.fa.fa-star
+        li
+          i.fa.fa-star
+        li
+          i.fa.fa-star
+        li
+          i.fa.fa-star-o
+    p.gc-rating-used
+      | Used by 
+      i.glyphicon.glyphicon-user
+      |  250
+  br
+  div
+    i.fa.fa-star.gc-icon.gc-icon-primary
+    i.fa.fa-star.gc-icon.gc-icon-highlight
+    i.fa.fa-star.gc-icon
+  br
+  div
+    i.gc-icon-trpohy
+    i.gc-icon-trpohy-gold
+    i.gc-icon-trash
+  div
+    a.gc-btn-round.gc-btn-chevron(href='#')
+    a.gc-btn-round.gc-btn-plus(href='#')
+  br
+  .gc-block-group.clearfix
+    .gc-block
+      .gc-block-highlight 2
+      label weeks
+    .gc-block
+      .gc-block-highlight 5
+      label workouts
+  br
+  label.gc-pill-label.gc-label-warning
+    i.gc-icon-lock-orange
+    |     private
+  br
+  label.gc-pill-label.gc-label-success
+    i.gc-icon-eye-green
+    |     public
+
+.gc-component
+  .gc-component-name Busy Indicator
+  .gc-busy-indicator-clock
+    span.pointer .gc-busy-indicator-clock
+    span.pointer.busy
+
+.gc-component
+  .gc-component-name Labels & Icons
+  i.gc-icon.workout
+  i.gc-icon.calendar
+  i.gc-icon.programs
+  i.gc-icon.clock
+  i.gc-icon.heartbeat
+  i.gc-icon.folder
+  i.gc-icon.upload
+  div
+
+    .gc-component
+      .gc-component-name Popup Window
+      .gc-modal-demo
+        .modal.gc-modal
+          .modal-dialog
+            .modal-content
+              .modal-header
+                button.close
+                  span Close
+                h4.modal-title Modal title
+              .modal-body
+                .form-group
+                  label Sample form
+                  input.form-control(type='text', placeholder='Inactive')
+              .modal-footer
+                a.btn.btn-primary.gc-custom(href='#') sample button
+
+    .gc-component
+      .gc-component-name Video Player
+      .gc-assign-videos
+        .gc-video-thumb
+          .gc-video-player
+            .gc-video-preview
+              img.img-responsive(src='https://placehold.it/350x220')
+              a.gc-video-play(href='#')
+            .gc-video-details
+              h5.gc-video-title Lorem Ipsum Dolor Amet
+              span.gc-video-report
+              div
+                span.gc-video-timer
+                  i.gc-video-time-icon
+                  | 0:23
+                span.gc-video-type
+                  i.gc-video-library-icon.gc-video-icon
+                  | My Library
+              button.btn.btn-primary.gc-custom.btn-block.btn-sm.gc-assign-video assign this video
+        .gc-video-thumb
+          .gc-video-player
+            .gc-video-preview
+              img.img-responsive(src='https://placehold.it/350x220')
+              a.gc-video-play(href='#')
+            .gc-video-details
+              h5.gc-video-title Lorem Ipsum Dolor Amet
+              span.gc-video-report
+              div
+                span.gc-video-timer
+                  i.gc-video-time-icon
+                  | 0:23
+                span.gc-video-type
+                  i.gc-video-public-icon.gc-video-icon
+                  | Public
+              button.btn.btn-primary.gc-custom.btn-block.btn-sm.gc-assign-video assign this video
+        .gc-video-thumb
+          .gc-video-player
+            .gc-video-preview
+              img.img-responsive(src='https://placehold.it/350x220')
+              a.gc-video-play(href='#')
+            .gc-video-details
+              h5.gc-video-title Lorem Ipsum Dolor Amet
+              span.gc-video-report
+              div
+                span.gc-video-timer
+                  i.gc-video-time-icon
+                  | 0:23
+                span.gc-video-type
+                  i.gc-video-youtube-icon.gc-video-icon
+                  | Youtube
+              button.btn.btn-primary.gc-custom.btn-block.btn-sm.gc-assign-video assign this video

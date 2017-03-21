@@ -1,0 +1,76 @@
+a.gc-sidebar-logo(href='#welcome')
+
+region(data-name='search-bar')
+
+.gc-topbar-item
+  a.btn.btn-default(
+    href='https://gymcloud.freshdesk.com'
+    type='button'
+    target='_blank'
+    title='GymCloud Support'
+  )
+    i.gc-help-button
+
+//-.gc-topbar-item
+  a.btn.btn-default(
+    href='#messages'
+    type='button'
+  )
+    i.fa.fa-envelope-o
+    span.gc-topbar-notifications.success
+      | 12
+
+//-.gc-topbar-item
+  a.btn.btn-default(
+    href='#'
+    type='button'
+  )
+    i.fa.fa-bell-o
+    span.gc-topbar-notifications.danger
+      | 3
+
+.gc-topbar-item.gc-topbar-avatar.dropdown
+
+  a(
+    href='#'
+    data-toggle='dropdown'
+    aria-haspopup='true'
+    role='button'
+    aria-expanded='false'
+  )
+    img(alt='')
+
+  ul.dropdown-menu.pull-right(
+    role='menu'
+    aria-labelledby='gc-user-topbar-avatar'
+  )
+
+    li
+      a.row(href='#users/me/edit')
+        span.col-xs-3
+          span.gc-topbar-dropdown-icon.gc-topbar-dropdown-icon-profile
+        span.col-xs-9 Profile
+
+    li.is_pro
+      a.row(href='#clients')
+        span.col-xs-3
+          span.gc-topbar-dropdown-icon.gc-topbar-dropdown-icon-clients
+        span.col-xs-9.client-title
+
+    li.is_client
+      a.row(href='#payments/details')
+        span.col-xs-3
+          span.gc-topbar-dropdown-icon.gc-topbar-dropdown-icon-payment
+        span.col-xs-9 Payments
+
+    li.is_pro(data-feature='refer_friend')
+      a.row(href='#', refer-friend)
+        span.col-xs-3
+          span.gc-topbar-dropdown-icon.gc-topbar-dropdown-icon-referral
+        span.col-xs-9 Refer friend
+
+    li
+      a#logout-btn.row(href='#logout')
+        span.col-xs-3
+          span.gc-topbar-dropdown-icon.gc-topbar-dropdown-icon-signout
+        span.col-xs-9 Sign out

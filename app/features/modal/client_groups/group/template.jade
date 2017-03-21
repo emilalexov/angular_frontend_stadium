@@ -1,0 +1,39 @@
+.modal-content
+  .modal-header
+    button.close(data-dismiss='modal')
+      span Close
+    h4.modal-title
+      span.gc-modal-icon-lg
+        img(src=require('app/images/icon-groups.png'), alt='')
+      | Edit group #{name}
+  form.form.group-form(role='form')
+    .modal-body
+      .row
+        .col-xs-3
+          .gc-edit-profile-modal-upload-wrapper
+            input.gc-edit-profile-modal-upload-input(type='file')
+            p.gc-edit-profile-modal-upload-text
+              span.fa.fa-plus
+              | Upload
+              br
+              | photo
+            img.gc-edit-profile-modal-avatar(src='')
+        .col-xs-9
+          .row
+            .col-xs-12
+              .form-group
+                label(for='name')
+                  | Group name 
+                  span.gc-req *
+                label.gc-error-message
+                input.form-control(
+                  type='text',
+                  name='name',
+                  maxlength=128,
+                  value=name
+                )
+                span.gc-valid-icon.fa.fa-check.hide
+    .modal-footer
+      .row
+        .col-xs-12.text-right
+          button.btn.btn-primary(type='submit') Save

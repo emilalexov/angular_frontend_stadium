@@ -1,0 +1,34 @@
+$border-color = #c0c0c0
+$text-color = #606060
+$bold-color = #303032
+
+.subscription
+  display: flex
+  flex-direction: column
+  height: 440px
+  border: 1px solid $border-color
+  border-radius: 3px
+  padding: 0 10px
+
+  .current,
+  .next-payment
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    height: 50%
+    color: $text-color
+
+  .current
+    border-bottom: 1px solid $border-color
+
+  .price
+    margin-right: .3em
+  .primary
+    font-size: 27px
+  .secondary
+    font-size: 16px
+  .bold
+    color: $bold-color
+    font-size: 30px
+    font-weight: 600

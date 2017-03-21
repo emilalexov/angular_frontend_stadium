@@ -1,0 +1,97 @@
+$blue_color = #3a99d8
+$delete_color = #ec6e61
+$result_name_color = #9ea0a1
+$result_value_color = #404447
+.personal-best
+  height: 100%
+  margin: -5px -15px
+  border-left: 1px solid $result_name_color
+
+  .header,
+  .content
+    display: flex
+    align-items: center
+    justify-content: center
+
+  .header
+    height: 50px
+    border-bottom: 1px solid $result_name_color
+    color: $result_name_color
+    font-size: 18px
+    text-transform: uppercase
+
+  .content
+    display: flex
+    flex-direction: column
+
+    button
+      margin: 30px 0
+
+    region
+      display: block
+      width: 100%
+
+    list
+      display: block
+
+      .no-exercise-results
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        padding: 0 35px
+
+        .trophy
+          width: 57px
+          height: 66px
+          background-size: 100%
+          background-repeat: no-repeat
+          background-image: url(../../images/icon-cup-large.png)
+
+        .text
+          margin-top: 10px
+          text-align: center
+          color: $result_name_color
+
+      .personal-best-item
+        width: 100%
+        padding: 0 15px
+        margin-bottom: 30px
+
+        .title
+          display: flex
+          align-items: center
+          justify-content: space-between
+          color: $blue_color
+
+          .icon
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 25px
+            height: 25px
+            border: 1px solid $blue_color
+            border-radius: 50%
+
+          span
+            font-size: 16px
+            font-weight: 500
+
+          .delete
+            color: $delete_color
+            cursor: pointer
+
+        .result-item
+          margin-top: 13px
+          font-size: 13px
+          text-transform: uppercase
+
+          .name
+            display: inline-block
+            width: 75%
+            color: $result_name_color
+          .value
+            width: 25%
+            display: inline-block
+            color: $result_value_color
+

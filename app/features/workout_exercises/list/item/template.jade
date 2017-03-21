@@ -1,0 +1,33 @@
+.gc-exercises-cell.drag-area
+  span.gc-workout-exercise-sort.draggable-handle(
+    maxlength='3'
+    autocomplete='off'
+    autocorrect='off'
+    autocapitalize='off'
+    spellcheck='false'
+  )
+
+.gc-exercises-cell.gc-workout-exercise-circle-cell
+  span.line-top
+  span.line-bottom
+  span.gc-workout-exercise-circle(contenteditable=true)
+
+.gc-exercises-cell.gc-exercise-details
+  .gc-exercise-item-detail
+    a.gc-workout-exercise-name.draggable-handle
+    input.gc-workout-exercise-note(type='text', placeholder='Add Note')
+
+.gc-exercises-cell.gc-cell-property
+  region(data-name='exercise_properties')
+
+.gc-exercises-cell.gc-cell-trash.gc-hover-hidden
+  a.gc-delete-exercise
+    i.gc-icon-trash
+
+.gc-exercises-cell.gc-cell-add.gc-hover-hidden
+  a.gc-btn-round.gc-btn-plus.gc-add-single-property-button
+
+.gc-exercises-cell.hidden.gc-set-property-checkbox-wrapper.gc-cell-add
+  label.gc-checkbox.gc-alt-checkbox
+    input.gc-set-property-checkbox(type='checkbox')
+    span.gc-checkbox-clone

@@ -1,0 +1,31 @@
+.gc-video-assigned-wrapper
+  .gc-video-player
+    .gc-video-preview
+      .iframe
+        iframe(
+          hidden='true'
+          allowfullscreen=''
+        )
+      i.gc-video-play
+      span.gc-video-duration
+  .gc-video-controls
+    a.gc-video-link(target='_blank')
+      span.name
+      i.gc-video-icon
+      span.type
+    span.gc-video-uploaded-at-wrapper
+      | Uploaded: 
+      span.gc-video-uploaded-at
+    span.gc-video-replace
+      | REPLACE VIDEO
+    span.gc-icon-trash(role='delete-video')
+
+.gc-video-assigned-placeholder.own-entity.text-center
+  .placeholder-icon
+    i.glyphicon.glyphicon-play
+  p
+    | Seems you don't have a video assigned
+    br
+    | You can either upload one or select from a list
+  button.btn.btn-primary.gc-add-video
+    | Assign video

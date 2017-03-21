@@ -1,0 +1,57 @@
+.gc-dashboard
+  header.gc-dashboard-header
+    h1.title
+      | Dashboard
+    .right-section
+      region(data-name='trainer_info')
+  .gc-dashboard-content
+    .dashboard-left-side
+      .top-section.clearfix
+        .workout-indicators
+          region(data-name='completion_ring', style='display:block;')
+        .gc-workout-calendar
+          region(data-name='scheduled_workout_slider')
+
+      .gc-dashboard-table
+        region(data-name='info_tables')
+
+    .dashboard-right-side.clearfix
+      .user-best-result
+        .icon
+        .description
+          | Congratulations on New Personal Best
+        .date
+          | 28 November, 2014
+        .property
+          span
+            | Reps
+          span
+            | 23
+        .property
+          span
+            | Weight (LBS)
+          span
+            | 100KG
+        .property
+          span
+            | Distance
+          span
+            | 230M
+      .weight-block
+        span.title
+          | Log your weight
+        span.description
+          | Enter your weight regularly to track progress
+        form
+          .form-group
+            .input-group.weight-input
+              input.form-control(type="text", placeholder='Weight')
+              span.weight-label
+                | LBS
+            .input-group.gc-datetime
+              input.form-control(type='text', placeholder='12/2/2014 1:03 PM')
+              span.input-group-btn
+                button.btn.btn-default
+                  span.gc-datetime-calendar-icon
+          button.btn.btn-primary.gc-custom.submit-btn
+            | Submit

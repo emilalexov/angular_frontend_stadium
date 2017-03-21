@@ -1,0 +1,13 @@
+.gc-usercard-large.row.account_type(class='gc-client-card')
+  .col-xs-9
+    .gc-usercard-avatar-wrapper.text-center
+      img.gc-usercard-avatar(alt='Avatar')
+    .gc-usercard-info
+      h1.gc-usercard-name
+      p.gc-usercard-address
+      input.gc-usercard-link(type='text', readonly='readonly')
+      .btn-group.gc-usercard-actions(role='group')
+        button.btn.btn-default.show-client-form
+          | Edit
+  .col-xs-3.gc-usercard-params.text-right
+#gc-edit-client-modal.modal.fade.gc-modal

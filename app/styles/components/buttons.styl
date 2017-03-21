@@ -1,0 +1,26 @@
+$color-main = #3a99d8
+
+.gc-btn-base
+  font-size: 12px
+  text-transform: uppercase
+  background: transparent
+  border-radius: 50px
+  color: $color-main
+
+.gc-btn-primary-outline
+  @extend .gc-btn-base
+  border-color: $color-main
+
+.gc-btn-inversed-outline
+  @extend .gc-btn-base
+  border-color: #fff
+  color: #fff
+  &:focus
+    color: #fff
+
+.gc-btn-link
+  @extend .gc-btn-base
+  border: none
+  &:hover
+    background: transparent
+    color: $color-main

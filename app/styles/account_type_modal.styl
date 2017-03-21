@@ -1,0 +1,243 @@
+.gc-presets-wizard
+  width: 550px
+
+  &.finish-modal
+    background-color: #3498DB
+    padding: 60px 72px 50px
+    text-align center
+    color: #fff
+
+  .presets-modal-header
+    height: 73px
+    padding: 0
+
+    button.program-modal-close
+      margin-top 30px
+      margin-right 25px
+
+  h4.preset-modal-title
+    font-size: 16px
+    margin-top: 25px
+    float: left
+
+  .account-type-body
+    padding: 44px 55px 0
+
+  .enveloper-icon
+    background-image: url('../images/icon-preset.png')
+    display: inline-block
+    width: 78px
+    height: 54px
+    background-repeat: no-repeat
+    background-position: center
+    float: left
+    margin: 18px 13px 0 15px
+
+  .account-type-list-region
+
+    ul
+      list-style-type: none
+      margin: 0
+      padding: 0
+
+    .presets
+
+      .account-selected
+        display: inline-block
+        float: right
+        width: 29px
+        height: 29px
+        margin: 4px 40px 4px 20px
+        background-image: url("../images/unselected_preset.png")
+        background-repeat: no-repeat
+
+        i
+          display: none
+          margin: 0 3px
+
+        &.assigned
+          width: 29px
+          height: 29px
+          display: inline-block
+          background-image: url("../images/select-acc.png")
+          background-repeat: no-repeat
+
+
+    .account-type-item
+      min-height: 54px
+      padding: 8px 5px 8px
+      border: 1px solid #ededed
+      border-radius: 4px
+      margin-bottom: 10px
+      cursor: pointer
+
+      list
+        display: none
+
+      &.active
+        border-color: #3a99d8
+        box-shadow: inset 0 0 4px #3a99d8
+
+        list
+          display: block
+          padding: 0 30px
+
+          .program
+            display: flex
+            align-items: center
+            margin: 3px 0
+
+            &.active
+              .name
+                color: black
+
+            input
+              margin: 0
+
+            .name
+              display: inline-block
+              margin: 0 1em
+              color: #808080
+
+    .account-selected
+      margin: 4px 40px 4px 20px
+      display: none
+      float: right
+
+      i
+        margin: 0 3px
+
+      &.assigned
+        display: block
+
+    .account-type-image
+      width: 36px
+      height: 33px
+      display: inline-block
+
+    .account-title
+      padding: 0
+
+    .account-icon
+      margin-left: 4px
+
+  .account-type-footer,
+  .program-footer
+    text-align center
+    margin-bottom: 40px
+
+  .account-type-footer.buttons
+    display: flex
+    justify-content: flex-end
+    padding-right: 55px
+
+    .change-account-type
+      padding: 7px 15px
+
+    .cancel
+      border: none
+      line-height: 25px
+
+  .account-type-descr
+    display block
+    margin-top: 20px
+    margin-left: 30px
+    margin-bottom: 36px
+    text-align: left
+    color: grey
+
+  .change-account-type
+    display: inline-block
+    padding: 7px 70px 7px
+
+  .program-body
+    padding: 30px 55px 0
+
+    .program-title
+      text-align: center
+      margin-bottom: 20px
+      font-weight: 700
+      font-size: 19px
+
+    span
+      display: block
+      text-align: left
+      color: #808080
+      margin-bottom: 20px
+
+  .program-select
+    padding-left: 31px
+
+  .program-footer
+    padding: 50px 55px 15px
+
+    span
+      display: block
+      text-align: left
+      color: #808080
+
+      &:last-of-type
+        margin-bottom: 40px
+
+  .program-prev-btn
+    border: none
+
+  .program-next-btn
+    padding-right: 22px
+    padding-left: 22px
+
+  .finish-title
+    font-size: 23px
+    font-weight: 700
+    margin: 0 0 63px
+
+  .finish-slogan
+    display block
+    text-align center
+    margin-bottom: 21px
+
+  .finish-btn
+    background-color: transparent
+    border-color: #fff
+    color: #fff
+    text-transform: uppercase
+
+    &:hover
+      opacity: 0.5
+      background-color: transparent
+      border-color: #fff
+      color: #fff
+
+  .finish-image
+    width: 129px
+    height: 144px
+    background: url("../images/preset-whistle.png")
+    margin: 0 auto 66px
+
+  .status-icon
+    width: 29px
+    height: 29px
+    display: inline-block
+    background-image: url("../images/select-acc.png")
+    background-repeat: no-repeat
+
+
+.gc-acc-personal-trainer
+  background-image: url('../images/personal-trainer.png')
+  background-size: cover
+  background-repeat: no-repeat
+
+.gc-acc-str-conditioning
+  background-image: url('../images/strength-conditioning.png')
+  background-size: cover
+  background-repeat: no-repeat
+
+.gc-acc-athletic-trainer
+  background-image: url('../images/athletic-trainer.png')
+  background-size: cover
+  background-repeat: no-repeat
+
+.gc-acc-physical-therapist
+  background-image: url('../images/physical-therapy.png')
+  background-size: cover
+  background-repeat: no-repeat

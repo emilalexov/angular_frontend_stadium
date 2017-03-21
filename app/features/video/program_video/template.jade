@@ -1,0 +1,14 @@
+ul.gc-content-nav.gc-workout-body-nav
+    li.active
+      a(data-toggle='tab', data-content='description')
+        | description
+    li
+      a(data-toggle='tab', data-content='video')
+        | video
+  .tab-content.gc-workout-tab-content
+    .tab-pane.active(data-pane='description')
+      region(data-name='editable_textarea')
+    .tab-pane(data-pane='video')
+      .row
+        .col-md-4
+          region(data-name='video_assigned')

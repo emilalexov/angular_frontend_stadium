@@ -1,0 +1,44 @@
+.workout-enter-results
+  position: relative
+  display: none
+  padding: 30px 70px 30px 25px
+  border: 1px solid #ededed
+  border-bottom: 0
+  transition: all .3s ease-in-out
+
+  &.opened
+    display: block
+
+  .workouts-result-inputs
+    float: right
+
+    .input-wrapper
+      float: left
+
+      &:not(:last-of-type)
+        margin-right: 15px
+
+    input
+      float: left
+      clear: both
+      max-width: 98px
+      padding: 10px
+      border: 1px solid #ededed
+      border-radius: 5px
+      text-align: right
+
+    label
+      display: block
+      float: left
+      color: #3a99d8
+      font-weight: 400
+
+    .add-result-submit
+      position: absolute
+      right: -36px
+      float: right
+      width: 25px
+      margin-top: 33px
+      margin-left: 13px
+      background-color: transparent
+      border: 0

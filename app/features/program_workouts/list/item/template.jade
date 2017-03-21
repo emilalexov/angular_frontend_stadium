@@ -1,0 +1,22 @@
+.gc-workout-header.draggable-handle
+  span.gc-program-workout-sort.draggable-handle
+  h3.gc-workout-title
+    span(contenteditable='true')
+    label
+      input.hidden(type='checkbox')
+      span.gc-workout-bookmark
+  .gc-workout-actions
+    a.btn.btn-primary.gc-cheevon-dropdown(data-toggle='dropdown', aria-haspopup='true', role='button', aria-expanded='false')
+    ul.dropdown-menu.gc-dropdown.pull-right(aria-labelledby='gc-workout-actions-dropdown', role='menu')
+      li
+        a(href='#', data-action='save_in_library')
+          | Save Workout
+      li
+        a(href='#', data-action='duplicate')
+          | Duplicate
+      li.gc-danger
+        a.gc-delete-program-workout(href='#')
+          | Delete
+.gc-workout-body
+  region(data-name='program_video')
+  region(data-name='workout_exercises')

@@ -1,0 +1,197 @@
+.gc-topbar
+  background: #23292b
+  display: flex
+
+.gc-topbar > div > div
+  display: table-cell
+  vertical-align: top
+  width: 64px
+
+.gc-topbar-search
+  background: #2f3538
+  padding: 16px 12px
+  white-space: nowrap
+
+.gc-topbar-search .input-group
+  width: 100%
+
+.gc-topbar-search input[type=text]
+  border: none
+  color: #333
+  border-radius: 50px 0 0 50px
+  height: 32px
+  background: #343a3d
+  transition: background 0.2s linear 0.2s, color 0.2s linear 0.2s
+
+.gc-topbar-search input[type=text]::placeholder
+  color: rgba(255,255,255,0.25)
+  opacity: 1
+
+.gc-topbar-search input[type=text]:focus,
+.gc-topbar-search input[type=text].active
+  box-shadow: none
+  background: #23292b
+  color: #fff!important
+
+.gc-topbar-search .input-group-btn .btn
+  border: none
+  border-radius: 0 50px 50px 0
+  background: #343a3d
+  color: rgba(255,255,255,0.25)
+  transition: background 0.2s linear 0.2s, color 0.2s linear 0.2s
+
+.gc-topbar-search .input-group-btn .btn:hover,
+.gc-topbar-search .input-group-btn .btn:active,
+.gc-topbar-search .input-group-btn .btn:focus
+  box-shadow: none
+
+.gc-topbar-search input[type=text]:focus + .input-group-btn .btn,
+.gc-topbar-search input[type=text].active + .input-group-btn .btn
+  background: #23292b
+  color: #fff
+
+.gc-topbar-item
+  height: 64px
+  background: #23292b
+
+.gc-topbar-item .btn
+  height: 64px
+  width: 64px
+  border: none
+  border-radius: 0
+  font-size: 18px
+  line-height: 52px
+  color: rgba(255,255,255,0.45)
+  background: transparent
+  position: relative
+
+.gc-topbar-item .gc-help-button
+  display: block
+  background: url('../images/icon-help.png') no-repeat center center
+  position: relative
+  width: 100%
+  height: 100%
+
+.gc-topbar-item .btn .fa-question
+  font-size: 14px
+  border: 1px solid rgba(255,255,255,0.45)
+  border-radius: 50px
+  min-width: 18px
+  height: 18px
+  line-height: 17px
+
+.gc-topbar-item .btn .gc-topbar-notifications
+  display: inline-block
+  border-radius: 50px
+  font-size: 12px
+  position: absolute
+  top: 12px
+  right: 50%
+  margin-right: -18px
+  color: #fff
+  height: 18px
+  min-width: 18px
+  line-height: 18px
+  text-align: center
+
+.gc-topbar-item .btn .gc-topbar-notifications.success
+  background: #2ecc71
+
+.gc-topbar-item .btn .gc-topbar-notifications.danger
+  background: #e74c3c
+
+.gc-topbar-avatar
+  padding: 9px 15px
+  border-left: 1px solid #2f3538
+
+  &.open
+    background: #0f82ca
+
+  > a
+    display: block
+    height: 46px
+    width: 46px
+    border-radius: 50%
+    background: #3a99d8 url('../images/avatar-placeholder.png') center center no-repeat
+    background-size: 70%
+    border: 2px solid #fff
+
+    img
+      display: none
+      width: 100%
+      height: 100%
+      border-radius: 50%
+
+    &.presents
+      background: transparent none
+      img
+        display: block
+
+.gc-topbar-dropdown-icon
+  display: inline-block
+  height: 22px
+  width: 20px
+  background-size: cover
+  background-position: left top
+  opacity: 0.65
+  position: relative
+  top: 7px
+  left: 7px
+
+.gc-topbar-dropdown-icon-profile
+  background-image: url('../images/icon-individuals.png')
+
+.gc-topbar-dropdown-icon-clients
+  background-image: url('../images/icon-clients.png')
+
+.gc-topbar-dropdown-icon-referral
+  background-image: url('../images/ic-referral.png')
+  background-size: 100% 100%
+
+.gc-topbar-dropdown-icon-trainigs
+  background-image: url('../images/icon-trainings.png')
+
+.gc-topbar-dropdown-icon-measurements
+  background-image: url('../images/measurements-icon.png')
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center
+
+.gc-topbar-dropdown-icon-payment
+  background-image: url('../images/payment-icon.png')
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center
+
+.gc-topbar-dropdown-icon-signout
+  background-image: url('../images/signout-icon.png')
+  background-size: 14px
+  background-repeat: no-repeat
+  background-position: center
+
+.gc-topbar-avatar .dropdown-menu
+  border: none
+  background: #0f82ca
+  padding: 14px 0 14px 0
+  margin: 0
+  border-radius: 0
+
+.gc-topbar-avatar .dropdown-menu li
+  display: block
+
+.gc-topbar-avatar .dropdown-menu .row
+  margin: 0
+  padding: 0
+  color: #fff
+  text-transform: uppercase
+  font-size: 12px
+  height: 39px
+  line-height: 39px
+
+.gc-topbar-avatar .dropdown-menu .row:hover
+  background: #0875ba
+
+.gc-topbar-avatar .dropdown-menu .row > span:first-child
+  padding: 0
+  text-align: center
+

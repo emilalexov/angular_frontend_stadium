@@ -1,0 +1,9 @@
+a.row.toggle-menu(href="##{type}/")
+  span.col-xs-2
+    - iconName = type.split('_')[1]
+    span.gc-sidebar-cat-icon(class="fix-bg-img-icon-#{iconName}")
+  span.col-xs-8.gc-sidebar-cat-name
+    = title
+  .col-xs-2.toggle-it
+    .gc-menu-item-arrow.toggle-it
+.gc-sidebar-sub

@@ -1,0 +1,14 @@
+.row.gc-exercise-header-wrapper
+  .col-md-12.gc-exercise-header
+    region(data-name='privacy_toggle2')
+    button.gc-exercise-btn.gc-save-exercise
+      | Save
+.row
+  .col-md-8.col-md-offset-2
+    label.gc-exercise-label
+      | Exercise Name
+      input.gc-exercise-name(type='text', placeholder='Exercise Name')
+    region(data-name='video_assigned')
+    textarea.gc-exercise-description.gc-exercise-description-edit
+  .col-md-12.text-right
+    region(data-name='delete_button')

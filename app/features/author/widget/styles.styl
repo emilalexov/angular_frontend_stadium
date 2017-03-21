@@ -1,0 +1,40 @@
+.gc-author-widget
+
+  display: inline-block
+  text-align: left
+  padding-top: 5px
+
+  .avatar
+    display: inline-block
+    vertical-align: top
+    height: 25px
+    width: 25px
+    border-radius: 30px
+    background: #3a99d8 url('../../../images/avatar-placeholder.png') center center no-repeat
+    background-size: 80%
+    margin: 1px 5px 0 0
+
+    img
+      display: none
+      border-radius: 30px
+
+      &[src$='defaultimage.png']
+        display: none
+
+    &.avatar-exist img
+      display: block
+      width: 25px
+
+  .name
+    display: inline-block
+    vertical-align: middle
+    color: #cacaca
+    margin: 0
+    line-height: 14px
+    font-size: 12px
+
+    a
+      color: #3a99d8
+      text-transform: uppercase
+      font-size: 14px
+      text-decoration: none

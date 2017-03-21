@@ -1,0 +1,38 @@
+.page-wrap
+
+  nav.navbar.navbar-fixed-top.gc-nav-top(role='navigation')
+    .container
+
+      .navbar-header
+        button.navbar-toggle.collapsed(aria-controls='navbar', aria-expanded='false', data-target='#navbar', data-toggle='collapse')
+          span.sr-only
+            | Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href='/')
+          img(alt='Gymcloud-logo', src=require('app/images/gymcloud-logo-horizontal.png'))
+
+      #navbar.collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(href=landingPath(''))
+              | Home
+          li
+            a(href=landingPath('about'))
+              | About Us
+          li
+            a(href=landingPath('contact'))
+              | Contact Us
+          //- li
+          //-   a(href='https://gymcloud.freshdesk.com', target='_blank')
+          //-     | Support
+          li
+            a(href=landingPath('blog'))
+              | Blog
+          li
+            a(href='#/login')
+              | Log In
+              i.glyphicon.glyphicon-log-in
+
+  region(data-name='content')

@@ -1,0 +1,19 @@
+.gc-sidebar-cat
+  a.row.toggle-menu.active-menu(href='#welcome')
+    span.col-xs-2
+      span.gc-sidebar-cat-icon.fix-bg-img-icon-dashboard
+    span.col-xs-10.gc-sidebar-cat-name
+      | Dashboard
+
+region(data-name='pro')
+region(data-name='personal_programs')
+region(data-name='personal_workouts')
+region(data-name='workout_exercises')
+
+//-if !isPro
+  .gc-sidebar-cat
+    a.row.toggle-menu(href='#calendar/')
+      span.col-xs-2
+        span.gc-sidebar-cat-icon.fix-bg-img-icon-calendar
+      span.col-xs-10.gc-sidebar-cat-name
+        | Calendar

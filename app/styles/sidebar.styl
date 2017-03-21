@@ -1,0 +1,320 @@
+.gc-sidebar
+  display: flex
+  flex-flow: row wrap
+  min-height: min-content
+
+  > region
+    flex: 1 0 100%
+
+.gc-sidebar-cat
+  background: transparent
+  flex: 1 0 100%
+
+  > a
+    display: block
+    margin: 0
+    font-size: 15px
+    font-weight: 300
+    line-height: 18px
+    color: rgba(255,255,255,0.65)
+    border-left: 2px solid #282d30
+    text-transform: uppercase
+    padding: 14px 7px 14px 0
+    height: 46px
+
+  > a:hover
+    color: #fff
+
+  > a:hover .gc-sidebar-cat-icon
+    opacity: 1
+
+  > a.active
+    background: #3c4248
+
+  > a.active-menu
+    border-left: 2px solid #34749e
+    color: #337ab7
+
+    .gc-sidebar-cat-icon
+      background-position: right top
+
+  > a.active .gc-sidebar-cat-icon
+    opacity: 1
+
+  > a > .col-xs-1
+    padding: 0
+    text-align: center
+
+.gc-menu-item-arrow
+  background: url('../images/sidebar-item-arrow.png') no-repeat
+  width: 6px
+  height: 10px
+  background-size: cover
+  top: 6px
+  position: relative
+
+  .active &
+    transform: rotate(90deg)
+
+.gc-sidebar-cat-name
+  padding: 0 0 0 5px
+
+.gc-sidebar-cat-icon
+  display: block
+  height: 22px
+  width: 20px
+  background-size: cover
+  background-position: left top
+  opacity: 0.65
+  position: relative
+  left: -3px
+  top: -3px
+
+
+.gc-sidebar-logo
+  background: #23292b url('../images/gymcloud-logo.png') center center no-repeat
+  padding: 32px 115px
+
+.gc-sidebar-sub
+  max-height: 0
+  overflow: hidden
+  background: #2f3539
+  position: relative
+  transition: max-height 0s ease-out
+
+.gc-sidebar-cat > a.active + .gc-sidebar-sub
+  max-height: 9000px
+  transition: max-height 0.5s ease-in
+
+.gc-sidebar-folder-name
+  padding: 0 5px
+  max-width: 178px
+
+.gc-sidebar-folder
+
+  .gc-sidebar-folder-icon
+    background: url('../images/sidebar-folder.png') no-repeat
+    width: 14px
+    height: 10px
+    background-size: cover
+    top: 4px
+    left: 2px
+    position: relative
+
+  > a
+    display: block
+    margin: 0
+    font-size: 15px
+    font-weight: 300
+    line-height: 18px
+    color: rgba(255,255,255,0.65)
+    padding: 14px 7px 14px 0
+    height: 46px
+
+  > a:hover
+    color: #3a99d8
+
+    .gc-sidebar-folder-icon
+      background: url('../images/sidebar-folder-active.png') no-repeat
+
+  > a.active
+ 
+    .fa:after
+      display: block
+      content: " "
+      position: absolute
+      bottom: -14px
+      top: 14px
+      left: 21px
+      width: 0
+      border-left: 1px solid #3a99d8
+
+  > a.active-menu
+    color: #337ab7!important
+
+    .gc-sidebar-folder-icon
+       background: url('../images/sidebar-folder-active.png') no-repeat
+
+  > a.active-menu + .gc-sidebar-sub:before
+    border-left: 1px solid #3a99d8
+
+  > a.active + .gc-sidebar-sub
+    max-height: 9000px
+    transition: max-height 0.5s ease-in
+    padding-left: 30px
+
+  .gc-sidebar-folder > a.active .fa:after
+    left: 15px
+
+  > .gc-sidebar-sub:before
+    display: block
+    content: " "
+    position: absolute
+    bottom: 18px
+    top: -19px
+    left: 21px
+    width: 0
+    border-left: 1px solid #fff
+
+.gc-sidebar-item.dragged
+  position: absolute
+  z-index: 9999
+  background: #2f3539
+  box-shadow: 0 0 3px #eee
+
+.gc-sidebar-item.dragged a:hover
+  color: rgba(255,255,255,0.65)
+
+.gc-sidebar-item.sortable-placeholder
+  position: relative
+
+.gc-sidebar-item
+
+  > a
+    display: block
+    margin: 0
+    font-size: 15px
+    font-weight: 300
+    line-height: 18px
+    color: rgba(255,255,255,0.65)
+    padding: 14px 0
+    height: 46px
+    text-decoration: none
+
+    .fa-arrows
+      font-size: 12px
+      position: relative
+      top: -1px
+      left: 4px
+
+  > a.gc-client-sidebar-item
+    padding-left: 15px
+
+    .gc-sidebar-cat-icon
+      margin-right: 7px
+
+  > a.gc-client-sidebar-item:hover .gc-sidebar-cat-icon,
+  > a.gc-client-sidebar-item.active .gc-sidebar-cat-icon
+    background-position: right top
+
+  > a .glyphicon-th
+    font-size: 12px
+    position: relative
+    top: -1px
+
+  > a:hover
+    color: #3a99d8
+
+  > a.active
+    color: #3a99d8
+
+.gc-sidebar-item-name
+  padding: 0 5px
+
+.gc-sidebar-cat-name,
+.gc-sidebar-folder-name,
+.gc-sidebar-item-name
+  white-space: nowrap
+  overflow-x: hidden
+  text-overflow: ellipsis
+  overflow-y: hidden
+
+.gc-sidebar-folder > .gc-sidebar-sub > .gc-sidebar-item:first-child
+  margin-top: -10px
+
+.gc-sidebar-folder .gc-sidebar-folder > .gc-sidebar-sub > .gc-sidebar-item > a > .col-xs-2
+  padding: 0 0 0 10px
+
+.gc-sidebar-folder .gc-sidebar-folder > .gc-sidebar-sub > .gc-sidebar-item > a > .gc-sidebar-item-name
+  padding: 0 5px
+
+.gc-sidebar-folder .gc-sidebar-folder .gc-sidebar-folder > a > .col-xs-2
+  padding: 0 0 0 10px
+
+.gc-sidebar-folder .gc-sidebar-folder .gc-sidebar-folder > a > .gc-sidebar-item-name
+  padding: 0 5px
+
+.gc-sidebar-folder .gc-sidebar-folder .gc-sidebar-folder > .gc-sidebar-sub:before
+  left: 15px
+
+.gc-clientpage-sidebar-avatar
+  width: 76px
+  height: 76px
+  border: 3px solid #2d3537
+  border-radius: 100px
+  margin: 25px auto 15px auto
+  background: #2d3537 url('../images/avatar-placeholder.png') 55% center no-repeat
+  background-size: 60%
+
+.gc-clientpage-sidebar-avatar img
+  width: 70px
+  height: 70px
+  display: block
+  border-radius: 100px
+
+.gc-clientpage-sidebar-avatar img[src$='defaultimage.png'],
+.gc-clientpage-sidebar-avatar img[src='']
+    display: none
+
+.gc-clientpage-sidebar-name
+  font-weight: bold
+  color: #fff
+  font-size: 25px
+  text-align: center
+  margin: 0 0 5px 0
+
+.gc-clientpage-sidebar-userlink
+  font-size: 12px
+  color: rgba(255, 255, 255, 0.5)
+  background: rgba(255, 255, 255, 0.14)
+  border: none
+  display: block
+  margin: 0 15px
+  width: 200px
+  padding: 3px 5px
+  border-radius: 3px
+
+.gc-clientpage-sidebar-updates-wrapper
+  margin: 50px 20px 0 20px
+
+.gc-clientpage-sidebar-updates-wrapper h3
+  font-size: 13px
+  color: rgba(167, 167, 167, 0.5)
+  text-transform: uppercase
+  margin: 0 0 20px 0
+
+.gc-clientpage-sidebar-updates-list
+  padding: 0 0 0 32px
+  margin: 0
+
+.gc-clientpage-sidebar-updates-list li
+  list-style-type: none
+  margin-bottom: 20px
+  position: relative
+
+.gc-clientpage-sidebar-updates-list li p
+  color: rgba(167, 167, 167, 0.5)
+  font-size: 12px
+  margin-bottom: 0
+  line-height: 12px
+
+.gc-clientpage-sidebar-updates-list li span
+  color: rgba(51, 152, 219, 0.5)
+  font-size: 12px
+  line-height: 11px
+
+.gc-clientpage-sidebar-updates-list li:before
+  border: 1px solid #91ba3f
+  position: absolute
+  content: " "
+  display: block
+  top: 0px
+  left: -16px
+  border-radius: 20px
+  background: #282d30
+  height: 10px
+  width: 10px
+
+.gc-sidebar-item.gu-mirror
+  border-radius: 5px
+  background-color: #2f3539

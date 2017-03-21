@@ -1,0 +1,117 @@
+.gc-box-content
+  .program-action-panel
+    height: auto
+    min-height: 50px
+    padding: 9px 15px 9px 0
+    background-color: #f9f9f9
+    border-top: 1px solid rgba(40,45,48,0.1)
+    overflow: visible
+
+    .widgets
+      .btn
+        border: none
+        color: #9ea0a1
+        background: #e5e5e5
+
+    button
+      margin-left: 1rem
+      border-radius: 50px
+      font-size: 12px
+      text-transform: uppercase
+      text-align: center
+
+      &:hover
+        border: none
+
+    .btn-warning:hover
+      background: #ffac61
+      color: #fff
+
+.program-action-panel
+  margin: 0
+  display: flex
+
+
+  .row > div
+    align-self: center
+
+  .selectize-input,
+  .selectize-input.focus
+    border-radius: 19px
+    padding-top: 9px
+    padding-left: 19px
+    height: 38px
+
+  .selectize-control
+    margin-top: 4px
+
+  .selectize-dropdown
+    margin-top: 6px
+    margin-left: 19px
+    max-width: calc(100% - 38px)
+
+  .quick-add
+    display: none!important
+
+  .counters
+    display: flex
+    flex-direction: row
+    // (".gc-nav-wrapper.program" height) - (1px border) - (sum of t/b paddings)
+    height: calc(65px - 1px - 1.1em)
+
+  button
+    align-self: center
+    height: 27px
+    font-size: 12px
+    padding: 0 12px
+
+  .counter-group
+    width: 210px
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+
+    .counter,
+    .counter-name
+      align-self: center
+      color: #797979
+
+    .counter
+      font-size: 31px
+      margin-right: 10px
+      transition: color .3s ease
+
+      &.highlight
+        color: #3a99d8
+
+    .counter-name
+      font-size: 15px
+      text-transform: uppercase
+
+    button
+      background: transparent
+
+      &:hover
+        background: #3a99d8
+
+  .widgets
+    display: flex
+    justify-content: flex-end
+
+    region
+      display: flex
+      height: calc(65px - 1px - 1.1em)
+      align-items: center
+
+      > div,
+      > span
+        flex-direction: row
+        align-self: center
+
+    .gc-author-widget
+      padding: 0
+
+    button
+      border: none
+      color: #9EA0A1
+      background: #E5E5E5

@@ -1,0 +1,37 @@
+header.gc-header-standard.gc-header-login
+  .container
+    .gc-login-form-wrapper.col-sm-6.cal-xs-12
+      h1.text-center
+        | Invite Your Pro
+      form.gc-signup-form(role='form')
+
+        .row.gc-trainer-invite-title
+          .gc-have-trainer-icon
+          div
+            | Invite your Fitness Pro to join GymCloud.
+
+        .form-group.gc-email-form-group
+          label(for='gc-invite-trainer')
+            | Pro's Name
+          input.form-control(
+            type='text'
+            id='gc-invite-trainer'
+            name='name'
+            required='required'
+            autofocus
+          )
+          label.gc-error-message
+        .form-group.gc-email-form-group
+          label(for='gc-invite-trainer-email')
+            | Pro's Email
+          input.form-control(
+            type='email'
+            id='gc-invite-trainer-email'
+            name='email'
+            required='required'
+          )
+          label.gc-error-message
+        .row.form-group.text-center
+            button.btn.btn-default.gc-invite-btn(type='submit')
+              | Next
+      include ../_footer_login.jade

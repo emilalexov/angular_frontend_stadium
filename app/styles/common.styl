@@ -1,0 +1,470 @@
+body
+  overflow: hidden
+
+region
+  display: inline
+
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15
+  position: relative
+  min-height: 1px
+  padding-right: 10px
+  padding-left: 10px
+
+.col-xs-15
+  width: 20%
+  float: left
+
+@media (min-width: 768px)
+  .col-sm-15
+    width: 20%
+    float: left
+
+@media (min-width: 992px)
+  .col-md-15
+    width: 20%
+    float: left
+
+@media (min-width: 1200px)
+  .col-lg-15
+    width: 20%
+    float: left
+
+.col-xs-17
+  width: 14.285714%
+  float: left
+
+@media (min-width: 768px)
+  .col-sm-17
+    width: 14.285714%
+    float: left
+
+@media (min-width: 992px)
+  .col-md-17
+    width: 14.285714%
+    float: left
+
+@media (min-width: 1200px)
+  .col-lg-17
+    width: 14.285714%
+    float: left
+
+.col-xs-18
+  width: 12.5%
+  float: left
+
+@media (min-width: 768px)
+  .col-sm-18
+    width: 12.5%
+    float: left
+
+@media (min-width: 992px)
+  .col-md-18
+    width: 12.5%
+    float: left
+
+@media (min-width: 1200px)
+  .col-lg-18
+    width: 12.5%
+    float: left
+
+.text-xs-left
+  text-align: left
+
+.text-xs-right
+  text-align: right
+
+.text-xs-center
+  text-align: center
+
+.text-xs-justify
+  text-align: justify
+
+@media (min-width: 768px)
+  .text-sm-left
+    text-align: left
+
+  .text-sm-right
+    text-align: right
+
+  .text-sm-center
+    text-align: center
+
+  .text-sm-justify
+    text-align: justify
+
+@media (min-width: 992px)
+  .text-md-left
+    text-align: left
+
+  .text-md-right
+    text-align: right
+
+  .text-md-center
+    text-align: center
+
+  .text-md-justify
+    text-align: justify
+
+@media (min-width: 1200px)
+  .text-lg-left
+    text-align: left
+
+  .text-lg-right
+    text-align: right
+
+  .text-lg-center
+    text-align: center
+
+  .text-lg-justify
+    text-align: justify
+
+*
+  margin: 0
+
+html,
+body
+  height: 100%
+
+body
+  background: #282d30
+  font-family: 'Source Sans Pro', sans-serif
+
+body.dragging,
+body.dragging *
+  cursor: move !important
+
+.gc-centered
+  margin-left: auto
+  margin-right: auto
+  float: none
+
+.gc-fixed-top-bar .gc-topbar
+  position: fixed
+  top: 0
+  z-index: 10
+  left: 230px
+  right: 0
+  min-width: 500px
+  max-width: 100%
+  width: auto
+  display: block
+
+.gc-fixed-top-bar .gc-topbar > div
+  display: table
+  width: 100%
+
+.gc-main-workspace
+  background: #fff
+  position: relative
+  height: 100%
+
+.gc-content-both
+  /*float: none;*/
+
+.gc-content-both > .row
+  overflow: hidden
+
+.gc-content-left
+  border-right: 1px solid rgba(40,45,48,0.1)
+  height: 100%
+  padding: 0
+
+.gc-content-right
+  height: inherit
+  padding-bottom: 12%
+  overflow-y: auto
+
+.gc-content-right header
+  height: 50px
+  border-bottom: 1px solid rgba(40,45,48,0.1)
+
+.gc-content-right header h3
+  font-size: 11px
+  text-transform: uppercase
+  color: rgba(158, 160, 161, 0.5)
+  text-align: center
+  line-height: 15px
+  margin: 0
+  height: 50px
+  padding: 10px 0
+
+@media (min-width: 1025px)
+  .gc-content-right header h3
+    font-size: 18px
+    text-align: center
+    line-height: 50px
+    margin: 0
+    padding: 0
+
+.gc-box-content .gc-nav-wrapper
+  height: auto
+  margin: -5px -15px 0 -15px
+  padding-bottom: 9px
+  background-color: #F9F9F9
+  z-index: 3
+
+.gc-nav-wrapper
+  min-height: 50px
+  padding: 9px 15px 0 0
+  margin-left: 0
+  border-bottom: 1px solid rgba(40,45,48,0.1)
+  overflow: visible
+  position: relative
+  z-index: 4
+
+  & + .gc-nav-wrapper
+    height: auto
+    padding-bottom: 9px
+    background-color: #F9F9F9
+    z-index: 3
+
+  &.without-shadow
+    box-shadow: none
+
+  .gc-col-1 > *
+    float: left
+
+  .gc-content-nav-back
+    margin: 6px 5px
+    display block
+    float: left
+    color: #337ab7
+    cursor: pointer
+
+  .gc-content-breadcrumbs
+    display block
+    overflow: hidden
+
+  h2
+    display: inline-block
+    text-transform: uppercase
+    font-size: 19px
+    text-transform: uppercase
+    color: #9ea0a1
+    padding: 0
+    margin: 0
+    font-weight: bold
+    color: #757575
+    line-height: 31px
+
+  .btn
+    margin-left: 1rem
+
+.gc-nav-right-side
+  position: absolute
+  right: 15px
+  bottom: -1px
+
+.gc-nav-shadow
+  box-shadow: 0px 5px 10px -8px rgba(143,143,143,1)
+
+.gc-content-both > .row.gc-nav-wrapper
+  overflow: visible
+
+.gc-nav-wrapper .btn,
+.gc-global-list-splash .btn
+  border-radius: 50px
+  font-size: 12px
+  color: #3a99d8
+  text-transform: uppercase
+  background: #fff
+  border-color: #3a99d8
+  text-align: center
+
+.gc-nav-wrapper .btn + .btn
+  margin-left: 8px
+
+.gc-clients-nav-right
+  min-height: 50px
+
+.gc-clients-nav-right p
+  display: inline-block
+  font-size: 12px
+  color: #3a99d8
+  margin: 19px 10px 19px 0
+  line-height: 10px
+
+.gc-clients-nav-right .btn
+  margin: 11px 0
+
+.gc-clients-nav-right .btn:hover
+  color: #fff
+
+.gc-nav-wrapper .btn-danger
+  border-radius: 50px
+  background: transparent
+  border-radius: 50px
+  outline: none
+  font-size: 16px
+  height: 27px
+  width: 27px
+  line-height: 25px
+  padding: 0
+  text-align: center
+  color: #ee6d5d
+  border-color: #ee6d5d
+
+.gc-nav-wrapper .btn-danger:hover
+  background: #ee6d5d
+  color: #fff
+
+.gc-nav-wrapper .btn-warning
+  color: #ffac61
+  border-color: #ffac61
+
+.gc-nav-wrapper .btn-warning:hover
+  background: #ffac61
+  color: #fff
+
+.gc-nav-wrapper span.btn-warning:hover
+  background: #fff
+  color: #ffac61
+
+.gc-nav-wrapper .btn-success
+  color: #39ca74
+  border-color: #39ca74
+
+.gc-nav-wrapper .btn-success:hover
+  background: #39ca74
+  color: #fff
+
+.gc-nav-wrapper span.btn-success:hover
+  background: #fff
+  color: #39ca74
+
+.btn:hover
+  background: #3a99d8
+  color: #fff
+
+.form-group.gc-valid input.form-control
+  border-color: #3a99d8
+  position: relative
+
+.form-group .gc-valid-icon
+  display: none
+
+.form-group.gc-valid .gc-valid-icon
+  display: block
+  position: absolute
+  right: 10px
+  bottom: 13px
+  color: #3a99d8
+  font-size: 12px
+
+.form-group.gc-valid input.form-control,
+.form-group.gc-valid select.form-control
+  border-color: #3a99d8
+
+.form-group.gc-invalid input.form-control,
+.form-group.gc-invalid select.form-control
+  border-color: #ff560a
+
+.form-group .gc-req
+  color: #ff560a
+
+.form-group .gc-error-message
+  color: #ff560a
+  position: absolute
+  right: 15px
+  display: none
+  text-align: right
+
+.form-group.gc-invalid .gc-error-message
+  display: inline-block
+  text-align: right
+
+.col-padding-5
+  padding: 0 5px
+
+.row-margin-v
+  margin: 30px -15px
+
+.padding-0
+  padding: 0
+
+.gc-global-list-splash
+  width: 480px
+  margin: 18% auto 0
+  text-align: center
+
+.gc-global-list-splash p
+  color: #ccc
+  padding: 10px 0
+
+.gc-btn
+  border-radius: 50px
+  font-size: 12px
+  color: #3a99d8
+  text-transform: uppercase
+  background: #fff
+  border-color: #3a99d8
+  border-radius: 50px
+  text-align: center
+  line-height: 16px
+  margin-top: -5px
+
+.btn .fa-plus
+  padding-right: 5px
+
+/* Auto Complete */
+.selectize-dropdown-content > div .label
+  color: #ccc
+  text-transform: uppercase
+
+/* Auto Complete */
+.disp-none
+  display: none
+
+.selectize-dropdown.form-control
+  margin-top: 0
+  border-top: 0
+  border-top-left-radius: 0
+  border-top-right-radius: 0
+  border-color: #cccccc
+
+.gc-workout-indicator
+  position: relative
+  width: 180px
+  height: 180px
+  
+  svg
+    width: inherit
+    height: inherit
+    stroke-dashoffset: 1
+  
+    .stroke
+      fill: none
+      stroke-width: 1.5
+      transition: stroke-dasharray .3s linear
+      stroke-linecap: round
+      
+      &.default
+        stroke: #dbdbdb
+      
+      &.progress
+        stroke: #14bf44
+        stroke-dasharray: 0 20
+        stroke-dashoffset: .9
+  
+  .content
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 50%
+    text-align: center
+    transform: translate(-50%,-50%)
+  
+  .counter
+    display: block
+    font-size: 40px
+    line-height: 40px
+    color: #757575
+  
+  .counter-text
+    display: block
+    margin-top: 8px
+    font-size: 10px
+    line-height: 11px

@@ -1,0 +1,23 @@
+.gc-video-player
+  .gc-video-preview
+    i.gc-video-play
+  .gc-video-details
+    h5.gc-video-title
+    span.gc-video-report
+    div
+      if durationTime
+        span.gc-video-timer
+          i.gc-video-time-icon
+          span
+            = durationTime
+      span.gc-video-type
+        i.gc-video-icon(class="gc-video-#{type}-icon")
+        span
+          = _.capitalize(type)
+    button.btn.btn-primary.gc-custom.btn-block.btn-sm.gc-assign-video(
+      class=(isAssigned && 'assigned')
+    )
+      if isAssigned
+        | assigned
+      else
+        | assign this video

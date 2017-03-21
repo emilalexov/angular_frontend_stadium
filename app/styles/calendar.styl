@@ -1,0 +1,262 @@
+.gc-calendar-activity
+  margin: 0
+  padding: 15px 0 0 0
+
+.gc-calendar-activity li
+  margin: 0 0 10px 0
+  list-style-type: none
+  position: relative
+
+.gc-calendar-activity li > div
+  padding: 0
+
+.gc-calendar-activity li .fa-clock-o
+  margin: 0 5px 0 0
+  color: rgba(51, 152, 219, 0.23)
+
+.gc-calendar-activity li > div:last-child:after
+  content: " "
+  display: block
+  width: 0
+  border-left: 1px solid rgba(51, 152, 219, 0.23)
+  position: absolute
+  bottom: -14px
+  top: 16px
+  left: -12px
+
+.gc-calendar-activity li:last-child > div:last-child:after
+  display: none
+
+.gc-calendar-activity li h6
+  margin: 4px 0 0 0
+  color: #99a6ac
+  font-size: 13px
+
+.gc-calendar-activity li p
+  font-size: 13px
+  color: #808080
+  margin-bottom: 0
+
+.gc-calendar-activity li p a
+  color: #3a99d8
+
+.gc-calendar-nav
+  height: 50px
+  margin: 0
+  border-bottom: 1px solid rgba(40,45,48,0.1)
+
+.gc-calendar-nav-date .btn-group
+  margin: 0
+
+.gc-calendar-nav-date .btn-group .btn
+  color: #3a99d8
+  padding: 1px 6px
+
+.gc-calendar-nav-date .btn-group .btn:hover,
+.gc-calendar-nav-date .btn-group .btn:active,
+.gc-calendar-nav-date .btn-group .btn:focus
+  outline: none
+  background: #fff
+
+.gc-calendar-nav-date p
+  font-size: 10px
+  color: #9ea0a1
+  display: inline-block
+  line-height: 16px
+  margin: 0
+
+.gc-calendar-nav-views .btn-group
+  margin: 7px 0
+
+.gc-calendar-nav-views .btn-group .btn
+  text-transform: uppercase
+  color: #9ea0a1
+  padding: 6px 5px
+
+.gc-calendar-nav-views .btn-group .btn:hover,
+.gc-calendar-nav-views .btn-group .btn:active,
+.gc-calendar-nav-views .btn-group .btn:focus,
+.gc-calendar-nav-views .btn-group .btn.active
+  color: #3a99d8
+  background: #fff
+  text-decoration: none
+  outline: none
+
+.gc-calendar-day-view
+  padding: 0
+  margin: 0
+
+.gc-calendar-day-view > li
+  margin: 0
+  border-bottom: 1px solid rgba(40,45,48,0.1)
+  display: table
+  height: 50px
+  width: 100%
+
+.gc-calendar-day-view > li > div
+  display: table-cell
+
+.gc-calendar-day-view > li > div:first-child
+  color: #9ea0a1
+  font-size: 10px
+  text-transform: uppercase
+  border-right: 1px solid rgba(40,45,48,0.1)
+  width: 85px
+  text-align: center
+  vertical-align: middle
+
+.gc-calendar-day-view > li > div:last-child
+  vertical-align: middle
+  padding: 5px
+  background: #f8f8f8
+  font-size: 12px
+
+.gc-calendar-day-view > li > div:last-child p
+  margin: 1px 0
+
+.gc-calendar-day-view > li > div:last-child p a
+  color: #3a99d8
+
+.gc-calendar-week-view
+
+.gc-calendar-week-view:after
+  content: " "
+  display: table
+  clear: both
+
+.gc-calendar-week-day
+  border-right: 1px solid rgba(40,45,48,0.1)
+
+.gc-calendar-week-day:last-child
+  border-right: none
+
+.gc-calendar-week-day > .row
+  margin: 0
+
+.gc-calendar-week-date
+  min-height: 50px
+  max-height: 50px
+  line-height: 15px
+  font-size: 12px
+  color: #9ea0a1
+  text-align: center
+  padding: 10px 0
+  border-bottom: 1px solid rgba(40,45,48,0.1)
+
+.gc-calendar-week-time
+  min-height: 50px
+  line-height: 29px
+  font-size: 12px
+  color: #9ea0a1
+  text-align: center
+  padding: 10px 0
+  border-bottom: 1px solid rgba(40,45,48,0.1)
+
+.gc-calendar-week-time > div
+  padding: 0
+
+.gc-calendar-week-hour
+  padding: 5px
+  background: rgba(183,183,183,0.1)
+  min-height: 50px
+  max-height: 50px
+  border-bottom: 1px solid rgba(40,45,48,0.1)
+  overflow-x: hidden
+  text-overlow: ellipsis
+
+.gc-calendar-week-hour > div
+  padding: 0
+
+.gc-calendar-week-hour p
+  margin-bottom: 5px
+  font-size: 12px
+  line-height: 12px
+
+.gc-calendar-week-hour p a
+  color: #3a99d8
+
+.gc-calendar-month-week-days
+  margin: 0
+  border-bottom: 1px solid rgba(40,45,48,0.1)
+  height: 50px
+
+.gc-calendar-month-week-days > div
+  border-right: 1px solid rgba(40,45,48,0.1)
+  text-align: center
+  min-height: 50px
+  max-height: 50px
+  line-height: 30px
+  font-size: 12px
+  color: #9ea0a1
+  padding: 10px 0
+  text-transform: uppercase
+
+.gc-calendar-month-week-days > div:last-child
+  border-right: none
+
+.gc-calendar-month-view
+  padding: 0
+
+.gc-calendar-month-view:after
+  content: " "
+  display: table
+  clear: both
+
+.gc-calendar-month-day
+  display: block
+  border-right: 1px solid rgba(40,45,48,0.1)
+  padding: 5px
+  min-height: 90px
+  max-height: 90px
+  border-bottom: 1px solid rgba(40,45,48,0.1)
+  overflow-x: hidden
+  overflow-y: auto
+  text-overlow: ellipsis
+
+.gc-calendar-month-day:nth-child(7n)
+  border-right: none
+
+.gc-calendar-month-date
+  color: #9ea0a1
+  font-size: 12px
+
+.gc-calendar-month-day p
+  margin-bottom: 5px
+  font-size: 12px
+  line-height: 12px
+
+.gc-calendar-month-day p a
+  color: #3a99d8
+
+@media (min-width: 1025px)
+  .gc-calendar-activity li .fa-clock-o
+    margin: 0 10px 0 0
+    color: rgba(51, 152, 219, 0.23)
+
+  .gc-calendar-activity li > div:last-child:after
+    content: " "
+    display: block
+    width: 0
+    border-left: 1px solid rgba(51, 152, 219, 0.23)
+    position: absolute
+    bottom: -14px
+    top: 16px
+    left: -15px
+
+@media (min-width: 992px)
+  .gc-calendar-nav-views .btn
+    padding: 5px 12px
+
+  .gc-calendar-nav-date .btn-group
+    margin: 4px 0
+
+  .gc-calendar-nav-date .btn-group .btn
+    padding: 5px 12px
+
+  .gc-calendar-nav-date p
+    font-size: 14px
+    line-height: 50px
+
+  .gc-calendar-nav-date p
+    font-size: 14px
+

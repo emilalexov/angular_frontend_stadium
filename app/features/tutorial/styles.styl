@@ -1,0 +1,75 @@
+$order-background-color = #42e46f
+$order-text-color = white
+$docs-background-color = #ececec
+$text-color = #757575
+$close-hover-color = #000
+
+.tour-backdrop
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  z-index: 1051
+  background-color: rgba(0,0,0,0.3)
+
+.tutorial
+  border: none
+  border-radius: 8px
+  padding: 15px
+  max-width: 320px
+
+  button.close
+    position: absolute
+    right: 10px
+    top: 10px
+    color: $text-color
+    font-size: 13px
+    opacity: 1
+
+    &:hover
+      background: none
+      color: $close-hover-color
+
+  .content
+    margin-top: 12px
+    display: flex
+    align-items: flex-start
+    color: $text-color
+
+    .order
+      display: flex
+      align-items: center
+      justify-content: center
+      min-width: 45px
+      width: 45px
+      height: 45px
+      border-radius: 50%
+      background: $order-background-color
+      color: $order-text-color
+
+    .text
+      display: flex
+      flex-direction: column
+
+      .popover-title
+        border: none
+        border-radius: 0
+        background: none
+        padding-top: 0
+
+  .buttons
+    display: flex
+    align-items: center
+    justify-content: space-between
+    text-transform: uppercase
+
+    .docs
+      background: $docs-background-color
+      border: none
+      color: $text-color
+
+    .btn
+      font-size: 12px
+
+      &:hover
+        background: none

@@ -1,0 +1,23 @@
+.trial-ends-soon
+  .trial-ended-img-mock
+
+  .reminder
+    h4
+      span
+        | Reminder: your free trial will end in
+      span.remains
+      span
+        |  days!
+    p
+      | Don't forget to enter your payment information to continue<br> using GymCloud.
+
+  .space-filler
+
+  .update-payment-info
+    a.btn.btn-primary.gc-custom(href="#payments/details")
+      | update payment info
+    a(href="#", remind-tomorrow)
+      | Remind me tomorrow
+
+  .close-block
+    i.fa.fa-times-circle

@@ -1,0 +1,177 @@
+.gc-workout-title
+  display: inline-block
+
+  span
+    line-height: 1em
+    border: 1px dashed transparent
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+
+    &:hover
+      border-bottom-color: #3a99d8
+      cursor: pointer
+
+    &:focus
+      padding: 6px 12px
+      border-bottom-color: transparent
+
+.dropdown-menu > li > a.text-danger
+  color: #e74c3c
+
+.gc-inner-nav-wrapper
+  margin: 0
+
+.gc-inner-nav
+  display: block
+  padding: 0
+  margin: 25px 0 20px 10px
+  list-style-type: none
+
+  li
+    display: inline-block
+
+    .active a
+      color: #3a99d8
+      text-decoration: underline
+
+    a
+      color: #9ea0a1
+      font-size: 14px
+      text-transform: uppercase
+
+      &:hover
+        cursor: pointer
+        color: #3a99d8
+        text-decoration: none
+
+  li + li
+    margin-left: 15px
+
+.gc-exercises-list-actions
+  border-top: 1px solid #ededed
+  background: #fafafa
+  border-radius: 0 0 10px 10px
+  min-height: 62px
+  padding: 6px
+
+.gc-workout-global-exercises-empty
+  color: #c1c1c1
+  font-size: 14px
+  text-align: center
+  min-height: 120px
+  line-height: 120px
+  margin-bottom: 0
+
+.gc-workout-exercise-add-button
+  border-radius: 50px
+  font-size: 12px
+  color: #3a99d8
+  text-transform: uppercase
+  background: #fff
+  border-color: #3a99d8
+  border-radius: 50px
+  text-align: center
+  line-height: 16px
+
+  &:hover,
+  &:active,
+  &:focus
+    border-color: #3a99d8
+
+.gc-workout-delete-button
+  border-radius: 50px
+  font-size: 12px
+  color: #ee6d5d
+  text-transform: uppercase
+  background: #fff
+  border-color: #ee6d5d
+  border-radius: 50px
+  text-align: center
+  line-height: 16px
+
+  &:hover,
+  &:active,
+  &:focus
+    border-color: #ee6d5d
+    background-color: #ee6d5d
+
+.gc-workout-description
+  color: #404447
+  font: 400 14px / 18px 'Source Sans Pro'
+  height: auto
+  width: 60%
+  padding: 6px 12px
+
+.gc-workout-author-block
+  padding-top: 25px
+  width: 290px
+
+.gc-workouts-video-view
+  padding: 5px 15px
+
+.gc-assign-list
+  padding: 0
+
+  .gc-workout-client-item,
+  .gc-workout-group-item
+    cursor: pointer
+    padding: 0 15px
+
+    i
+      padding: 19px 10px
+
+      &.partial
+        color: #9ea0a1
+  
+  h3
+    padding-left: 15px
+
+.gc-btn-group
+  margin: 0 15px
+
+  > .btn:first-child
+    border-top-left-radius: 50px
+    border-bottom-left-radius: 50px
+
+  > .btn:last-child
+    border-top-right-radius: 50px
+    border-bottom-right-radius: 50px
+
+  .btn
+    background: #E7E7E7
+    color: #9D9D9D
+    border: 1px solid #ededed
+    box-shadow: none
+
+    &:hover
+      color: #3a99d8
+      background: #fff
+
+    &.active
+      color: #3a99d8
+      background: #fff
+
+      &:hover
+        border-color: #3a99d8
+        background-color: #3a99d8
+        color: #fff
+
+.gc-exercises-assign-input-wrapper .selectize-control.live-search
+  height: 34px
+
+.gc-workout-notes-label
+  padding-left: 11px
+  padding-bottom: 10px
+
+.gc-workout-schedule
+  label.gc-checkbox
+    height: 20px
+    line-height: 20px
+
+  .modal-body
+    padding-bottom: 10px
+
+  .btn-group > .btn
+    width: 25%
+
+.gc-workout-repeat-wrapper label
+  padding: 10px

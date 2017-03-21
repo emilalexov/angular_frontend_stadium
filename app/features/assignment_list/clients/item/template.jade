@@ -1,0 +1,12 @@
+.col-xs-10
+  a.gc-clients-list-avatar-wrapper(
+    href='#'
+    data-id=id
+    class=avatar_url ? 'gc-clients-list-avatar-exist' : ''
+    style="background-color: #{avatar_background_color}"
+  )
+    img(src=avatar_url, alt='')
+  span.gc-clients-list-client-link
+.col-xs-2.text-right.gc-global-ewp-assigned-mark
+  i.glyphicon.glyphicon-ok
+  span.outdated

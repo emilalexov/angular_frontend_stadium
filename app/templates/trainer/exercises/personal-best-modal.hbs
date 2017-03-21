@@ -1,0 +1,45 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <button class="close" data-dismiss="modal"><span>Close</span></button>
+    <h4 class="modal-title">
+      <span><img src="app/images/icon-cup-white.png" alt=""></span>
+      Add new personal best
+    </h4>
+  </div>
+  <div class="modal-body">
+    <form class="form" role="form">
+      <div class="form-group">
+        <label class="control-label">Date</label>
+        <div class="input-group date gc-add-personal-best-date">
+          <input type="text" class="form-control">
+          <span class="input-group-addon">
+            <span class="fa fa-calendar"></span>
+          </span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label">Property</label>
+        <div class="row gc-add-personal-best-property">
+          <div class="col-xs-4">
+            <select class="form-control">
+            </select>
+          </div>
+          <div class="col-xs-6">
+            <input type="text" class="gc-add-personal-best-property-value form-control">
+          </div>
+          <div class="col-xs-2 text-right">
+            <button type="submit" class="btn btn-secondary btn-block">Add</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <ul class="gc-add-personal-best-list">
+    </ul>
+  </div>
+  <div class="modal-footer">
+    <div class="row">
+      <div class="col-xs-6 text-left"><button class="btn btn-link gc-add-personal-best-clear">Clear all</button></div>
+      <div class="col-xs-6 text-right"><button class="btn btn-primary gc-add-personal-best-add">Add personal best</button></div>
+    </div>
+  </div>
+</div>

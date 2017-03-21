@@ -1,0 +1,31 @@
+.gc-main-workspace
+  .gc-nav-wrapper.row
+
+    .col-xs-12.col-sm-8.gc-col-1
+      label.gc-content-nav-checkall
+        input(type='checkbox')
+      a.gc-content-nav-back
+        span.fa.fa-chevron-left
+      region(data-name='breadcrumbs')
+      a.btn.btn-link.gc-show-add-exercise-modal
+        span.fa.fa-plus
+        | Add #{singularName}
+
+    .col-xs-12.col-sm-4.text-sm-right
+      a.btn.btn-link.gc-show-edit-folder-modal
+        span.fa.fa-plus
+        | Edit folder name
+      a.btn.btn-link.gc-show-add-exercise-folder-modal
+        span.fa.fa-plus
+        | Add folder
+      a.btn.btn-link.gc-show-duplicate-modal.disp-none
+        | Duplicate
+      a.btn.btn-danger.disp-none(href='#', data-action='remove')
+        span.fa.fa-trash
+
+  .gc-workspace-content
+    .gc-quick-search-wrapper
+      input.gc-exercises-assign-input.form-control.live-search.gc-auto-complete(type='text', placeholder="Search #{singularName}")
+    region(data-name='collection')
+
+#gc-modal-region.modal.fade.gc-modal

@@ -1,0 +1,15 @@
+.current-page-info
+  = currentPageInfo
+nav
+  ul.pagination.gc-pagination-bordered
+    li
+      a(href="#", aria-label='Previous')
+        i.fa.fa-angle-left
+    - i = 0
+    - while (i++ < totalPages)
+      li
+        a(href="#")
+          = i
+    li
+      a(href="#", aria-label='Next')
+        i.fa.fa-angle-right

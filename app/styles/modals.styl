@@ -1,0 +1,313 @@
+.modal-dialog
+
+  &.gc-modal-narrow
+    width: 470px
+
+  .modal-md
+    width: 480px
+
+  .modal-body
+    .description
+      text-align: center
+      white-space: pre
+      padding: 30px 0
+
+.gc-remove-modal
+
+  h4 span
+    margin-right: 7px
+
+  .gc-rm-text
+    margin: 30px 0
+    padding: 0
+
+    > p
+      width: 80%
+      margin-bottom: 0
+
+  .gc-rm-buttons
+    margin: 30px 0 32px
+    padding: 0
+
+    td
+      padding: 0 10px
+
+.gc-add-modal-list-wrapper
+  height: 250px
+  padding: 5px 5px
+  background: #fafafa
+  overflow-y: auto
+  border: 1px solid #cbd5d7
+  border-radius: 5px 5px 0 0
+
+  a:hover
+    text-decoration: none
+
+    span
+      text-decoration: none
+
+.gc-add-modal-cat-icon
+  display: inline-block
+  height: 22px
+  width: 20px
+  background-position: center center
+  opacity: 1
+  position: relative
+  background-repeat: no-repeat
+  background-size: contain
+
+.gc-add-modal-cat
+
+  > a
+    display: block
+    margin: 0
+    font-size: 15px
+    line-height: 18px
+    color: #333
+    padding: 6px 0
+    height: 30px
+    cursor: pointer
+
+    &:hover .gc-add-modal-cat-icon
+      opacity: 1
+
+    &.active
+      color: #333
+
+      .gc-add-modal-cat-icon
+        background-position: left top
+        opacity: 1
+
+    > .col-xs-1
+      padding: 0
+      text-align: center
+
+  > a.active + .gc-add-modal-sub,
+  &.active > .gc-add-modal-sub
+    max-height: 9000px
+    transition: max-height 0.5s ease-in
+
+.gc-add-modal-sub
+  max-height: 0
+  overflow: hidden
+  position: relative
+  transition: max-height 0s ease-out
+
+  .gc-add-modal-cat-icon
+    height: 18px
+    width: 14px
+    margin: 0 2px 0 6px
+
+.gc-add-modal-folder
+
+  &.parent
+    background-color: #cbd5d7
+
+  > a
+    display: block
+    margin: 0
+    font-size: 15px
+    line-height: 18px
+    color: #333
+    padding: 6px 0
+    height: 30px
+    cursor: pointer
+
+  > a:hover
+    color: #333
+    background-color: #e6f0f6
+
+  > a.selected
+    background-color: #3a99d8
+
+  > a.selected > .gc-add-modal-item-name,
+  > a.selected > .fa-folder-o
+    color: #fff
+
+  > a.active
+    color: #333
+
+  > a.active + .gc-add-modal-sub
+    max-height: 9000px
+    transition: max-height 0.5s ease-in
+    padding-left: 30px
+
+  > a > .fa-folder-o
+    color: #3a99d8
+    margin: 0 1px 0 7px
+
+  .gc-add-modal-folder > .gc-add-modal-sub
+  > .gc-add-modal-item > a > .col-xs-2
+    padding: 0 0 0 10px
+
+  .gc-add-modal-folder > .gc-add-modal-sub
+  > .gc-add-modal-item > a > .gc-add-modal-item-name
+    padding: 0 5px
+
+  .gc-add-modal-folder .gc-add-modal-folder > a >
+  .col-xs-2
+    padding: 0 0 0 10px
+
+  .gc-add-modal-folder .gc-add-modal-folder > a >
+  .gc-add-modal-item-name
+    padding: 0 5px
+
+  .gc-add-modal-folder .gc-add-modal-folder >
+  .gc-add-modal-sub:before
+    left: 15px
+
+.gc-add-modal-folder-name
+  padding: 0 5px
+
+.gc-add-modal-item
+
+  > a
+    display: block
+    margin: 0
+    font-size: 15px
+    line-height: 18px
+    color: #333
+    padding: 6px 0
+    height: 30px
+    cursor: pointer
+    vertical-align: top
+
+    &:hover
+      color: #333
+      background-color: #e6f0f6
+
+.gc-add-modal-item-name
+  padding: 0 5px
+
+.gc-add-modal-sub .gc-add-modal-item-name
+  vertical-align: top
+
+.gc-add-modal-cat-name,
+.gc-add-modal-folder-name,
+.gc-add-modal-item-name
+  white-space: nowrap
+  overflow-x: hidden
+  text-overflow: ellipsis
+
+.gc-add-modal-actions-wrapper
+  position: relative
+  margin: 0 25px 25px 25px
+
+  .input-group-addon
+    min-height: 0
+    height: 52px
+
+.gc-add-modal-input-type-wrapper
+  padding: 8px 12px
+  border-color: #cbd5d7
+  border-radius: 0 0 0 5px
+  border-top: none
+  border-right: none
+
+  .gc-add-modal-input-type
+    display: inline-block
+    height: 26px
+    width: 26px
+    background-size: cover
+    background-position: right top
+    opacity: 1
+    position: relative
+
+.gc-new-item-name-input
+  height: 52px!important
+  border: none
+  border-bottom: 1px solid #cbd5d7
+  box-shadow: none
+
+  &:focus
+    box-shadow: none
+
+.gc-add-modal-submit-wrapper
+  padding: 0 2px
+  border-color: #cbd5d7
+  border-radius: 0 0 5px 0
+  border-top: none
+  border-left: none
+
+  button
+    font-size: 15px
+    color: #3a99d8
+    text-transform: uppercase
+    background: #fff
+    border-color: #3a99d8
+    border-radius: 50px
+    text-align: center
+    line-height: 16px
+    height: 36px
+    padding: 6px 18px
+    margin: 0 5px 0 0
+
+    &:focus,
+    &:active,
+    &:hover
+      border-color: #3a99d8
+
+.form-group.gc-add-modal-actions-wrapper .input-group .gc-error-message
+  color: #ee6d5d
+  position: absolute
+  bottom: 1px
+  font-size: 12px
+  left: 59px
+  right: auto
+  z-index: 10
+
+.form-group.gc-add-modal-actions-wrapper.gc-valid .input-group input.gc-new-item-name-input
+  border-color: #cbd4d7
+
+.form-group.gc-add-modal-actions-wrapper span.gc-new-item-name-input
+  vertical-align: middle
+  line-height: 39px
+  font-size: 15px;
+
+.modal-video-assign-sec
+  padding: 0 20px
+
+  .gc-assign-videos
+    margin-left: 0
+    margin-right: 0
+
+  .gc-video-thumb
+    width: 100%!important
+    padding-left: 0!important
+    padding-right: 0!important
+
+  .gc-assign-video-upload
+    margin-left: 0
+    margin-right: 0
+
+  .video-search
+    width: 70%
+    padding-left: 0
+
+  .upload-btn
+    width: 30%
+    padding-right: 0
+
+  .gc-video-preview,
+  .gc-video-details
+    float: left
+
+  .gc-video-preview
+    width: 45%
+    height: 184px
+
+  .gc-video-details
+    width: 55%
+
+  .gc-video-player
+    display: flex
+    align-items: center
+    background-color: #fafafa
+
+    .gc-video-details
+      border-top: none
+
+      .gc-assign-video
+        max-width: 200px
+        max-width: 200px
+        margin: 10px auto 0 auto

@@ -1,0 +1,57 @@
+<div class="gc-main-workspace">
+  <div class="gc-nav-wrapper row gc-workspace-nav">
+    <div class="col-xs-7">
+      <label class="gc-content-nav-checkall">
+        <input type="checkbox">
+      </label>
+      <h2>{{view_type}}</h2>
+      {{#ifNot view_type 'groups'}}
+      <a href="#" class="btn btn-link show-client-form">
+        <span class="fa fa-plus"></span>
+        <span class="client-title">Add client</span>
+      </a>
+      {{/ifNot}}
+      {{#ifNot view_type 'individuals'}}
+      <a href="#" class="btn btn-link show-group-form">
+        <span class="fa fa-plus"></span>
+        Add group
+      </a>
+      {{/ifNot}}
+    </div>
+    <div class="col-xs-5 gc-clients-nav-right text-right">
+      <p class="hidden"></p>
+      <a href="#" style="display:none;" class="btn btn-link move-to-group-show">Move to group</a>
+      <a href="#" style="display:none;" class="remove-item btn btn-danger">
+        <span class="fa fa-trash"></span>
+      </a>
+    </div>
+  </div>
+  <div class="gc-clients-list-wrapper gc-workspace-content">
+    <div class="col-xs-12" id="clients-region"></div>
+    <div class="col-xs-12" id="groups-region"></div>
+    <div class="gc-global-list-splash hidden" id="clients-groups-splash">
+      <div class="gc-splash-control">
+        <div class="gc-splash-description">
+          <img src="app/images/icon-folder.png" alt="icon-folder" />
+          <p>You dont have <br/> anything inside this folder.</p>
+        </div>
+        <div class="gc-splash-btn-container">
+          {{#ifNot view_type 'groups'}}
+          <a href="#" class="btn btn-link show-client-form">
+            <span class="fa fa-plus"></span>
+            Add client
+          </a>
+          {{/ifNot}}
+          {{#ifNot view_type 'individuals'}}
+          <a href="#" class="btn btn-link show-group-form">
+            <span class="fa fa-plus"></span>
+            Add group
+          </a>
+          {{/ifNot}}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade gc-modal" id="gc-modal-container"></div>

@@ -1,0 +1,19 @@
+.modal-content
+  .modal-header
+    button.close(data-dismiss='modal')
+      span
+        | Close
+    h4.modal-title
+      span
+        img(src=require('app/images/icon-cup-white.png'), alt='')
+      | Duplicate to Folder(s)
+  form.gc-duplicate-form(role='form')
+    .modal-body
+      label.control-label
+        | Select folders to duplicate selected #{typeSinglular}(s) to
+      ul.gc-duplicate-folders-list
+    .modal-footer
+      .row
+        .col-xs-12.text-right
+          button.btn.btn-primary(type='submit')
+            | Duplicate

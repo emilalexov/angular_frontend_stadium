@@ -1,0 +1,22 @@
+.modal-dialog.modal-md
+  .modal-content.gc-remove-modal
+    .modal-header
+      button.close(data-dismiss='modal')
+        span
+          | Close
+      h4.modal-title
+        span
+          img(src=require('app/images/add-to-library-icon.png'), alt='')
+        | Add to library
+    form.form.group-form(role='form')
+      region(data-name='library').modal-body
+      .form-group.gc-add-modal-actions-wrapper
+        .input-group
+          .input-group-addon.gc-add-modal-input-type-wrapper
+            span.gc-add-modal-input-type(class="fix-bg-img-#{type}")
+          span.form-control.gc-new-item-name-input
+            = name
+          .input-group-addon.gc-add-modal-submit-wrapper
+            button.btn.btn-primary(type='submit')
+              | Add
+          span.gc-error-message

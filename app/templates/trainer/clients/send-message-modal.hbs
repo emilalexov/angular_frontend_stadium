@@ -1,0 +1,51 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <button class="close" data-dismiss="modal"><span>Close</span></button>
+    <h4 class="modal-title">
+      <span><img src="app/images/icon-individuals.png" alt=""></span>
+      Send message
+    </h4>
+  </div>
+  <form class="form" role="form">
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="form-group">
+                <label for="user-message">Send to:</label>
+                <label class="gc-error-message"></label>
+                <input type="text" name="clients" id="user-message" class="form-control gc-send-message-input live-search">
+              </div>
+              <div class="gc-message-modal-actions row">
+                <div class="col-xs-3">
+                  <a class="gc-send-message-all btn btn-link"><span class="fa fa-check"></span> Select all</a>
+                </div>
+                <div class="col-xs-5">
+                  <a class="gc-send-message-none btn btn-link"><span class="fa fa-remove"></span> Select none</a>
+                </div>
+                <div class="col-xs-4 text-right">
+                  <a class="gc-send-message-reset btn btn-link"><span class="fa fa-repeat"></span> Reset</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="form-group">
+                <label for="message-body">Message:</label>
+                <label class="gc-error-message"></label>
+                <textarea name="body" id="message-body" class="form-control"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <div class="row">
+        <div class="col-xs-12 text-right"><button type="submit" class="btn btn-primary">Send</button></div>
+      </div>
+    </div>
+  </form>
+</div>

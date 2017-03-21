@@ -1,0 +1,21 @@
+.row
+  .col-md-12.tabs
+    ul.gc-content-nav.gc-workout-body-nav
+      li.active
+        a(data-toggle='tab', data-content='description')
+          | description
+      li
+        a(data-toggle='tab', data-content='video')
+          | video
+    .tab-content.gc-workout-tab-content
+      .tab-pane.active(data-pane='description')
+        span.description
+      .tab-pane(data-pane='video')
+        iframe(allowfullscreen)
+
+.row
+  .col-md-6.note
+
+.row
+  .col-md-12
+    region(data-name='workout_exercises')

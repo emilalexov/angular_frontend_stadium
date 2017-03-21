@@ -1,0 +1,14 @@
+.modal-dialog.modal-md
+  .modal-content
+    .modal-header
+      button.close(data-dismiss='modal')
+        span
+          | Close
+      h4.modal-title
+        span.gc-modal-icon-sm
+          img(src=require('app/images/add-client-icon.svg'), alt='')
+        | Add Workout Video
+    .modal-body
+      .row
+        region(data-name='video-assign-sec')
+        region(data-name='pagination')

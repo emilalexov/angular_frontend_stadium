@@ -1,0 +1,30 @@
+.gc-exercises-assign
+ .gc-exercises-assign-input-wrapper
+    input.gc-exercises-assign-input.form-control.live-search.gc-auto-complete(type='text', placeholder='Add clients to this group')
+  region(data-name='list')
+
+#gc-remove-from-group-modal.modal.fade.gc-modal
+  .modal-dialog.modal-md
+    .modal-content
+      .modal-header
+        button.close(data-dismiss='modal')
+          span
+            | Close
+        h4.modal-title
+          span
+            img(src=require('app/images/icon-groups.png'), alt='')
+          | Remove client(s) from group
+      form.gc-remove-from-group-form
+        .modal-body
+          .row
+            .col-xs-12
+              p
+                | Are you sure you want to remove this client(s) from this group?
+        .modal-footer
+          .row
+            .col-xs-6.text-right
+              button.btn.btn-primary(data-dismiss='modal')
+                | Cancel
+            .col-xs-6.text-left
+              button.btn.btn-primary(type='submit')
+                | Remove

@@ -1,0 +1,7 @@
+.col-xs-12
+  label.gc-clients-list-client-chb
+    input(data-id=id, type='checkbox')
+  a.gc-clients-list-avatar-wrapper(href='#', style="background-color: #{user_profile.avatar_background_color}")
+    img(src=user_profile.avatar.thumb.url, alt='')
+  a.gc-clients-list-client-link(href="#users/#{id}")
+    | #{user_profile.first_name} #{user_profile.last_name}

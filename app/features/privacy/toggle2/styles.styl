@@ -1,0 +1,39 @@
+.gc-privacy-toggle2
+  display: inline-block
+  vertical-align: middle
+  margin-right: 20px
+
+  .switch
+    display: flex
+    align-items: center
+    font-size: 18px
+    text-transform: uppercase
+    color: #9ea0a1
+    font-weight: 300
+    user-select: auto
+
+    label
+      margin-bottom: 0
+      display: block
+
+      input[type=checkbox]
+        &:checked + .lever
+          &:after
+            left: 27px
+            background-color: #fff
+            border: none
+
+      .lever
+        width: 52px
+        height: 27px
+        background-color: #fd9727
+        margin: 0 12px
+        display: block
+
+        &:after
+          width: 23px
+          height: 23px
+          background-color: #fff
+          border: none
+          left: 2px
+          top: 2px

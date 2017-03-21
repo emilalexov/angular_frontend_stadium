@@ -1,0 +1,114 @@
+.gc-content-nav-wrapper
+  height: 50px
+  border-bottom: 1px solid rgba(40,45,48,0.1)
+  margin: 0
+
+.gc-content-nav
+  padding: 0
+  margin: 0
+  height: 50px
+  display: inline-block
+
+  .gc-nav-wrapper &
+    margin-top: -0.55em
+
+  li
+    display: inline-block
+    font-size: 18px
+    text-transform: uppercase
+    color: #9ea0a1
+    line-height: 44px
+    border-bottom: 0px solid #3a99d8
+    padding: 2px 0px
+    margin: 0 7px
+    cursor: pointer
+
+    &.active
+      color: #3a99d8
+      border-bottom-width: 2px
+
+    &:hover
+      color: #3a99d8
+      cursor: pointer
+
+    &.gc-content-nav-back
+      span
+        line-height: 42px
+        color: #3a99d8
+        font-size: 14px
+        cursor: pointer
+
+.gc-content-nav-checkall
+  margin: 5px 5px 5px 0
+  cursor: pointer
+
+  input
+    margin: 0
+    cursor: pointer
+
+.gc-content-nav-actions
+
+  .gc-content-nav-wrapper > &
+    padding: 11px 15px 0 0
+
+    .btn-group
+
+      .btn
+
+        &,
+        &:first-child,
+        &:last-child
+          border-radius: 50px
+          background: transparent
+          border-radius: 50px
+          outline: none
+          font-size: 16px
+          height: 28px
+          line-height: 25px
+          text-align: center
+
+  .btn
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0 7px
+
+    + .btn
+      margin-left: 10px
+
+    span
+      line-height: 28px
+      
+      &:before
+        font-size: 13px
+
+    .title
+      font-size: 12px
+      text-transform: uppercase
+
+  .btn-primary
+    color: #5b9be6
+    border-color: #5b9be6
+
+  .btn-danger
+    color: #ee6d5d
+    border-color: #ee6d5d
+
+.gc-content-nav-wrapper .gc-content-nav-actions .btn-group
+  .btn.btn-danger:hover
+    background: #ee6d5d
+    color: #fff
+
+  .btn.btn-primary:hover
+    background: #5b9be6
+    color: #fff
+
+.gc-content-nav-back
+
+  .gc-content-nav &
+
+    a
+      color: #3a99d8
+
+      &:hover
+        cursor: pointer

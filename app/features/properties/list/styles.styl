@@ -1,0 +1,99 @@
+.property-list-title
+  display: flex
+  justify-content: space-between
+
+  .suggest-property span
+    color: #969696
+
+.gc-properties-list-header
+  font-size: 13px
+  color: #98a7ac
+  text-align: left
+  padding: 15px 0
+  border-bottom: 1px solid #ededed
+
+  .table-item
+    padding: 0
+
+.gc-properties-list
+  padding: 0
+  margin: 0
+
+  > li
+    list-style-type: none
+
+    &.sortable-placeholder
+      height: 67px
+      margin: 0 -24px
+      background: rgba(51, 152, 219, 0.5)
+
+    &.dragged
+      left: 15px!important
+      right: 0!important
+      position: absolute
+      z-index: 2000
+      background: #fff
+      box-shadow: 0px 2px 5px #999
+
+      .row
+        border: none
+
+  .row
+    border-bottom: 1px solid #ededed
+
+    .switch
+      margin-top: 10px
+
+    > div
+      font-size: 14px
+      color: #666769
+      height: 66px
+      line-height: 16px
+      padding: 25px 0
+
+      > .fa
+        color: #3a99d8
+        font-size: 14px
+        display: inline-block
+        margin: -10px 15px -10px 5px
+        padding: 10px
+
+      > .fa + span
+        text-transform: uppercase
+        color: #3a99d8
+        font-size: 14px
+
+      &.gc-properties-property-actions
+        padding: 12px 0
+
+.gc-properties-list-empty
+  margin: 15% auto 0 auto
+  width: 170px
+  height: 180px
+  text-align: center
+
+  img
+    margin-bottom: 20px
+    width: 55px
+    height: 55px
+
+  p
+    font-size: 12px
+    color: #cbcacb
+    line-height: 15px
+
+  .btn
+    background: #fff
+    color: #3a99d8
+    border-color: #3a99d8
+    text-transform: uppercase
+    font-size: 12px
+    line-height: 20px
+    border-radius: 50px
+    padding: 4px 8px
+
+    &:hover,
+    &:active,
+    &:focus
+      color: #3a99d8
+      border-color: #3a99d8

@@ -1,0 +1,70 @@
+.gc-program-workout-item
+  .gc-workout-header
+    span.gc-program-workout-sort
+    h3.gc-workout-title
+      span(contenteditable='true', data-bind="workout-name")
+      label
+        input.hidden(type='checkbox', data-bind='is_visible')
+        span.gc-workout-bookmark
+    .gc-workout-actions
+      a.btn.btn-primary.gc-cheevon-dropdown(data-toggle='dropdown', aria-haspopup='true', role='button', aria-expanded='false')
+        i.fa.fa-chevron-down
+      ul.dropdown-menu.gc-dropdown.pull-right(aria-labelledby='gc-workout-actions-dropdown', role='menu')
+        li
+          a(href='#')
+            | Add Note
+        li
+          a(href='#')
+            | Edit Description
+        li
+          a(href='#')
+            | Add Video
+        li
+          a(href='#')
+            | Save Workout
+        li
+          a(href='#')
+            | Duplicate
+        li.gc-danger
+          a.gc-delete-program-workout(href='#')
+            | Delete
+  .gc-workout-body
+    ul.gc-content-nav.gc-workout-body-nav
+      li.active
+        a(data-toggle='tab', data-content='description')
+          | description
+      li
+        a(data-toggle='tab', data-content='video')
+          | video
+      li
+        a(data-toggle='tab', data-content='warmups')
+          | warmups
+    .tab-content.gc-workout-tab-content
+      .tab-pane.active(data-pane='description')
+        textarea.gc-program-description-editor.gc-description-editor.form-control(rows='1', type='text', placeholder='Start typing a description here...', data-bind='description')
+      .tab-pane(data-pane='video')
+        .gc-workout-empty-video
+          p
+            | Seems you don’t have any video in your workout.
+          p
+            button.btn.btn-primary.gc-custom
+              | Add Video
+      .tab-pane(data-pane='warmups')
+        .gc-workout-empty-warmups
+          p
+            | Seems you don’t have any warmups in your workout.
+          p
+            a.gc-quick-add(href='#')
+              | Quick Add
+            | or
+            button.btn.btn-primary.gc-custom
+              | Add Exercise
+  .gc-workout-footer.row
+    .col-xs-6
+      a.gc-text-link.gc-capitalize(href='#')
+        span.gc-icon-link.gc-icon-exercises-add
+        | Add Exercise
+    .col-xs-6.text-right
+      a.gc-text-link.gc-capitalize(href='#')
+        span.gc-icon-link.gc-icon-add-property
+        | Add New Property

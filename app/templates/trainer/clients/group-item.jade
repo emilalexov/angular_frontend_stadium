@@ -1,0 +1,8 @@
+.col-xs-8
+  label.gc-clients-list-client-chb
+    input(type='checkbox', data-id=id)
+  a(class="gc-clients-list-avatar-wrapper #{avatar_url ? '' : 'gc-clients-list-avatar-group'}")
+  a.gc-clients-list-client-link(href="#client_groups/#{id}")
+   = name
+.col-xs-4.text-right.gc-clients-list-client-actions
+  a(class='gc-clients-list-client-delete btn btn-danger', data-id=id)

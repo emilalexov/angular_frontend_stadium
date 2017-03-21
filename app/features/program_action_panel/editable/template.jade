@@ -1,0 +1,23 @@
+.col-xs-8.col-lg-9
+
+  region(data-name='quick_add')
+
+  .counters
+    .counter-group
+      span.counter.weeks(contenteditable=true)
+      span.counter-name
+        | Weeks
+      button.add-week.btn.btn-primary.gc-btn-primary-outline
+        | Add new
+    .counter-group
+      span.counter.workouts
+      span.counter-name
+        | Workouts
+      button.add-workout.btn.btn-primary.gc-btn-primary-outline
+        | Add new
+
+.widgets.col-xs-4.col-lg-3
+  region(data-name='author_widget')
+  region(data-name='privacy_button')
+  button.btn.back-to-overview
+    | Save

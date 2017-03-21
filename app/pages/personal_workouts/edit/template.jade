@@ -1,0 +1,16 @@
+.row.gc-nav-wrapper
+  .col-sm-6
+    a.gc-content-nav-back
+      span.fa.fa-chevron-left
+    region(data-name='breadcrumbs').gc-content-breadcrumbs
+
+  .col-xs-12.col-sm-6.text-sm-right.buttons
+    button.btn.brn-primary(enter-results)
+      | Enter Results
+    button.btn.brn-primary(data-mobile-only)
+      | Schedule
+    a.btn.btn-warning
+      | Save
+
+.gc-workspace-content
+  region(data-name='page_content')

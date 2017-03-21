@@ -1,0 +1,11 @@
+.col-xs-3
+  i.fa.fa-arrows-v.draggable-handle
+  span(data-weight="#{global_property.symbol}")
+    = global_property.name
+.col-xs-4
+  = global_property.unit
+.col-xs-2.gc-properties-property-actions
+  .switch
+    label
+      input(type='checkbox', data-id="#{id}", checked=is_visible)
+      span.lever

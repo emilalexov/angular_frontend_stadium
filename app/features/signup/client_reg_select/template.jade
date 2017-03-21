@@ -1,0 +1,22 @@
+header.gc-header-standard.gc-header-login
+  .container
+    .gc-login-form-wrapper.col-sm-6.cal-xs-12
+      h1.text-center
+        | Client Sign Up
+      form.gc-signup-form(role='form')
+
+        .form-group.client-reg-type-select
+          label.invite-pro
+            .text
+              | Invite my Fitness Pro to join GymCloud.
+            input(type='radio', name='client_reg_type', value='pro_invite')
+            .radio-button
+          label.request-pro
+            .text
+              | Find a Fitness Pro for me.
+            input(type='radio', name='client_reg_type', value='find_a_pro')
+            .radio-button
+        .row.form-group.text-center
+            button.btn.btn-default.disabled(type='submit')
+              | Next
+      include ../_footer_login.jade

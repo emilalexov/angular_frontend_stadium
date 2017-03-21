@@ -1,0 +1,21 @@
+region(data-name='header')
+.gc-main-workspace
+
+  .col-xs-9.gc-content-left
+    nav.gc-content-nav-wrapper.row
+
+      .col-xs-8
+        a.gc-content-nav-back
+          span.fa.fa-chevron-left
+        region(data-name='navigation_content_tabs')
+
+      .col-xs-4.gc-content-nav-actions.text-right
+        .btn-group(role='group')
+          .btn.btn-default.btn-primary.gc-content-nav-add
+            span.fa.fa-plus
+            span.title
+
+    region(data-name='page_content')
+
+  .col-xs-3.gc-content-right
+    region(data-name='activity')

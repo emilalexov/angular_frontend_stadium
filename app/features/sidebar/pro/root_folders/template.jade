@@ -1,0 +1,12 @@
+- url = "#"+type+"_folder/"+id
+
+a.row.toggle-menu(href=url)
+  span.col-xs-2
+    - className = 'fix-bg-img-icon-'+type
+    span.gc-sidebar-cat-icon(class=className)
+  span.col-xs-8.gc-sidebar-cat-name
+    = name.toUpperCase()
+  .col-xs-2.toggle-it
+    .gc-menu-item-arrow.toggle-it
+
+.gc-sidebar-sub

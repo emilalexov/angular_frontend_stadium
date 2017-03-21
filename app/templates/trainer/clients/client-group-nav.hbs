@@ -1,0 +1,32 @@
+<nav class="gc-content-nav-wrapper row">
+  <div class="col-xs-10">
+    <ul class="gc-content-nav">
+      <li class="gc-content-nav-back">
+        <a>
+          <span class="fa fa-chevron-left"></span>
+        </a>
+      </li>
+      {{#ifEqual client_id 0}}
+        <li class="active"><a data-nav-view="exercises" href="#exercises_folder">Exercises</a></li>
+        <li><a data-nav-view="workouts" href="#workout_templates_folder">Workouts</a></li>
+        <li><a data-nav-view="programs" href="#program_templates_folder">Programs</a></li>
+        <li><a data-nav-view="calendar" href="#tr/me/calendar">Calendar</a></li>
+      {{else}}
+        <li class="{{#ifNot view_name 'groups'}}hidden{{/ifNot}}"><a data-nav-view="members" href="#tr/{{view_name}}/id/{{client_id}}/members">Members</a></li>
+        <li class="active"><a data-nav-view="exercises" href="#tr/{{view_name}}/id/{{client_id}}/exercises">Exercises</a></li>
+        <li><a data-nav-view="workouts" href="#tr/{{view_name}}/id/{{client_id}}/workouts">Workouts</a></li>
+        <li><a data-nav-view="programs" href="#tr/{{view_name}}/id/{{client_id}}/programs">Programs</a></li>
+        <li><a data-nav-view="calendar" href="#tr/{{view_name}}/id/{{client_id}}/calendar">Calendar</a></li>
+      {{/ifEqual}}
+    </ul>
+  </div>
+  <div class="col-xs-2 gc-content-nav-actions text-right">
+     <div class="btn-group" role="group">
+      <button class="btn btn-default btn-primary">
+        <span class="fa fa-plus"></span>
+      </button>
+      <button class="btn btn-default btn-danger gc-content-nav-delete">
+      </button>
+    </div>
+  </div>
+</nav>

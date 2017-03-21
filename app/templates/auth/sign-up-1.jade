@@ -1,0 +1,65 @@
+header.gc-header-standard.gc-header-login
+  .container
+    .col-xs-12.col-sm-6.gc-login-form-wrapper
+      h1.text-center
+        | Create a GymCloud Account
+      form#gc-signup-step-1(role='form')
+        ul.gc-trainer-type-wrapper.row
+          li.col-xs-4
+            label.active.gc-trainer-type.gc-trainer-type-personal
+              span
+                | I'm a
+                br
+                | Personal Trainer
+              input(type='radio', checked='', name='account_type', value='1')
+          li.col-xs-4
+            label.gc-trainer-type.gc-trainer-type-couch
+              span
+                | I'm a Strength and
+                br
+                | Conditioning Coach
+              input(type='radio', name='account_type', value='2')
+          li.col-xs-4
+            label.gc-trainer-type.gc-trainer-type-not
+              span
+                | I'm not working
+                br
+                | with a Fitness
+                br
+                | Professional
+              input(type='radio', name='account_type', value='3')
+        .form-group.row.gc-login-social
+          .col-xs-12.col-md-6.text-xs-center.text-md-left
+            a.btn.btn-primary(href='#')
+              i.fa.fa-facebook
+              | Sign up with Facebook
+          .col-xs-12.col-md-6.text-xs-center.text-md-right
+            a.btn.btn-danger(href='#')
+              i.fa.fa-google-plus
+              | Sign up with Google+
+        .row.gc-signup-with-email-title
+          | Or register with your email:
+        .form-group.gc-email-form-group
+          label(for='gc-signup-email')
+            | Email address
+          input#gc-signup-email.form-control(type='email', name='email', placeholder='Enter email')
+          label.gc-error-message
+        .row.form-group
+          .col-xs-6
+            label(for='gc-signup-password-1')
+              | Password
+            input#gc-signup-password-1.form-control(type='password', name='password', placeholder='Password', autocomplete='off')
+            label.gc-error-message
+          .col-xs-6
+            label(for='gc-signup-password-2')
+              | Password Confirm
+            input#gc-signup-password-2.form-control(type='password', name='password_confirmation', placeholder='Password', autocomplete='off')
+            label.gc-error-message
+        .form-group.row
+          .col-xs-12.text-right
+            button.btn.btn-default(type='submit')
+              | Next
+      p.gc-login-signup-wrapper.text-center
+        | Have an GymCloud account?
+        a(href='#login')
+          | Sign in

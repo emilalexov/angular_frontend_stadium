@@ -1,0 +1,12 @@
+if isFolder
+  .gc-add-modal-folder
+    a.row(data-key=id)
+      span.fa.fa-folder-o.fa.fa-arrows
+      span.gc-add-modal-item-name
+        = name
+else
+  .gc-add-modal-item
+    a.row
+      span.gc-add-modal-cat-icon(class="fix-bg-img-single-#{type}")
+      span.gc-add-modal-item-name
+        = name

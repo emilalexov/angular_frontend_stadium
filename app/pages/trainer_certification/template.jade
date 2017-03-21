@@ -1,0 +1,50 @@
+//- Just for showing black overlay. remove after backend integration:
+.modal-backdrop.fade.in
+//- -------------------
+
+//- Uploading step - add class .in-upload
+
+//- Success step - add class .success-upload
+
+#gc-trainer-cert-modal.modal.fade.gc-modal.in.gc-trainer-cert-modal(style='display:block')
+  .modal-dialog.modal-md
+    .modal-content
+      .modal-header
+        button.close(data-dismiss='modal')
+          span Close
+        h4.modal-title
+          span
+            img(src=require('app/images/ic-cert.svg'), alt='')
+          client-title
+            | Upload Personal Training Certification
+      .modal-body
+        .row
+          .col-xs-12
+            .description
+              | In order to continue using GymCloud a fitness certification must be uploaded for a review.
+            .cert-progress-block
+              .certificat-info
+                i.icon
+                span.certificat-file-name
+                  | Photo2343242.jpg
+              .upload-progress
+                .progress-status
+                  span(data-progress='57%', style='width:57%')
+                button.btn.cancel-btn
+            .cert-upload-area
+            .success-block
+              .icon
+              .success-message
+                | Your certification was successfully loaded and will appear in your profile.
+      .modal-footer
+        .row
+          .col-xs-12.text-center
+            .back-btn
+              button.btn.btn-primary.button(type='submit')
+                | Back to homepage
+            .submit-btn
+              button.btn.btn-primary.button(type='submit')
+                | Submit
+            .finish-btn
+              button.btn.btn-primary.button(type='submit')
+                | OK

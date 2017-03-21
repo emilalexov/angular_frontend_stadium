@@ -1,0 +1,1216 @@
+/*color constants*/
+white = #ffffff
+blue = #3a99d8
+blueSecondary = #1d74ae
+gray = #cccccc
+lighGray = fafafa
+black = #2f3539
+blackSecondary = #282d30
+
+green = #39ca74
+orange = #ff9702
+red = #e54d42
+
+/*functions*/
+transition(type, duration, animation)
+  transition type duration animation
+
+/*base styles*/
+backgroundCenter =
+  background-repeat no-repeat
+  background-position center
+
+faIcon =
+  display block
+  position absolute
+  bottom 13px
+  right 10px
+  font-size 14px
+  display inline-block
+  font normal normal normal 14px/1 FontAwesome
+  font-size inherit
+  text-rendering auto
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  transform translate(0, 0)
+
+/*ui styles*/
+.gc-label-danger
+  color red
+
+.gc-label-success
+  color green
+
+.gc-label-warning
+  color orange
+
+.gc-label-primary
+  color blue
+
+input.form-control,
+textarea.form-control
+  color black!important
+
+.gc-prototype-container
+  background white
+  padding 15px
+  max-width 1100px
+  margin 0 auto
+  overflow auto
+  height 100%
+
+.gc-prototype-title
+  color blue
+  margin 0
+  padding 10px 0
+
+.gc-component
+  padding 10px
+
+.gc-component .gc-component-name
+  font-size 22px
+  line-height 30px
+  font-weight 300
+  margin-bottom 15px
+  color #808080
+
+.gc-bg-inverse
+  background-color blue
+  color white
+
+.gc-bg-inverse .gc-component-name
+  color white
+
+.btn.gc-custom
+  border-radius 50px
+  outline none
+  text-transform uppercase
+
+.btn-primary.gc-custom
+  background-color white
+  border 1px solid blue
+  color blue
+
+.btn-primary.gc-custom:hover
+  transition(all, 0.20s, linear)
+  border-color blueSecondary
+  background-color white
+  color blueSecondary
+
+.btn-primary.gc-custom:active
+  transition(all, 0.20s, linear)
+  background-color blue
+  color white
+
+.btn-inverse.gc-custom
+  background-color transparent
+  border 1px solid white
+  color white
+
+.btn-inverse.gc-custom:hover
+  transition(all, 0.20s, linear)
+  border-color blueSecondary
+  color blueSecondary
+
+.btn-inverse.gc-custom:active
+  transition(all, 0.20s, linear)
+  background-color white
+  border-color white
+  color blue
+
+.btn.gc-custom.gc-no-border
+  border none
+
+.form-group
+  position relative
+
+.form-group label
+  color blue
+  font-weight normal
+
+.form-group.gc-form-disabled label
+  color gray
+
+.form-group.gc-form-alert:before
+  float right
+  color red
+  content attr(data-error)
+
+.form-group.gc-form-alert:after
+  color red
+  content "\f00d"
+  {faIcon}
+
+input.form-control.gc-alert
+  border-color red
+
+input.form-control.gc-active
+  border-color blue
+
+.form-group.gc-form-active input.form-control,
+.form-group.gc-form-alert input.form-control
+  padding-right 30px
+
+.form-group.gc-form-active:after
+  color blue
+  content "\f00c"
+  {faIcon}
+
+input.form-control:disabled
+  background-color #ccc
+  color #bbb
+
+input.form-control
+  color #000
+  height 38px
+
+input.form-controlfocus
+  border-color auto
+  box-shadow none
+
+input.form-control-ms-input-placeholder
+input.form-control-moz-placeholder
+input.form-control-moz-placeholder
+input.form-control-webkit-input-placeholder
+   color gray
+
+select.form-control
+  -webkit-appearance none
+  -moz-appearance none
+  appearance none
+  outline none
+  background-image url('../../images/prototypes/sort-icon.png')
+  background-repeat no-repeat
+  background-position right 10px center
+
+.gc-checkbox
+.gc-radio
+  position relative
+
+.gc-checkbox input[type="checkbox"]
+.gc-radio input[type="radio"]
+  visibility hidden
+
+.gc-checkbox input[type="checkbox"] + .gc-checkbox-clone
+  height 14px
+  width 14px
+  display inline-block
+  border 1px solid #ccc
+  position absolute
+  left -1px
+  top 3px
+  border-radius 3px
+  background #fff
+  outline none
+
+.gc-checkbox input[type="checkbox"]:checked + .gc-checkbox-clone
+  background-image url('../../images/prototypes/checkbox-icon.png')
+  background-position center
+  background-repeat no-repeat
+
+.gc-checkbox input[type="checkbox"]:not(:checked):not(:disabled):hover + .gc-checkbox-clone:after
+  margin-top 1px
+  margin-left 1px
+  height 10px
+  width 10px
+  content ''
+  display block
+  background-image url('../../images/prototypes/checkbox-icon.png')
+  background-position center
+  background-repeat no-repeat
+  opacity 0.5
+
+.gc-radio input[type="radio"]:disabled + .gc-radio-clone
+.gc-checkbox input[type="checkbox"]:disabled + .gc-checkbox-clone
+.gc-radio input[type="radio"]:disabled + .gc-radio-clone:after
+  background-color #efefef!important
+
+.gc-radio input[type="radio"] + .gc-radio-clone
+  height 14px
+  width 14px
+  display inline-block
+  border 1px solid #ccc
+  position absolute
+  left -1px
+  top 3px
+  border-radius 100%
+  background #fff
+  outline none
+
+.gc-radio input[type="radio"]:not(:checked):not(:disabled):hover + .gc-radio-clone:after
+  margin-top 2px
+  margin-left 2px
+  height 8px
+  width 8px
+  content ''
+  display block
+  opacity 0.5
+  background blue
+  border-radius 100%
+
+.gc-radio input[type="radio"]:checked + .gc-radio-clone
+  padding 2px
+
+.gc-radio input[type="radio"]:checked + .gc-radio-clone:after
+  display block
+  height 100%
+  width 100%
+  background blue
+  content ''
+  border-radius 100%
+
+label.gc-alt-checkbox
+  height 36px
+  line-height 36px
+  padding-left 35px
+  margin 0
+
+label.gc-alt-checkbox:after
+  content ''
+  display block
+  clear both
+
+.gc-alt-checkbox input[type="checkbox"] +.gc-checkbox-clone
+  height 30px
+  width 30px
+  border-color blue
+  border-radius 100%
+
+.gc-alt-checkbox input[type="checkbox"]:checked +.gc-checkbox-clone
+  background-image url('../../images/prototypes/check-icon.png')
+
+.gc-alt-checkbox input[type="checkbox"]:not(:checked):not(:disabled):hover +.gc-checkbox-clone:after
+  width 30px
+  height 30px
+  background-image url('../../images/prototypes/check-icon.png')
+  background-position center
+  background-repeat no-repeat
+  margin-top -1px
+  margin-left -1px
+
+.gc-dropdown.gc-sample-active
+  display block
+  position inherit
+  float none
+  display inline-block
+
+.gc-dropdown li > a
+  color black
+
+.gc-dropdown li.gc-danger > a
+  color red
+
+a.gc-text-link
+  color #3a99d8
+  font-size 14px
+  line-height 30px
+  margin 0
+  display inline-block
+  outline none
+  text-decoration none
+
+.gc-capitalize
+  text-transform uppercase
+
+a.gc-text-link.gc-danger
+  color red
+
+a.gc-text-link:hover
+  text-decoration none
+
+.gc-text-link .fa
+  width 22px
+  margin-right 6px
+  text-align center
+
+.gc-text-link .gc-icon-link
+  display inline-block
+  width 18px
+  height 30px
+  margin 0 5px 0 0
+  vertical-align middle
+
+.gc-icon-exercises
+  background transparent url('../../images/icon-exercises.png') -21px 2px no-repeat
+  background-size 220%
+
+.gc-icon-workouts
+  background transparent url('../../images/icon-workouts.png') -15px 3px no-repeat
+  background-size 180%
+
+.gc-icon-programs
+  background transparent url('../../images/icon-programs.png') -13px 4px no-repeat
+  background-size 170%
+
+.gc-icon-exercises-add
+  background transparent url('../../images/prototypes/add-exercise-icon.png') 3px 7px no-repeat
+  bacground-size 15px
+
+.gc-icon-add-property
+  background transparent url('../../images/prototypes/add-property-icon.png') 3px 7px no-repeat
+  bacground-size 15px
+
+.gc-icon-load-more
+  background transparent url('../../images/prototypes/load-more-icon.png') 3px 7px no-repeat
+  bacground-size 15px
+
+.input-group.gc-datetime .btn
+  height 38px
+  font-size 18px
+  padding 0px 8px
+  color blue
+
+.input-group.gc-datetime .btn:hover
+  background-color white
+
+.input-group.gc-datetime .btn > .fa:first-child
+  margin-right 5px
+
+.input-group.gc-datetime > :last-child,
+.input-group.gc-datetime > :last-child > .btn
+  border-top-right-radius 6px
+  border-bottom-right-radius 6px
+
+.input-group.gc-datetime > :first-child,
+.input-group.gc-datetime > :first-child > .btn
+  border-top-left-radius 6px
+  border-bottom-left-radius 6px
+
+.input-group.gc-datetime .btn .gc-datetime-calendar-icon
+  background-image: url('../../images/prototypes/calendar-icon-blue-md.png')
+  height 21px
+  width 21px
+  display inline-block
+  margin 7px 5px
+
+.input-group.gc-datetime .btn .gc-datetime-clock-icon
+  background-image: url('../../images/prototypes/clock-icon-blue-md.png')
+  height 21px
+  width 21px
+  display inline-block
+  margin 7px 5px
+
+
+.btn-group.gc-tabs
+  display block
+
+.btn-group.gc-tabs > *
+  height 38px
+  color #808080
+
+.btn-group.gc-tabs > *:hover
+  background #fff
+
+.btn-group.gc-tabs > .active
+  border-color blue
+  background-color blue
+  color white
+
+.btn-group.gc-tabs > *:last-child
+  border-top-right-radius 6px
+  border-bottom-right-radius 6px
+
+.btn-group.gc-tabs > *:first-child
+  border-top-left-radius 6px
+  border-bottom-left-radius 6px
+
+.gc-counter
+  display table
+  border-collapse separate
+
+.gc-counter > *
+  display table-cell
+  vertical-align top
+
+.gc-counter > .gc-counter-input
+  border-top-left-radius 6px
+  border-bottom-left-radius 6px
+  border-top-right-radius 0px
+  border-bottom-right-radius 0px
+
+.gc-counter .gc-counter-control
+  height 38px
+  padding 0
+  border-top-left-radius 0px
+  border-bottom-left-radius 0px
+  border-top-right-radius 6px
+  border-bottom-right-radius 6px
+  overflow hidden
+  border 1px solid gray
+  border-left none
+
+.gc-counter .gc-counter-control > .gc-caret
+  height 18px
+  display block
+  padding 0 10px
+
+.gc-counter .gc-counter-control > .gc-caret:hover
+  text-decoration none
+
+.gc-counter .gc-counter-control > .gc-caret:first-child
+  border-bottom 1px solid gray
+
+.gc-counter .gc-counter-control > .gc-caret i
+  display block
+  font-size 12px
+  height 100%
+  line-height 17px
+
+.gc-counter .gc-counter-control > .gc-caret:last-child i
+  line-height 18px
+
+.gc-textarea-no-border
+  border none
+  box-shadow none
+  outline none
+  resize none
+
+.gc-textarea-no-borderfocus
+  box-shadow none
+
+.gc-textarea
+  color #000
+  resize none
+
+.gc-tag
+  border 1px solid gray
+  padding 4px 15px
+  border-radius 50px
+  color #97A4AA
+  display inline-block
+  margin 10px 0
+
+.gc-tag.gc-tag-highlight
+  border-color blue
+
+.gc-tag-group
+  display table
+  margin 10px 0
+
+.gc-tag-group > .gc-tag
+  display table-cell
+  border-radius 0px
+  margin 0
+
+.gc-tag-group > .gc-tag:not(:first-child)
+  border-left none
+
+.gc-tag-group > .gc-tag:first-child
+  border-top-left-radius 50px
+  border-bottom-left-radius 50px
+
+.gc-tag-group > .gc-tag:last-child
+  border-top-right-radius 50px
+  border-bottom-right-radius 50px
+
+.gc-nav-breadcrumbs .gc-breadcrumbs
+  display inline-block
+  margin-left 15px
+
+.gc-nav-breadcrumbs .gc-breadcrumbs-title
+  font-size 18px
+  font-weight bold
+  color #757575
+  text-transform uppercase
+
+.gc-topbar-item.gc-topbar-dropdown
+  position relative
+  display inline-block
+
+.gc-topbar-avatar
+  border-left none
+
+region[data-name="pagination"] > div
+  clear: both
+  margin-left: 15px
+
+.paginator
+
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  .pagination
+    margin: 0
+
+  .current-page-info
+    color: #adadad
+
+.gc-pagination-bordered
+
+  li
+
+    &:first-child > a
+      border-top-left-radius 50px
+      border-bottom-left-radius 50px
+
+    &:last-child > a
+      border-top-right-radius 50px
+      border-bottom-right-radius 50px
+
+    a
+      border-color #e6e6e6
+      color #3a99d8
+
+.gc-pagination li a
+  border none
+  color #3a99d8
+  padding 6px 8px
+
+.gc-pagination li a:hover
+.gc-pagination li a span:hover
+  background white
+
+.gc-tooltip.gc-demo
+  position relative
+  display block
+
+.popover.gc-tooltip
+  border none
+  padding 0
+  border-radius 3px
+
+.gc-tooltip .popover-title
+  background blue
+  border-color blue
+  color white
+  padding 20px 10px
+
+.gc-tooltip .popover-content
+  padding 20px 10px
+
+.popover.gc-tooltip.bottom .arrow
+  border-bottom-color rgba(205, 202, 202, 0.25)!important
+
+.popover.gc-tooltip.top .arrow
+  border-top-color rgba(205, 202, 202, 0.25)!important
+
+.popover.gc-tooltip.left .arrow
+  border-left-color rgba(205, 202, 202, 0.25)!important
+
+.popover.gc-tooltip.right .arrow
+  border-right-color rgba(205, 202, 202, 0.25)!important
+
+.popover.gc-tooltip.bottom .arrow:after
+  border-bottom-color blue
+
+.popover.gc-tooltip.bottom.gc-tooltip-no-header .arrow:after
+  border-bottom-color white
+
+.gc-tooltip.gc-tooltip-no-header
+  box-shadow 0px 2px 12px 1px rgba(0,0,0,.2)
+
+.gc-alert-message
+  background #FAFAFA
+  border-radius 3px
+  max-width 250px
+  box-shadow 0 2px 8px rgba(0,0,0,.2)
+  display table
+  margin 15px
+
+.gc-alert-message > *
+  display table-cell
+  vertical-align middle
+
+.gc-alert-message .gc-alert-icon
+  width 50px
+  padding 15px
+
+.gc-alert-message .gc-alert-icon > span
+  height 26px
+  width 26px
+  display block
+  color white
+
+.gc-alert-message p
+  width 200px
+  font-size 15px
+  padding-right 10px
+
+.gc-alert-message.gc-error
+  border-left 5px solid red
+
+.gc-alert-message.gc-error .gc-alert-icon > span
+  background red
+  border-radius 26px
+  font-size 18px
+  text-align center
+
+.gc-alert-message.gc-warning
+  border-left 5px solid orange
+
+.gc-alert-message.gc-warning .gc-alert-icon > span
+  background orange
+  border-radius 26px
+  font-size 18px
+  text-align center
+
+.gc-alert-message.gc-success
+  border-left 5px solid green
+
+.gc-alert-message.gc-success .gc-alert-icon > span
+  background green
+  border-radius 100%
+  position relative
+
+.gc-alert-icon.workout > span:after
+  content ""
+  display block
+  position absolute
+  top 4px
+  left 4px
+  width 18px
+  height 18px
+  background-image url('../../images/icon-exercises.png')
+  background-size cover
+  background-position 0 0
+  background-repeat no-repeat
+
+.gc-alert-icon.message > span:after
+  content ""
+  display block
+  position absolute
+  top 8px
+  left 8px
+  width 11px
+  height 9px
+  background-image url('../../images/prototypes/message-icon.png')
+  background-size contain
+  background-repeat no-repeat
+
+.gc-alert-icon.calendar > span:after
+  content ""
+  display block
+  position absolute
+  top 7px
+  left 8px
+  width 10px
+  height 11px
+  background-image url('../../images/prototypes/calendar-icon-white.png')
+  background-size 10px 11px
+  background-repeat no-repeat
+
+.gc-alert-icon.flag > span:after
+  content ""
+  display block
+  position absolute
+  top 7px
+  left 7px
+  width 13px
+  height 12px
+  background-image url('../../images/prototypes/flag-icon.png')
+  background-size contain
+  background-repeat no-repeat
+
+.gc-alert-icon.comment > span:after
+  content ""
+  display block
+  position absolute
+  top 7px
+  left 7px
+  width 11px
+  height 10px
+  background-image url('../../images/prototypes/comment-icon.png')
+  background-size contain
+  background-repeat no-repeat
+
+.gc-alert-icon.like > span:after
+  content ""
+  display block
+  position absolute
+  top 7px
+  left 8px
+  width 10px
+  height 10px
+  background-image url('../../images/prototypes/like-icon.png')
+  background-size contain
+  background-repeat no-repeat
+
+.gc-table-holder
+  border 1px solid gray
+  border-radius 5px
+  margin 20px 0
+
+.gc-table-title
+  padding 0 20px
+  background-color #FCFCFC
+  border-bottom 1px solid gray
+
+.gc-table-holder .gc-table-container
+  padding 20px
+
+.gc-table-title span
+  text-transform uppercase
+  font-size 15px
+  padding 20px 0
+  display inline-block
+  border-bottom 2px solid blue
+  margin-bottom -1px
+
+.gc-table
+  border-collapse collapse
+  width 100%
+
+.gc-table.gc-demo tbody tr > td:first-child
+  width 100px
+
+.gc-table.gc-demo tbody tr > td:last-child
+  width 50px
+
+.gc-table thead,
+.gc-table tbody,
+.gc-table tr
+  width 100%
+
+.gc-table tr
+  border-bottom 1px solid gray
+
+.gc-table tbody tr
+  cursor pointer
+
+.gc-table tbody tr:hover td
+  background-color #FBFBFB
+
+.gc-table td
+  padding 20px 0
+
+.gc-table thead td
+  color #C0C0C0
+
+.gc-table tbody td
+  font-size 15px
+  padding 25px 0
+
+.gc-table td.center
+  text-align center
+
+.gc-heading-1,
+.gc-heading-2,
+.gc-paragraph
+  font-size 16px
+  margin 15px 0
+
+.gc-heading-1
+  color #424647
+  font-weight bold
+
+.gc-heading-2
+  color blackSecondary
+  font-weight bold
+
+.gc-empty-state
+  text-align center
+  color #C1C1C1
+  width 100%
+
+.gc-empty-state-image
+  height 45px
+  margin 15px 0
+  position relative
+
+.gc-empty-state-image img
+  position absolute
+  bottom 0
+  left 50%
+  transform translateX(-50%)
+
+/*for demo grid*/
+.gc-row-4:after
+  content " "
+  display block
+  clear both
+
+.gc-row-4 > .gc-col
+  float left
+  width 25%
+
+.gc-row-4 > .gc-col > div
+  padding 20px
+
+/*end*/
+.gc-modal-demo
+  background blackSecondary
+  padding 50px
+
+.gc-modal-demo .gc-modal
+  display block
+  position inherit
+
+
+/*for demo dropdown menu*/
+.gc-topbar-item .dropdown-menu.pull-left
+  left 0
+  right auto
+
+
+.gc-icon
+  display inline-block
+  height 20px
+  width 20px
+  background-size cover
+  font-size 20px
+  margin 0
+  color #EAEAEA
+  background-repeat no-repeat
+
+.gc-icon.workout
+  background-image url('../../images/prototypes/workouts-icon.png')
+  background-size 17px 9px
+  background-position center
+
+.gc-icon.programs
+  background-image url('../../images/prototypes/programs-icon.png')
+  background-position center
+  background-size 13px 18px
+
+.gc-icon.clock
+  background-image url('../../images/prototypes/clock-icon-blue-small.png')
+  background-position center
+  background-size 17px 19px
+
+.gc-icon.calendar
+  background-image url('../../images/prototypes/calendar-icon-blue.png')
+  background-size 13px 14px
+  {backgroundCenter}
+
+.gc-icon.heartbeat
+  background-image url('../../images/prototypes/heartbeat-icon-blue.png')
+  background-size 17px 15px
+  {backgroundCenter}
+
+.gc-icon.folder
+  background-image url('../../images/prototypes/folder-icon-blue.png')
+  background-size 18px 13px
+  {backgroundCenter}
+
+.gc-icon.upload
+  background-image url('../../images/icon-upload.png')
+  background-size 18px 13px
+  {backgroundCenter}
+
+
+.gc-icon-primary
+  color blueSecondary
+
+.gc-icon-highlight
+  color #ffc800
+
+.gc-btn-round
+  border-radius 100%
+  font-size 14px
+  color blue
+  text-align center
+  line-height 25px
+  display inline-block
+  width 25px
+  height 25px
+
+.gc-btn-chevron
+  background-image url('../../images/prototypes/actions-icon-blue.png')
+  background-size cover
+  background-position -25px 0px
+
+.gc-btn-plus
+  background-image url('../../images/prototypes/actions-icon-blue.png')
+  background-size cover
+  background-position 0px 0px
+
+.gc-pill-label
+  border 1px solid blue
+  padding 3px 10px
+  border-radius 50px
+  text-transform uppercase
+  color blue
+  font-weight normal
+
+.gc-pill-label i
+  margin-right 2px
+
+.gc-label-warning
+  border-color orange
+  color orange
+
+.gc-label-success
+  border-color green
+  color green
+
+.live-search.gc-demo .selectize-input
+  opacity 1
+  position relative
+  left 0px
+
+.live-search.gc-demo .selectize-dropdown
+  display block
+  width 100%
+  top -8px
+  position relative
+
+.gc-icon-trpohy
+  height 18px
+  width 16px
+  display inline-block
+  background-image url('../../images/prototypes/trophies-icon.png')
+  background-position -16px 0px
+
+.gc-icon-trpohy-gold
+  height 18px
+  width 16px
+  display inline-block
+  background-image url('../../images/prototypes/trophies-icon.png')
+  background-position 0px 0px
+
+.gc-icon-trash
+  height 20px
+  width 17px
+  display inline-block
+  background-image url('../../images/prototypes/trash-icon.png')
+  background-size contain
+  background-repeat no-repeat
+
+  &:hover
+    opacity: .8
+
+.gc-icon-lock-orange
+  display inline-block
+  background-image url('../../images/prototypes/lock-icon-orange.png')
+  background-size contain
+  height 12px
+  width 15px
+  {backgroundCenter}
+
+.gc-icon-eye-green
+  display inline-block
+  background-image url('../../images/prototypes/eye-icon-green.png')
+  background-size contain
+  height 11px
+  width 14px
+  {backgroundCenter}
+
+.gc-icon-client-group
+  display inline-block
+  background-image url('../../images/prototypes/client-group-icon.png')
+  background-size contain
+  height 25px
+  width 30px
+  {backgroundCenter}
+
+.gc-btn-group > .btn:first-child
+  border-top-left-radius 50px
+  border-bottom-left-radius 50px
+
+.gc-btn-group > .btn:last-child
+  border-top-right-radius 50px
+  border-bottom-right-radius 50px
+
+@keyframes rotateHourHand
+  0%
+    transform rotate(0deg)
+  100%
+    transform rotate(360deg)
+
+@-moz-keyframes rotateHourHand
+  100%
+    transform rotate(360deg)
+
+@-webkit-keyframes rotateHourHand
+  100%
+    transform rotate(360deg)
+
+@-o-keyframes rotateHourHand
+  100%
+    transform rotate(360deg)
+
+.gc-content-nav
+  border-bottom 1px solid #eaeaea
+
+.gc-alert-icon.gc-demo span
+  background #39ca74
+  border-radius 100%
+  position relative
+  height 26px
+  width 26px
+  display block
+  color #fff
+
+.gc-alert-icon.gc-demo.success span
+  background #39ca74
+
+.gc-alert-icon.gc-demo.danger span
+  background #e54d42
+
+.gc-alert-icon.gc-demo.primary span
+  background #3A99D8
+
+.gc-alert-icon.gc-demo.warning span
+  background #ff9702
+
+.gc-alert-icon.gc-demo.info span
+  background #E557FF
+
+.gc-demo-list
+  margin 0
+  padding 0
+  list-style-type none
+
+.gc-demo-list li
+  margin-right 10px
+  display inline-block
+
+.gc-status-icon
+  height 17px
+  width 17px
+  display inline-block
+  background-image url('../../images/prototypes/status-icons.png')
+  background-repeat no-repeat
+
+.gc-status-icon.gc-status-cancel
+  background-position -17px 0
+
+.gc-assign-videos
+  margin 10px 15px
+  overflow: hidden
+
+.gc-assign-videos:before,
+.gc-manage-videos:before
+  display block
+  content ' '
+  clear both
+
+.gc-assign-videos
+  .gc-video-thumb
+    float left
+    position relative
+    min-height 1px
+    padding-right 15px
+    padding-left 15px
+
+  .gc-video-preview
+    height: 184px
+
+.gc-video-player
+  border-radius 4px
+  overflow hidden
+  border 1px solid gray
+  margin-bottom 20px
+
+  .gc-video-details
+    padding 15px
+    background-color #FAFAFA
+    position relative
+
+    .gc-video-report
+      background url('../../images/icon-video-flag.png')
+      background-size contain
+      background-repeat no-repeat
+      height 10px
+      width 10px
+      position absolute
+      right 10px
+      top 17px
+      display inline-block
+      cursor pointer
+
+  .gc-video-title
+    margin-top 0px
+    padding-right: 10px
+    font-size 15px
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+  .gc-video-timer,
+  .gc-video-type
+    color #808080
+    font-size 13px
+    line-height 18px
+    margin-right 10px
+
+  .gc-video-time-icon,
+  .gc-video-icon
+    display inline-block
+    margin-right 5px
+    height 10px
+    width 12px
+    background-repeat no-repeat
+    background-position center
+
+  .gc-video-time-icon
+    height 12px
+    background-image url("../../images/icon-video-time.png")
+
+  .gc-video-library-icon
+    width 14px
+    background-image url("../../images/icon-video-library.png")
+
+  .gc-video-youtube-icon
+    width 17px
+    background-image url("../../images/icon-video-youtube.png")
+
+  .gc-video-vimeo-icon
+    width 12px
+    background-image url("../../images/icon-video-vimeo.png")
+
+  .gc-video-gymcloud-icon
+    width 18px
+    background-image url("../../images/icon-video-gymcloud.png")
+
+  .gc-assign-video
+    margin-top 10px
+    background-color transparent
+
+  .gc-assign-video:hover
+    background-color blue
+    color #fff
+
+  .gc-assign-video.assigned
+    background-color blue
+    color #fff
+
+  .gc-video-preview
+    position relative
+    background: center center no-repeat
+    background-size: cover
+
+    iframe
+      width: 100%
+      height: 100%
+
+    .gc-video-play
+      cursor pointer
+      height 44px
+      width 44px
+      background-color rgba(255, 255, 255, 0.7)
+      position absolute
+      left 50%
+      top 50%
+      border-radius 44px
+      overflow hidden
+      background-image url("../../images/icon-video-play.png")
+      background-repeat no-repeat
+      background-position center
+      transform translate(-50%,-50%)
+
+.gc-progress-panel
+  padding 10px 0
+
+  label
+    color green
+    float left
+    margin-bottom 0
+    margin-right 7px
+    font-size 14px
+    font-weight normal
+    line-height 21px
+
+  .gc-progress-bar
+    display block
+    height 5px
+    border-radius 5px
+    background-color #EDEDED
+    overflow hidden
+    margin 8px 0
+
+    .gc-progress
+      background green
+      height 5px
+      transition(all, 0.20s, linear)

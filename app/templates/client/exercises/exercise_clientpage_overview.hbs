@@ -1,0 +1,28 @@
+{{#withProfile}}
+  <div class="form-group {{#hasDescription}}hidden{{/hasDescription}}">
+    <p>{{../description}}</p>
+  </div>
+  {{#if ../video_url}}
+  <div class="gc-exercises-exercise-video">
+    <iframe width="853" height="480" src="{{ ../../video_url }}" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="row gc-exercise-video-controls">
+    <div class="col-xs-6">
+      <a href="{{../../video_url}}" target="_blank" class="gc-exercises-exercise-video-link">
+        {{../../name}}
+        <i class="fa fa-youtube-play"></i>
+        <span>Youtube</span>
+      </a>
+    </div>
+  </div>
+  {{else}}
+  <div class="gc-exercises-exercise-video-placeholder text-center">
+    <div class="gc-exercises-exercise-video-placeholder-icon">
+      <i class="glyphicon glyphicon-play"></i>
+    </div>
+    <p>
+      No available video for this exercise
+    </p>
+  </div>
+  {{/if}}
+{{/withProfile}}

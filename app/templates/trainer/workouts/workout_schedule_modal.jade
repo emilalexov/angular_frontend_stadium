@@ -1,0 +1,56 @@
+.modal-dialog.modal-md.gc-workout-schedule
+  .modal-content.gc-remove-modal
+    .modal-header
+      button.close(data-dismiss="modal") Close
+      h4.modal-title
+        span
+          img(src=require('app/images/add-to-library-icon.png'), alt="")
+        | Schedule New Workout
+    .modal-body
+      form
+        .form-group
+          label Workout
+          select.form-control.gc-workout-id
+            option default
+        .form-group
+          label Repeat
+          .btn-group.clearfix.gc-workout-repeat-wrapper.gc-tabs(data-toggle="buttons")
+            label.btn.btn-default
+              input(type="radio", name="gc-workout-repeat", class="btn btn-default gc-workout-repeat", value="1") 
+              | Daily
+            label.btn.btn-default
+              input(type="radio", name="gc-workout-repeat", class="btn btn-default active gc-workout-repeat", value="2") 
+              | Weekly
+            label.btn.btn-default
+              input(type="radio", name="gc-workout-repeat", class="btn btn-default gc-workout-repeat", value="3") 
+              | Monthly
+            label.btn.btn-default
+              input(type="radio", name="gc-workout-repeat", class="btn btn-default gc-workout-repeat", value="4") 
+              | Never
+        .form-group
+          label Start
+          .input-group.gc-datetime
+            input(type="text", class="form-control gc-start-date", placeholder="mm/dd/yyyy hh:mm")
+            span.input-group-btn
+              button(class="btn btn-default")
+                span.gc-datetime-calendar-icon
+                span.gc-datetime-clock-icon
+        .form-group.gc-workout-end-date-wrapper.hidden
+          label End
+          .input-group.gc-datetime
+            input(type="text", class="form-control gc-end-date", placeholder="mm/dd/yyyy hh:mm")
+            span.input-group-btn
+              button(class="btn btn-default")
+                span.gc-datetime-calendar-icon
+                span.gc-datetime-clock-icon
+
+    .modal-footer
+      .row
+        .col-xs-6
+          .checkbox.text-left
+            label.gc-checkbox
+              input.gc-has-end-date(type="checkbox")
+              span.gc-checkbox-clone 
+              | End Date
+        .col-xs-6
+          a(href="#", class="btn btn-primary gc-custom") Add Schedule

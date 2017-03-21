@@ -1,0 +1,4 @@
+a.gc-client-sidebar-item(data-entity-id="#{id}", href="##{type}/#{id}")
+  - iconName = type.split('_')[1]
+  span.gc-sidebar-cat-icon.pull-left(class="fix-bg-img-icon-#{iconName}")
+  span(data-bind='name')

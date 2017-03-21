@@ -1,0 +1,78 @@
+header.gc-header-standard.gc-header-login
+  .container
+    .gc-login-form-wrapper.col-sm-6.cal-xs-12
+      h1.text-center
+        | Create a GymCloud Account
+      form.gc-signup-form(role="form")
+        ul.gc-signup-checkbox-wrapper.row
+          li.col-xs-6
+            label.gc-signup-checkbox.gc-user-type-trainer
+              span
+                | I'm a Fitness
+                br
+                | Professional
+              input(type='radio', checked='', name='account_type', value='1')
+          li.col-xs-6
+            label.gc-signup-checkbox.gc-user-type-client
+              span
+                | I'm a
+                br
+                | Client
+              input(type='radio', name='account_type', value='3')
+        .form-group.row.gc-login-social
+          .col-xs-12.col-md-6.text-xs-center.text-md-left
+            span.btn.btn-primary(data-social='fb')
+              i.fa.fa-facebook
+              | Sign up with Facebook
+          .col-xs-12.col-md-6.text-xs-center.text-md-left
+            span.btn.btn-danger(data-social='gplus')
+              i.fa.fa-google-plus
+              | Sign up with Google+
+        .row.gc-signup-with-email-title
+          | Or register with your email:
+        .form-group.gc-email-form-group
+          label(for="gc-signup-first-name")
+            | First Name
+          input.form-control(
+            type="text"
+            id="gc-signup-first-name"
+            name="first_name"
+            placeholder=""
+            data-bind="first_name"
+            autofocus
+          )
+          label.gc-error-message
+        .form-group.gc-email-form-group
+          label(for="gc-signup-last-name")
+            | Last Name
+          input.form-control(type="text", id="gc-signup-last-name", name="last_name", placeholder="", data-bind="last_name")
+          label.gc-error-message
+        .form-group.gc-email-form-group
+          label(for="gc-signup-email")
+            | Email Address
+          input.form-control(type="text", id="gc-signup-email", name="email", placeholder="", data-bind="email")
+          label.gc-error-message
+        .row.form-group
+          .col-xs-6
+            label(for="gc-signup-password-1")
+              | Password
+            input.form-control(id="gc-signup-password-1", name="password", placeholder="", autocomplete="off", type="password", data-bind="password")
+            label.gc-error-message
+          .col-xs-6
+            label(for="gc-signup-password-2")
+              | Confirm Password
+            input.form-control(id="gc-signup-password-2", name="password_confirmation", placeholder="", autocomplete="off", type="password", data-bind="password_confirmation")
+        .row.form-group
+          .col-xs-6
+            .checkbox
+              label
+                input.gc-signup-agree(type="checkbox", name="agree", value="true", data-bind="agree")
+                span
+                  | I Agree with the
+                  br
+                  a(href='//www.gymcloud.com/legal' target='_blank')
+                    | GymCloud End User Agreement
+          .col-xs-6.text-right
+            button.btn.btn-default.gc-signup(type="submit")
+              | Sign Up
+      include ./_footer_login.jade

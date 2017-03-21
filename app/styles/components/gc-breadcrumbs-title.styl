@@ -1,0 +1,36 @@
+.gc-nav-wrapper
+  .gc-breadcrumbs-title
+    display: block
+.gc-breadcrumbs-title
+
+  span
+    margin-left: 0.5rem
+
+    &:after
+      content "\f054"
+      color #989898
+      font-family 'FontAwesome'
+      font-size 8px
+      line-height 18px
+      vertical-align 2px
+      margin: 0 0.5rem 0 1rem
+      display inline-block
+
+    &:last-child
+      &:after
+        display none
+
+    &[contenteditable]
+      margin: 0
+      line-height: 1em
+      border: 1px solid transparent
+      padding: 3px 8px 3px 0
+      border-radius: 5px
+
+      &:hover
+        border: 1px dashed #ddd
+        border-style: dashed
+        cursor: pointer
+
+      &:focus
+        border: 1px solid #ddd

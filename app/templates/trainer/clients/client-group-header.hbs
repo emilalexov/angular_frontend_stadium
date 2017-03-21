@@ -1,0 +1,81 @@
+<div class="gc-usercard-large row {{#ifEqual account_type 'trainer'}}gc-trainer-card{{else}}gc-client-card{{/ifEqual}}">
+  <div class="col-xs-10">
+    <div class="gc-usercard-avatar-wrapper text-center {{#if avatar_url}}gc-usercard-avatar-exist{{/if}}">
+      <img class="gc-usercard-avatar" src="{{avatar_url}}" alt="">
+    </div>
+    <div class="gc-usercard-info">
+      {{#if view_type}}
+      <h1 class="gc-usercard-name">{{first_name}} {{last_name}}</h1>
+      {{else}}
+      <h1 class="gc-usercard-name">{{name}}</h1>
+      {{/if}}
+      <p class="gc-usercard-address">{{address}} {{zip}}</p>
+      <input type="text" value="http://gymcloud.com/clients/john-doe" class="gc-usercard-link" readonly="readonly">
+      <div class="btn-group gc-usercard-actions" role="group">
+        {{#if view_type}}
+        <button class="btn btn-default show-message-form">New message</button>
+          {{#unless ../myProfile}}
+          <button class="btn btn-default" data-toggle="modal" data-target="#gc-invite-client-modal">Invite client</button>
+          {{/unless}}
+        {{/if}}
+        <button class="btn btn-default show-client-form">Edit profile</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-2 gc-usercard-params text-right">
+    {{#if view_type}}
+    <dl>
+      <dt>Height</dt>
+      <dd>{{height}}</dd>
+      <dt>Weight</dt>
+      <dd>{{weight}}</dd>
+      <dt>Bodyfat</dt>
+      <dd>{{bodyfat}}</dd>
+      <dt>Age</dt>
+      <dd>{{getAge dob}}</dd>
+      <dt>Gender</dt>
+      <dd>{{getSex gender}}</dd>
+    </dl>
+    {{/if}}
+  </div>
+</div>
+
+<div class="modal fade gc-modal" id="gc-invite-client-modal">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal"><span>Close</span></button>
+        <h4 class="modal-title">
+          <span><img src="app/images/icon-individuals.png" alt=""></span>
+          Invite client
+        </h4>
+      </div>
+      <form class="form invite-client-form" role="form">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="form-group">
+                    <label for="">Client's email</label>
+                    <label class="gc-error-message"></label>
+                    <input name="email" type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="row">
+            <div class="col-xs-12 text-right"><button type="submit" class="btn btn-primary">Invite</button></div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade gc-modal" id="gc-send-message-modal"></div>
+
+<div class="modal fade gc-modal" id="gc-edit-client-modal"></div>

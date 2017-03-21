@@ -1,0 +1,13 @@
+.modal-dialog.modal-md.gc-presets-wizard
+  .modal-content.gc-remove-modal
+    .modal-header.presets-modal-header
+      i.enveloper-icon
+      h4.modal-title.preset-modal-title
+        | Select Your Account Type
+    .modal-body.account-type-body
+      region.account-type-list-region(data-name='user_account_types')
+    .modal-footer.account-type-footer.buttons
+      a.btn.btn-danger.cancel(data-dismiss="modal")
+        | Cancel
+      a.btn.btn-primary.gc-custom.change-account-type
+        | Change Account Type

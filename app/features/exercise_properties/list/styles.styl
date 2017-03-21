@@ -1,0 +1,85 @@
+.workout-exercise-properties
+  float: right
+
+.gc-property-item
+  display: block
+  float: left
+  padding: 5px
+
+  &.empty
+    color: #d0cfd0
+
+.gc-property-view
+
+  .glyphicon-remove
+    height: 15px
+    width: 13px
+    visibility: hidden
+
+  .gc-remove
+    background: none
+    padding: 5px
+    font-size: 12px
+    color red
+    border-left: 0
+
+  .gc-property-label
+    border-right: 0
+    cursor: text
+
+    &.readable
+      border-right: 1px solid
+
+  &:hover
+    border-color #3a99d8
+
+    .glyphicon-remove
+      visibility: visible
+      color: red
+
+.gc-workout-exercise-prop
+  color: #99a6ac
+  font: 400 14px / 21px 'Source Sans Pro'
+  text-align: right
+  display: inline-block
+
+  i.fa
+    margin-right: 11px
+
+.gc-property
+  margin 10px 0
+
+  .gc-save
+    padding 5px 10px
+    font-weight 300
+    color green
+
+  .gc-icon-bars
+    background-image url('../../../images/prototypes/property-bars-icon.png')
+    background-repeat no-repeat
+    background-position center
+    height: 10px
+    width: 10px
+    display: inline-block
+
+  .gc-remove
+    font-size 12px
+
+  &.editable
+
+    .gc-remove
+      font-size 19px
+      padding: 0px 10px
+
+    .gc-value
+      padding-right: 0
+      cursor: text
+
+      .gc-property-value
+        padding-right: 5px
+
+    .btn span
+      color black
+
+    .open .btn span
+      color white

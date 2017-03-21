@@ -1,0 +1,285 @@
+@media print
+  body
+    -webkit-print-color-adjust: exact
+
+  .gc-topbar,
+  region[data-name='header'],
+  .gc-sidebar-wrapper,
+  .gc-nav-wrapper > .text-sm-right,
+  .gc-exercises-list-actions,
+  region[data-name='privacy_toggle'],
+  region[data-name='delete_button'],
+  region[data-name='video_assigned'],
+  region[data-name='author_widget'],
+  region[data-name='privacy_button'],
+  region[data-name='page_content'] .gc-nav-wrapper,
+  region[data-name='page_content'] .program-action-panel,
+  .gc-exercises-cell.drag-area,
+  .gc-program-workout-item .gc-workout-body-nav,
+  .gc-workout-actions,
+  .gc-btn-primary-outline,
+  .program-action-panel .widgets,
+  .gc-workout-exercise-note.empty,
+  .gc-property-item.empty,
+  .note,
+  .btn.edit,
+  .gc-workout-body-nav,
+  .gc-program-week-actions,
+  .gc-week-workouts-empty
+    display: none !important
+  
+  .row-margin-v
+    margin: 10px -15px 0
+  
+  .form-group
+    margin-bottom: 0
+    
+    textarea
+      max-height: 100% !important
+      padding-left: 0
+   
+  .gc-box-content
+    border: none
+
+  .gc-workout-exercise-circle
+    background-color #717171 !important
+    color: #fff !important
+   
+  .gc-sidebar-logo
+    display: list-item
+    list-style-image: url("../images/print-logo.png")
+    list-style-position: inside
+    list-style-type: none
+  
+  .gc-breadcrumbs-title
+    
+    span
+      display: inline-block
+      font-size 31px
+      width: 445px
+      margin-left: 0
+      
+      &:not(:last-child)
+        display: none
+    
+    span[contenteditable]
+      display: inline-block
+      font-size 31px
+      width: 445px
+  
+  .gc-nav-wrapper
+    border-bottom: 1px solid rgba(40,45,48,0.1)
+    padding-right: 0
+    
+    + .gc-nav-wrapper
+      border-bottom: none
+    
+    &.program
+      border: none
+      float: right
+    
+    .col-sm-8
+      width: 100%
+      padding-left: 0
+    
+    .col-sm-6
+      width: 100%
+      padding-left: 0
+    
+    .col-sm-12
+      padding-left: 0
+    
+    .gc-content-nav-back
+      float: right
+      display: list-item
+      list-style-image: url("../images/print-logo.png")
+      list-style-position: inside
+      
+      .fa.fa-chevron-left
+        display: none
+  
+  .gc-property 
+    
+    button
+      border: none
+
+    .gc-icon-bars
+      position: relative
+      top: 6px
+      float: left
+      display: list-item
+      list-style-image: url('../images/label-property-icon.png')
+      list-style-position: inside
+      border: none
+      margin-right: 12px
+    
+    .gc-property-value-name-label
+      float: right
+      display: block
+      font-size 18px
+    
+    .btn-primary.gc-custom
+      border: none
+      margin-right: 20px
+
+  ul.gc-workout-exercises-list 
+    
+    li 
+      .gc-property
+        padding: 2px 0
+        
+        button
+          border: none
+    
+    &:before, &:after
+      display: block
+      font-size 18px
+      color: #393939 !important
+      opacity: 0.5
+
+     &:before 
+      float: left
+
+    &:after
+      position: absolute
+      right: 28px
+
+  .gc-workout-exercise-name
+    font-size: 21px
+    font-weight: 700
+    float: left
+
+  .gc-workouts-exercises-view
+    border: none
+    border-radius: 0
+    padding-left: 0
+
+  ul.gc-workout-exercises-list li.hover-enabled .gc-hover-hidden
+    display: none !important
+  
+  .gc-property-item
+    padding: 0
+    float: left
+
+  .workout-exercise-properties
+    padding: 0
+  
+  .gc-property-label
+    padding-left: 0
+    padding-right: 0
+  
+  .line-bottom,
+  .line-top
+    background-color: #717171 !important
+  
+  .gc-cell-property,
+  .gc-exercise-details
+    border-bottom: 1px solid #7c7c7c
+  
+  .gc-exercise-details
+    width 55%
+  
+  .gc-cell-property
+    width: 45%
+  
+  .form-control
+    font-size: 17px
+    color: #393939 !important
+  
+  .gc-program-workout-item 
+    
+    .gc-workouts-exercises-view
+      padding-left: 15px
+
+    .gc-workout-body
+      border: none
+      padding-left: 0
+
+    .gc-workout-header
+      border: none
+      border-radius: 0
+      padding: 0
+      
+      .gc-workout-title
+        font-size: 25px
+        padding-left: 0
+  
+  .gc-program-workouts-list
+    padding: 10px 0
+  
+  .gc-workout-tab-content
+    .form-control
+      padding-left: 0
+    
+    .tab-pane
+      padding: 0 0 8px
+  
+  .program-action-panel
+    
+    .col-xs-8.col-lg-9
+      padding: 0
+
+    .counters
+      height: 75px !important
+      margin-top: 20px
+    
+    .counter-group
+      width: 115px
+      padding: 15px 29px
+      background-color: #CCC !important
+      flex-direction: column
+      text-align: center
+      border: 1px solid #e9eaea
+      
+      &:first-child
+        border-right: 0
+        border-top-left-radius: 5px
+        border-bottom-left-radius: 5px
+      
+      &:last-child
+        border-left: 0
+        border-top-right-radius: 5px
+        border-bottom-right-radius: 5px
+      
+      span
+        display: block
+
+      .counter
+        margin-right: 0
+
+  .gc-main-workspace
+    
+    .gc-workspace-content
+      overflow: visible
+
+  .gc-programs-weeks-list-container
+    padding-left: 0
+    
+    .gc-program-workout-item
+      page-break-after: always
+      
+      &:last-child
+        page-break-after: avoid 
+
+  .gc-program-week-item
+    border: none !important
+    padding-left: 0 !important
+  
+  .gc-program-workout-item.personal 
+    .gc-box-content,
+    .gc-workouts-exercises-view
+      border: none
+
+  .gc-workout-exercise-note
+    float: left
+
+  .gc-workout-body
+    padding-top 10px !important
+  
+  .gc-program-week-title
+    font-size: 18px
+    font-weight: 700
+  
+  region[data-name='workout_body'] .gc-box-content
+    .gc-workout-exercises-list
+      padding-left: 15px !important

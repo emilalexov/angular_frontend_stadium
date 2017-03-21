@@ -1,0 +1,741 @@
+.gc-dashboard
+  color: #757575
+  height: 100%
+  overflow: hidden
+
+.gc-dashboard-header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 79px
+  padding: 0 24px
+  color: #fff
+  background-color: #3a99d8
+
+  .title
+    margin: 0
+    font-weight: 700
+    font-size: 30px
+
+  .slogan
+    font-size: 13px
+    line-height: 15px
+    text-align: right
+
+  .trainer-info
+    color: rgba(#fff, 0.5)
+
+    .trainer-link
+      margin-left: 10px
+      color: #fff !important
+
+  .right-section,
+  .trainer-info-block
+    display: flex
+    align-items: center
+
+  .trainer-message-btn
+    display: block
+    margin-top: 5px
+    margin-left: 22px
+    font-size: 12px
+    border-radius: 50px
+    color: #fff
+    border-color: #fff
+    background-color: transparent
+    text-transform: uppercase
+
+    &:active
+      background-color: transparent
+      opacity: .7
+      border-color: #fff
+      color: #fff
+
+  .trainer-avatar
+    display: block
+    width: 53px
+    height: 53px
+    margin-left: 15px
+    margin-right: 22px
+    border-radius: 50%
+
+.gc-dashboard-content
+  padding-bottom: 54px
+  height: 100%
+  overflow-y: auto
+
+  .dashboard-left-side
+    width: calc(100% - 236px)
+    float: left
+    padding-top: 41px
+    padding: 41px 23px 54px
+
+  .gc-workout-indicator
+    float: left
+
+    &:not(:last-child)
+      margin-right: 58px
+
+    &.client
+      .progress
+        stroke: #edcf27
+
+  .workout-amounts
+    float: left
+
+    .workout-amount
+      text-align: right
+      width: 90%
+
+      .counter
+        display: inline-block
+        margin-right 39px
+        font-size: 35px
+
+      .counter-progress
+        position: relative
+        display: inline-block
+        left: -10px
+        font-size: 16px
+        margin-left -15px
+
+        &:before
+          content: ''
+          position: relative
+          display: block
+          left: 50%
+          width: 6px
+          height: 4px
+          background-size: contain
+          transform: translate(-50%,0)
+
+        &.positive
+          color: #39ca74
+
+          &:before
+            background: url('../images/amount-positive.svg') no-repeat
+
+        &.negative
+          color: red
+
+          &:before
+            background: url('../images/amount-negative.svg') no-repeat
+
+      .counter-text
+        display: inline-block
+        width: 45%
+        margin-left: 8px
+        font-size: 12px
+        text-align: left
+
+    .calendar-button
+      margin-top 25px
+      float: right
+      padding: 8px 29px
+
+  .gc-dashboard-table
+    margin-top: 55px
+
+    .header
+      height: 56px
+      padding: 0 21px
+      border: 1px solid #e9eaea
+      border-top-left-radius: 5px
+      border-top-right-radius: 5px
+      background-color: #fafafa
+
+      .tab-link
+        display: block
+        height: 55px
+        float: left
+        text-transform: uppercase
+        background-color: transparent
+        border: 0
+        color: #9ea0a1
+
+        &:not(:last-child)
+          margin-right: 53px
+
+        &:hover,
+        &:active
+          color: #3a99d8
+
+        &.active
+          color: #3a99d8
+          border-bottom: 2px solid #3a99d8
+
+    .content
+      border: 1px solid #e9eaea
+      border-top: 0
+      border-bottom-left-radius: 5px
+      border-bottom-right-radius: 5px
+
+      .table-container
+        padding: 21px 21px 0px
+
+        &:first-child
+          padding-top: 32px
+
+        &:last-child
+          padding-bottom: 21px
+
+        &.with-bg
+          background-color: rgba(#f0f0f0, 0.5)
+
+        &.performance-table
+
+          th,
+          td
+            &:first-child
+              width: 82%
+
+          th
+            text-align: center
+
+            &:first-child
+              text-align: left
+
+          td
+            &:not(:first-child)
+              text-align: center
+
+      table
+        width 100%
+
+        &:not(:last-child)
+          margin-bottom: 22px
+
+        .table-title
+          margin-bottom 33px
+          padding: 0
+          font-weight: 700
+          font-size: 16px
+          color: #404447
+
+        tr.empty
+          height: 200px
+
+          td
+            border: none
+            text-align: center
+
+            &:before
+              content: ' '
+              display: block
+              position: relative
+              left: 0
+              top: 0
+              width: 100%
+              height: 50px
+              z-index: 1
+              opacity: 0.6
+              background-image: url('../images/workouts-single.png')
+              background-repeat: no-repeat
+              background-position: center center
+
+        th,
+        td
+          &:first-child
+            width: 72%
+
+        th
+          padding-bottom: 7px
+          font-weight: 400
+          font-size 12px
+          color: #757575
+          vertical-align: middle
+          text-align: right
+
+          &:first-child
+            text-align: left
+
+        td
+          vertical-align: middle
+          text-align: right
+          border-bottom: 1px solid #ededed
+          padding: 16px 0
+
+          &:first-child
+            text-align: left
+
+        .user-avatar
+          display: inline-block
+          width: 24px
+          height: 24px
+          margin-right: 9px
+          vertical-align: middle
+          border-radius: 50%
+          background: #b0c237 url('../images/client-avatar-placeholder.svg') center center no-repeat
+
+          img
+            display: inline-block
+            width: inherit
+            height: inherit
+            border-radius: 50%
+
+            &[src='']
+              display: none
+
+        .user-link
+          display: inline-block
+          vertical-align: middle
+          text-transform: uppercase
+          color: #3a99d8
+
+          &:hover
+            color: #000
+
+        .dynamic-counter
+
+          &:after
+            content: ''
+            display: inline-block
+            width: 5px
+            height: 9px
+            margin-left: 10px
+            background-size: contain
+            background-repeat: no-repeat
+
+          &.positive
+            color: #39ca74
+
+            &:after
+              background-image: url('../images/positive-dynamic.svg')
+
+          &.negative
+            color: #ec6e61
+
+            &:after
+              background-image: url('../images/negative-dynamic.svg')
+
+        .missed-workout-link
+          color: #e7594f
+          text-transform: uppercase
+
+          &:hover
+            color: #3a99d8
+
+        .performed-workout-link
+          text-transform: uppercase
+          color: #3a99d8
+
+          &:hover
+            color: #000
+
+          &.missed
+            color: #e7594f
+
+            &:before
+              content: ''
+              position: relative
+              top: 2px
+              display: inline-block
+              width: 12px
+              height: 12px
+              margin-right: 8px
+              background: url('../images/missed-workout.svg') no-repeat
+              background-size: contain
+
+        .workout-status
+          display: block
+          float: right
+          margin-right: 6px
+          width: 20px
+          height: 20px
+          background-repeat: no-repeat
+          background-size: contain
+
+          &.completed
+            background-image: url('../images/workout-complete.svg')
+
+          &.incomplete
+            background-image: url('../images/workout-incomplete.svg')
+
+        .with-load-btn
+          padding: 16px 0 6px
+          border-bottom: 0
+
+        .load-more-content
+          display: block
+          float: right
+          color: #3a99d8
+
+          &:before
+            content: '↓'
+            display: inline-block
+            margin-right: 18px
+
+          &:hover
+            color: #000
+
+  .gc-workout-calendar
+    width: 430px
+    float: left
+    margin-left: 56px
+
+    .header
+      display: flex
+      align-items: center
+      height: 55px
+      padding: 0 21px 0 32px
+      border: 1px solid #e9eaea
+      border-top-left-radius: 5px
+      border-top-right-radius: 5px
+      background-color: #fafafa
+
+    .workout-icon
+      display: inline-block
+      width: 26px
+      height: 30px
+      margin-right: 18px
+      background: url('../images/icon-workouts.png') no-repeat
+      background-size: cover
+      background-position: center right
+
+    .title
+      display: block
+      font-size: 12px
+      color: #c6c6c6
+
+    .workout-date
+      display: block
+
+    .workout-link
+      display: block
+      font-size: 16px
+      text-transform: uppercase
+      color: #3a99d8
+      margin-top: 2px
+
+      &:hover
+        color: #000
+
+    .content
+      display: flex
+      justify-content: center
+      flex-direction: column
+      padding: 24px 39px 31px
+      border: 1px solid #e9eaea
+      border-top: 0
+      border-bottom-left-radius: 5px
+      border-bottom-right-radius: 5px
+      background-color: #fff
+
+    // Owl carousel styles redefinition:
+
+    .owl-theme
+
+      .owl-controls
+        text-align: left
+
+        .owl-page
+
+          span
+            width: 6px
+            height: 6px
+            background-color: #ededed
+            opacity: 1
+
+          &.active
+
+            span
+              background-color: #3a99d8
+
+        .owl-pagination + .owl-buttons
+          display: none
+
+        .owl-buttons
+          position: absolute
+          top: 11px
+          right: 15px
+
+          div
+            display: inline-block
+            font-size: 12px
+            color: #3a99d8
+            background-color: transparent
+            opacity: 1
+
+            &:before,
+            &:after
+              content: ''
+              font: normal normal normal 14px/1 FontAwesome
+              text-rendering: auto
+              vertical-align: -1px
+
+            &:hover
+              color: #000
+
+            &.owl-next
+
+              &:after
+                content: '\f105'
+                margin-left: 5px
+
+            &.owl-prev
+
+              &:before
+                content: '\f104'
+                margin-right: 5px
+
+  .dashboard-right-side
+    width: 236px
+    height: 100%
+    float: left
+    padding: 41px 21px 54px
+    border-left: 1px solid rgba(#282d30, 0.1)
+    text-align: center
+
+    .trainer-library
+      line-height: 13px
+
+      .right-side
+        float: left
+        margin-left: 14px
+        text-align: left
+
+      .icon
+        width: 42px
+        height: 47px
+        float: left
+        background: url('../images/trainer-library.svg') no-repeat
+        background-size: contain
+
+      .title
+        display: inline-block
+        margin: 0 0 5px
+        font-weight: 700
+        font-size: 15px
+        color: #404447
+
+      .subtitle
+        display: block
+
+    .ewp-links
+      margin-top 34px
+
+      a
+        display: block
+        float: left
+        clear: both
+        color: #3a99d8
+
+        &:not(:last-child)
+          margin-bottom: 16px
+
+        &:hover
+          color: #000
+
+        &:before
+          content: ''
+          position: relative
+          top: 5px
+          display: inline-block
+          width: 18px
+          height: 19px
+          margin-right: 18px
+          background-repeat: no-repeat
+          background-position: center center
+
+        &.exercise-link
+
+          &:before
+            background-image: url('../images/exercise.svg')
+
+          &:hover
+
+            &:before
+              background-image: url('../images/exercise-hover.svg')
+
+        &.workout-link
+
+          &:before
+            background-image: url('../images/workout.svg')
+
+          &:hover
+
+            &:before
+              background-image: url('../images/workout-hover.svg')
+
+        &.program-link
+
+          &:before
+            background-image: url('../images/program.svg')
+
+          &:hover
+
+            &:before
+              background-image: url('../images/program-hover.svg')
+
+    .user-best-result
+      padding-bottom: 29px
+      border-bottom: 1px solid #ededed
+
+      .icon
+        display: inline-block
+        width: 45px
+        height: 45px
+        background: url('../images/user-best-result.png') no-repeat
+
+      .description
+        margin-top: 10px
+
+      .date
+        margin: 4px 0 23px
+        color: #3a99d8
+
+      .property
+        display: flex
+        justify-content: space-between
+
+    .weight-block
+      margin-top: 34px
+      text-align: left
+
+      .title
+        display: block
+        width: 70%
+        margin-bottom 22px
+        font-size: 17px
+        text-transform: uppercase
+
+      .description
+        display: block
+        font-size: 13px
+        margin-bottom 20px
+
+      .input-group
+        margin-bottom: 14px
+
+      .weight-input
+        position: relative
+        width: 100%
+
+        .form-control
+          padding-right: 45px
+          border-top-right-radius: 4px
+          border-bottom-right-radius: 4px
+
+        .weight-label
+          position: absolute
+          z-index: 3
+          top: 50%
+          right: 15px
+          color: #808080
+          transform: translateY(-50%)
+
+      .submit-btn
+        width: 100%
+        padding-top: 8px
+        padding-bottom: 8px
+        font-size: 15px
+
+  .gc-recent-activity
+    margin-top: 73px
+    text-align: left
+
+    .title
+      display: block
+      margin-bottom 12px
+      font-size: 16px
+      color: rgba(#757575, 0.5)
+
+    .load-more-activity
+      display: block
+      margin-top: 35px
+      font-size: 13px
+      color: #3a99d8
+
+      &:hover
+        color: #000
+
+    .gc-activity-block
+      position: relative
+      width: 100%
+      padding: 17px 0
+      border-bottom: 1px solid #ededed
+
+      a
+        color: #3a99d8
+
+        &:hover
+          color: #000
+
+      .icon
+        position: absolute
+        top: 50%
+        float: left
+        width: 24px
+        height: 24px
+        background-color: gray
+        border-radius: 50%
+        transform: translateY(-50%)
+
+        &:before
+          content: ''
+          position: absolute
+          top: 50%
+          left: 50%
+          display: block
+          margin: 0 auto
+          background-repeat: no-repeat
+          background-size: contain
+          transform: translate(-50%, -50%)
+
+      .text
+        color: grey
+        font-size: 13px
+        overflow: hidden
+        padding-left: 36px
+
+      &.message
+
+        .icon
+          background-color: #39ca74
+
+          &:before
+            width: 10px
+            height: 8px
+            background-image: url('../images/activity-message.svg')
+
+
+      &.comment
+
+        .icon
+          background-color: #e54d42
+
+          &:before
+            width: 10px
+            height: 9px
+            background-image: url('../images/activity-comment.svg')
+
+      &.event
+
+        .icon
+          background-color: #3a99d8
+
+          &:before
+            width: 10px
+            height: 11px
+            background-image: url('../images/activity-event.svg')
+
+
+      &.performed
+
+        .icon
+          background-color: #8bc8f1
+
+          &:before
+            width: 12px
+            height: 7px
+            background-image: url('../images/activity-performed.svg')
+
+      &.entered-result
+
+        .icon
+          background-color: #ffda2b
+
+          &:before
+            width: 10px
+            height: 14px
+            background-image: url('../images/activity-entered-result.svg')

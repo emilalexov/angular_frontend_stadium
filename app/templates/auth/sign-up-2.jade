@@ -1,0 +1,169 @@
+header.gc-header-standard.gc-header-login
+  .container
+    .col-xs-12.col-sm-6.gc-login-form-wrapper
+      h1.text-center
+        | Enter your personal information
+      form#gc-signup-step-2(role='form')
+        .row.form-group
+          .col-xs-6
+            label(for='InputPassword1')
+              | First Name
+            input#InputPassword1.form-control(type='text', name='first_name', placeholder='')
+          .col-xs-6
+            label(for='InputPassword2')
+              | Last Name
+            input#InputPassword2.form-control(type='text', name='last_name', placeholder='')
+        .form-group
+          label(for='InputAddress')
+            | Address
+          input#InputAddress.form-control(type='text', name='address', placeholder='')
+        .form-group
+          label(for='InputCity')
+            | City
+          input#InputCity.form-control(type='text', name='city', placeholder='')
+        .form-group
+          label(for='InputState')
+            | State
+          select#InputState.form-control(name='state')
+            option(value='', disabled='', selected='') Select your state please
+            option(value='Alabama') Alabama
+            option(value='Alaska') Alaska
+            option(value='Arizona') Arizona
+            option(value='Arkansas') Arkansas
+            option(value='California') California
+            option(value='Colorado') Colorado
+            option(value='Connecticut') Connecticut
+            option(value='Delaware') Delaware
+            option(value='Florida') Florida
+            option(value='Georgia') Georgia
+            option(value='Hawaii') Hawaii
+            option(value='Idaho') Idaho
+            option(value='Illinois') Illinois
+            option(value='Indiana') Indiana
+            option(value='Iowa') Iowa
+            option(value='Kansas') Kansas
+            option(value='Kentucky') Kentucky
+            option(value='Louisiana') Louisiana
+            option(value='Maine') Maine
+            option(value='Maryland') Maryland
+            option(value='Massachusetts') Massachusetts
+            option(value='Michigan') Michigan
+            option(value='Minnesota') Minnesota
+            option(value='Mississippi') Mississippi
+            option(value='Missouri') Missouri
+            option(value='Montana') Montana
+            option(value='Nebraska') Nebraska
+            option(value='Nevada') Nevada
+            option(value='New Hampshire') New Hampshire
+            option(value='New Jersey') New Jersey
+            option(value='New Mexico') New Mexico
+            option(value='New York') New York
+            option(value='North Carolina') North Carolina
+            option(value='North Dakota') North Dakota
+            option(value='Ohio') Ohio
+            option(value='Oklahoma') Oklahoma
+            option(value='Oregon') Oregon
+            option(value='Pennsylvania') Pennsylvania
+            option(value='Rhode Island') Rhode Island
+            option(value='South Carolina') South Carolina
+            option(value='South Dakota') South Dakota
+            option(value='Tennessee') Tennessee
+            option(value='Texas') Texas
+            option(value='Utah') Utah
+            option(value='Vermont') Vermont
+            option(value='Virginia') Virginia
+            option(value='Washington') Washington
+            option(value='West Virginia') West Virginia
+            option(value='Wisconsin') Wisconsin
+            option(value='Wyoming') Wyoming
+        .form-group
+          label(for='InputZIP')
+            | ZIP code
+          input#InputZIP.form-control(type='text', name='zip', placeholder='')
+        .form-group.row.gc-date-selectors
+          .col-xs-12
+            label(for='InputDate')
+              | Date of Birth
+          .col-xs-3
+            select#InputBirthDay.form-control(name='birth_day')
+              option(value='', disabled='', selected='') Day
+              option(value='01') 1
+              option(value='02') 2
+              option(value='03') 3
+              option(value='04') 4
+              option(value='05') 5
+              option(value='06') 6
+              option(value='07') 7
+              option(value='08') 8
+              option(value='09') 9
+              option(value='10') 10
+              option(value='11') 11
+              option(value='12') 12
+              option(value='13') 13
+              option(value='14') 14
+              option(value='15') 15
+              option(value='16') 16
+              option(value='17') 17
+              option(value='18') 18
+              option(value='19') 19
+              option(value='20') 20
+              option(value='21') 21
+              option(value='22') 22
+              option(value='23') 23
+              option(value='24') 24
+              option(value='25') 25
+              option(value='26') 26
+              option(value='27') 27
+              option(value='28') 28
+              option(value='29') 29
+              option(value='30') 30
+              option(value='31') 31
+          .col-xs-6
+            select#InputBirthDay.form-control(name='birth_month')
+              option(value='', disabled='', selected='') Month
+              option(value='01') January
+              option(value='02') February
+              option(value='03') March
+              option(value='04') April
+              option(value='05') May
+              option(value='06') June
+              option(value='07') Jule
+              option(value='08') August
+              option(value='09') September
+              option(value='10') October
+              option(value='11') November
+              option(value='12') December
+          .col-xs-3
+            select#InputBirthDay.form-control(name='birth_year')
+              option(value='', disabled='', selected='') Year
+              | {{yearsOptionsList}}
+            label.gc-error-message
+        .form-group.form-group-radio
+          .row
+            .col-xs-2
+              label(for='r1')
+                | Gender
+            .col-xs-2.col-padding-5
+              label
+                input(type='radio', value='male', name='gender')
+                span Male
+            .col-xs-3.col-padding-5
+              label
+                input(type='radio', value='female', name='gender')
+                span Female
+        .form-group.row
+          .col-xs-6
+            .checkbox
+              label
+                input.gc-signup-agree(name='agree', type='checkbox', value='true')
+                span
+                  | I Agree with the
+                  br
+                  a
+                    | GymCloud End User Agreement
+          .col-xs-6.text-right
+            button.btn.btn-default(type='submit')
+              | Sign Up
+      p.gc-login-signup-wrapper.text-center
+        | Have an GymCloud account?
+        a(href='#login') Sign in

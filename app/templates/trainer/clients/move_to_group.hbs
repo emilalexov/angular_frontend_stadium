@@ -1,0 +1,29 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <button class="close" data-dismiss="modal"><span>Close</span></button>
+    <h4 class="modal-title">
+      <span><img src="app/images/icon-individuals.png" alt=""></span>
+      Move to Group(s)
+    </h4>
+  </div>
+  <form class="form gc-move-to-group-form" role="form">
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-xs-12">
+          {{#each items}}
+          <div class="checkbox">
+            <label>
+              <input data-id="{{id}}" type="checkbox"> {{name}}
+            </label>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <div class="row">
+        <div class="col-xs-12 text-right"><button type="submit" class="btn btn-primary">Move to Group(s)</button></div>
+      </div>
+    </div>
+  </form>
+</div>

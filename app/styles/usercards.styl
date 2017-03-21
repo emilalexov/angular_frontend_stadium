@@ -1,0 +1,246 @@
+.gc-trainer-card
+  background: #5a2c6c
+
+.gc-client-card
+  background: #3a99d8
+
+.gc-usercard-large
+  max-height: 185px
+
+  > .col-xs-10
+    padding: 0 5px
+
+  .gc-usercard-avatar-wrapper
+    min-height: 100px
+    min-width: 100px
+    border: 3px solid #fff
+    border-radius: 100px
+    margin: 39px 10px 0 0
+    display: inline-block
+    vertical-align: top
+    background: transparent url('../images/avatar-placeholder.png') 60% 55% no-repeat
+    background-size: 70%
+
+    &.gc-usercard-avatar-exist
+      background: transparent
+
+      .gc-usercard-avatar
+        display: block
+
+  .gc-usercard-avatar
+    display: none
+    height: 100%
+    width: 100%
+    max-width: 94px
+    max-height: 94px
+    border-radius: 100px
+
+  .gc-usercard-info
+    display: inline-block
+    vertical-align: top
+
+  .gc-usercard-name
+    color: #fff
+    font-size: 22px
+    font-weight: bold
+    margin: 30px 0 6px 0
+
+  .gc-usercard-address
+    color: #fff
+    font-size: 13px
+    margin-bottom: 0.7em
+
+  .gc-usercard-link
+    font-size: 12px
+    color: rgba(255, 255, 255, 0.5)
+    background: rgba(255, 255, 255, 0.14)
+    border: none
+    padding: 3px 5px
+    border-radius: 3px
+    min-width: 210px
+    display: block
+    cursor: text
+
+    &:focus
+      box-shadow: none
+      outline: none
+
+  .gc-usercard-actions
+    display: block
+    margin-top: 10px
+    text-align: center
+
+    .btn
+      border: 1px solid #fff
+      background: transparent
+      color: #fff
+      text-transform: uppercase
+      font-size: 12px
+      padding: 5px 5px
+      line-height: 18px
+
+      &:hover
+        color: #3a99d8
+        background: #fff
+
+      + .btn
+        margin-left: 5px
+
+    .invite-client-button,
+    .show-client-form
+      margin-left: 0 !important
+      float: none
+      transition: .3s opacity ease-in-out
+
+      &:hover
+        background-color: transparent
+        color: #fff
+        opacity: .6
+
+    .invite-client-button
+      margin-right: 10px
+
+  .gc-usercard-info .btn-group.gc-usercard-actions .btn
+    border-radius: 50px
+
+.gc-usercard-params
+
+  ul
+    display: inline-block
+    margin: 17px 10px 0 0
+    padding: 0
+    font-size: 0
+
+  li
+    display: inline-block
+    color: #fff
+    font-size: 13px
+    font-weight: normal
+    text-transform: uppercase
+
+    p
+      color: rgba(255, 255, 255, 0.5)
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+      padding: 0 16px 7px 0
+      margin-bottom: 7px
+      font-size: 13px
+
+    &:last-child p
+      padding-right: 0px
+
+  dd
+    color: #fff
+    font-size: 13px
+    text-transform: uppercase
+    text-align: left
+    margin: 0 0 0 100px
+    padding: 0 0 1em 10px
+    border-left: 1px solid rgba(255, 255, 255, 0.5)
+    min-height: 31px
+
+    &:last-child
+      padding-bottom: 0.1em
+      min-height: 18px
+
+  dt
+    width: 100px
+    text-align: left
+    color: rgba(255, 255, 255, 0.5)
+    font-weight: normal
+    text-transform: uppercase
+    font-size: 13px
+    padding: 0 5px 0 0
+    float: left
+    clear: left
+
+  dl
+    margin-top: 22px
+    float: right
+
+  .dl
+    margin: 5px 0 0 0
+
+    &:after
+      content: " "
+      display: table
+      clear: both
+
+  .dt
+    text-align: left
+    color: rgba(255, 255, 255, 0.5)
+    font-weight: normal
+    text-transform: uppercase
+    font-size: 13px
+
+  .dd
+    color: #fff
+    font-size: 13px
+    text-transform: uppercase
+    text-align: left
+
+    &:last-child
+      padding-bottom: 0.1em
+
+.gc-usercard-small
+  background: #3a99d8
+  max-height: 85px
+
+  .gc-usercard-avatar
+    height: 100%
+    width: 100%
+    max-width: 76px
+    max-height: 76px
+    border: 3px solid #59a7db
+    border-radius: 100px
+    margin: 4px 15px
+    vertical-align: top
+
+    img
+      height: 100%
+      width: 100%
+      max-width: 70px
+      max-height: 70px
+      border-radius: 100px
+
+  .gc-usercard-info
+    padding: 0 5px 0 0
+
+  .gc-usercard-params
+    padding: 0 5px 0 0
+
+  .gc-usercard-name
+    color: #fff
+    font-size: 22px
+    font-weight: bold
+    margin: 30px 0 6px 0
+    display: inline-block
+
+@media (min-width: 992px)
+
+  .gc-usercard-large
+
+    .gc-usercard-actions
+      margin-top: 20px
+
+      .btn
+        padding: 5px 12px
+
+        + .btn
+          margin-left: 10px
+
+.gc-usercard-small .gc-usercard-params
+  padding: 0 15px
+
+.gc-usercard-large
+
+  .gc-usercard-avatar-wrapper
+    min-height: 146px
+    min-width: 146px
+    margin: 19px 35px 19px 5px
+
+  .gc-usercard-avatar
+    max-width: 140px
+    max-height: 140px
+
+  > .col-xs-10
+    padding: 0 15px

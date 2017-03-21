@@ -1,0 +1,7 @@
+header.header
+  each val, index in tables
+    button.tab-link(tab-name=val.region, class=(!index && 'active'))
+      = val.name
+.content
+  each val in tables
+    region(data-name=val.region)

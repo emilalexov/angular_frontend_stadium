@@ -1,0 +1,319 @@
+.clients-view-main-wrapper
+  height: 100%
+
+.gc-edit-profile-modal-upload-wrapper
+  background: #eeeeee
+  border-radius: 100px
+  height: 130px
+  width: 130px
+  position: relative
+  text-align: center
+  margin: 0 auto
+
+.gc-edit-profile-modal-upload-input
+  position: absolute
+  z-index: 10
+  cursor: pointer
+  display: block
+  height: 130px
+  width: 130px
+  opacity: 0
+
+.gc-edit-profile-modal-upload-text
+  font-size: 12px
+  text-transform: uppercase
+  color: #3a99d8
+  width: 130px
+  height: 130px
+  padding: 42px 0
+  margin: 0
+  position: absolute
+  z-index: 3
+  border-radius: 100px
+
+.gc-edit-profile-modal-upload-wrapper:hover .gc-edit-profile-modal-upload-text
+  z-index: 7
+  background: rgba(238, 238, 238, 0.7)
+
+.gc-edit-profile-modal-upload-text .fa
+  display: block
+  margin-bottom: 3px
+
+.gc-edit-profile-modal-avatar
+  display: block
+  width: 130px
+  height: 130px
+  border-radius: 100px
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 5
+
+.gc-edit-profile-modal-avatar[src='']
+  display: none
+
+.gc-clients-list-wrapper
+
+  .gc-clients-list-client-chb
+    // top: 2px
+    margin-right: 5px
+    padding-left: 0
+
+  h3
+    color: #9ea0a1
+    font-size: 18px
+    padding: 15px 0
+
+.gc-clients-list
+  padding: 0
+
+.gc-clients-list + h3
+  margin-top: 30px
+
+.gc-clients-list > .row
+  margin: 0
+  list-style-type: none
+  min-height: 64px
+  border-bottom: 1px solid #ededed
+
+.gc-clients-list > .row:hover
+  background: #fbfbfb
+
+.gc-clients-list > .row > *
+    padding-right: 0
+    padding-left: 0
+
+.gc-clients-list > .row:first-child
+  border-top: 1px solid #ededed
+
+.gc-clients-list-client-link
+  text-transform: uppercase
+  color: #3a99d8
+  font-size: 14px
+  line-height: 14px
+  padding: 15px 10px
+  margin: 10px 0
+  display: inline-block
+  float: left
+
+.gc-clients-list-client-link:hover,
+.gc-clients-list-client-link:active,
+.gc-clients-list-client-link:focus
+  color: #282d30
+  cursor: pointer
+
+.gc-clients-list-client-chb
+  display: inline-block
+  padding: 5px
+  margin: 20px 5px 20px 0
+  cursor: pointer
+  width: 25px
+  height: 25px
+  position: relative
+  // top: -1px
+  float: left
+
+.gc-clients-list-client-chb input
+  margin: 0
+  cursor: pointer
+
+.gc-clients-list-avatar-wrapper
+  width: 24px
+  height: 24px
+  border-radius: 50px
+  display: inline-block
+  margin: 20px 5px 20px 0
+  vertical-align: top
+  background: green url('../images/client-avatar-placeholder.svg') center center no-repeat
+  text-align: center
+  float: left
+  a&
+    cursor: pointer
+
+.gc-clients-list-avatar-wrapper.gc-clients-list-avatar-group
+  border-radius: 0
+  background: green url('../images/clients-group-avatar.jpg') center top no-repeat
+  background-size: cover
+  width: 28px
+
+.gc-clients-list-avatar-wrapper.gc-clients-list-avatar-exist
+  background: none
+
+.gc-clients-list-avatar-wrapper img
+  width: 24px
+  height: 24px
+  display: inline-block
+  border-radius: 50px
+
+.gc-clients-list-avatar-wrapper
+  img[src=''],
+  img[alt='']
+    display: none
+
+.gc-move-to-group-form .checkbox label
+  font-size: 14px
+  color: #282d30
+
+.gc-move-to-group-form .checkbox input
+  margin: 0 15px 0 -20px
+
+.gc-move-to-group-form .checkbox
+  margin-bottom: 14px
+
+.gc-move-to-group-form
+  border-bottom: 1px solid #ededed
+
+.gc-message-modal-actions
+  margin-top: -15px
+
+.gc-message-modal-actions .btn
+  font-size: 14px
+  text-transform: uppercase
+  text-decoration: none
+  color: #5698e5
+
+.gc-message-modal-actions .btn:hover
+  color: #5698e5
+  background: transparent
+
+.gc-message-modal-actions .btn .fa-remove,
+.gc-message-modal-actions .btn .fa-check
+  font-size: 16px
+
+.gc-clients-list-add-input
+  margin: 25px 0 25px 0
+
+.gc-assign-catch
+  display: none
+
+.gc-dnd-area
+  display: none
+  position: absolute
+  top: 15px
+  left: 15px
+  right: 15px
+  bottom: 15px
+  background: rgba(58, 153, 216, 0.5)
+  outline: 15px solid rgba(58, 153, 216, 0.5)
+  border: 2px dashed rgba(255, 255, 255, 0.5)
+
+.gc-main .gc-dnd-area
+  display: block
+  z-index: 50
+
+.gc-dnd-area .gc-dnd-area-message
+  font-size: 21px
+  color: #fff
+  display: inline-block
+  text-align: center
+  position: absolute
+  top: 40vh
+  left: 0
+  right: 0
+  margin-top: -85px
+
+.gc-dnd-area .gc-dnd-area-message img
+  margin-bottom: 25px
+
+.gc-dnd-area .gc-dnd-area-message p
+  margin: 0
+
+.gc-send-message-inpu
+  height: 34px
+
+.gc-send-message-input::placeholder
+  color: #c6c6c6
+  opacity: 1
+
+.gc-send-message-input .selectize-input.focus
+  box-shadow: none
+  border-color: #ccc
+  border-radius: 4px 4px 0 0
+
+.gc-send-message-input .selectize-dropdown
+  border-radius: 0 0 4px 4px
+  top: 31px !important
+  border-color: #ccc
+
+.gc-send-message-input .selectize-dropdown-content > div
+  width: 100%
+  padding: 6px 12px
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+  text-transform: uppercase
+  color: #3a99d8
+
+.gc-send-message-input .selectize-dropdown-content > div .label
+  color: #ccc
+
+.gc-send-message-input .selectize-dropdown-content > div:hover .label
+  color: #666
+
+.gc-send-message-input .selectize-dropdown-content > div span.avatar
+  border-radius: 20px
+  display: inline-block
+  height: 20px
+  width: 20px
+  vertical-align: -6px
+  margin-right: 8px
+  background: green url('../images/icon-individual-right.png') center top no-repeat
+  background-size: contain
+
+.gc-send-message-input .selectize-dropdown-content > div span.avatar img
+  border-radius: 20px
+  display: block
+  height: 20px
+  width: 20px
+
+.gc-send-message-input .selectize-dropdown-content > div span.avatar img[src=''],
+.gc-send-message-input .selectize-dropdown-content > div span.avatar img[src='undefined']
+  display: none
+
+.gc-clients-list-client-actions
+  padding: 15px 15px
+  display: none
+
+  &.active
+    display: block
+
+.gc-clients-list .row:hover .gc-clients-list-client-actions
+  display: block
+
+.gc-clients-list-client-move
+  border-radius: 50px
+  font-size: 12px
+  color: #3a99d8
+  text-transform: uppercase
+  background: #fff
+  border-color: #3a99d8
+  border-radius: 50px
+  text-align: center
+  line-height: 16px
+
+.gc-clients-list-client-move + .btn
+  margin-left: 8px
+
+.gc-clients-list-client-delete.btn
+  width: 16px
+  height: 20px
+  background: transparent url('../images/prototypes/trash-icon.png') no-repeat center center
+  background-size: contain
+  outline: none
+  font-size: 20px
+  line-height: 27px
+  padding: 0
+  text-align: center
+  color: #d9d9d9
+  border: none
+  box-shadow: none
+
+  &:hover
+    background: transparent url('../images/prototypes/trash-icon.png') no-repeat center center
+    background-size: contain
+    opacity: .8
+
+@media (min-width: 768px)
+  .modal-dialog
+    width: 650px
+

@@ -1,0 +1,29 @@
+.modal-content.gc-remove-modal
+  .modal-header
+    button.close(data-dismiss='modal')
+      span
+        | Close
+    h4.modal-title
+      span
+        img(src=require('app/images/ic-referral.png'), alt='')
+      .title
+  form.form(role='form')
+    .modal-body
+      .description
+      .form-group
+        label.control-label
+        label.gc-error-message
+        input.form-control(
+          type='text'
+          name='prompt'
+          maxlength='128'
+        )
+    .modal-footer.gc-rm-buttons
+      table.gc-centered
+        tbody
+          tr
+            td
+              button.btn.btn-primary.cancel(data-dismiss='modal')
+                | Cancel
+            td
+              button.btn.btn-danger.confirm

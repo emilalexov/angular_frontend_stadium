@@ -1,0 +1,28 @@
+---
+engines:
+  csslint:
+    enabled: true
+  coffeelint:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - ruby
+      - javascript
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
+ratings:
+  paths:
+  - "**.css"
+  - "**.coffee"
+  - "**.js"
+exclude_paths:
+- config/
+- test/
+- node_modules/
+- bower_components/
+- app/deps/vendor/
+- app/modules/utils/freshdesk.coffee

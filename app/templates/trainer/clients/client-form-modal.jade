@@ -1,0 +1,50 @@
+.modal-content
+  .modal-header
+    button.close(data-dismiss='modal')
+      span
+        | Close
+    h4.modal-title
+      span.gc-modal-icon-sm
+        img(src=require('app/images/add-client-icon.svg'), alt='')
+      client-title
+  form.form(role='form')
+    .modal-body
+      .row
+        .col-xs-12
+          .form-group
+          .row
+            .col-xs-12
+              .form-group
+                label(for='name')
+                  | Name
+                label.gc-error-message
+                input.form-control(
+                  name='name'
+                  type='text'
+                  maxlength='128'
+                  value=name
+                  placeholder='e.g. John Smith'
+                )
+                span.gc-valid-icon.fa.fa-check.hide
+          .row
+            .col-xs-12
+              .form-group
+                label(for='email')
+                  | Email
+                label.gc-error-message
+                input.form-control(
+                  name='email'
+                  type='email'
+                  value=email
+                  placeholder='Email'
+                )
+                span.gc-valid-icon.fa.fa-check.hide
+    .modal-footer
+      .row
+        .col-xs-12.text-right
+          button.btn.btn-primary(type='submit')
+            | Save
+          span.button-separate
+            | or
+          button.btn.btn-primary(data-action='invite')
+            | SAVE &amp; Invite

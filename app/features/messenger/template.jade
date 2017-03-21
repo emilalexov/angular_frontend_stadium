@@ -1,0 +1,10 @@
+.gc-notify-inner(class='gc-notify-inner-' + type)
+  .gc-notify-icon-wrapper(class='gc-notify-icon-wrapper-' + type)
+    if type == 'success'
+      span.gc-notify-icon-sucess
+    if type == 'error'
+      | ×
+    if type == 'info'
+      | !
+  p
+    = message

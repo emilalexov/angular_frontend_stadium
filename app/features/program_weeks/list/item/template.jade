@@ -1,0 +1,12 @@
+.row
+  .col-xs-10.gc-program-week-title
+    h2(data-bind="name")
+    span.workouts-count
+  .col-xs-2
+    ul.gc-program-week-actions
+      li
+        button.fa.fa-edit
+      li.gc-week-remove-container
+        button.gc-icon-trash.gc-remove-program-week
+
+region(data-name='week_workouts')

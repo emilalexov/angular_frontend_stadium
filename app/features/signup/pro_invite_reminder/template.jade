@@ -1,0 +1,18 @@
+header.gc-header-standard.gc-header-login
+  .container
+    .gc-login-form-wrapper.col-sm-6.cal-xs-12
+      h1.text-center
+        | Invite Your Pro
+      form.gc-signup-form(role='form')
+
+        .row.invite-sent-icon
+
+        .row.gc-trainer-invite-title
+          | You've already signed up with this email address, but your Pro hasn't accepted your invitation to join GymCloud.
+
+        button.send-reminder
+          | SEND REMINDER
+        .row.form-group.text-center
+            a.btn.gc-form-submit-button.gc-invite-btn(href='#login')
+              | Back To Sign In
+      include ../_footer_login.jade

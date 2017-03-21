@@ -1,0 +1,102 @@
+.gc-main-workspace
+  .col-xs-12.gc-content-both
+    .gc-nav-wrapper.row
+      .col-xs-12
+        ul.gc-content-nav
+          li.active
+            a(href='#') Individuals
+          li
+            a(href='#') Groups
+    .gc-im-wrapper.row
+      .col-xs-3.gc-im-contacts-wrapper
+        input.gc-im-contacts-search.form-control(type='text', placeholder='Search Individual...')
+        ul.gc-im-contacts-list
+          li
+            a.gc-im-contacts-list-item(href='#')
+              span.gc-im-contacts-list-item-avatar
+                img(src='app/images/portrait-2.jpg', alt='')
+              span.gc-im-contacts-list-item-name John Doe
+          li
+            a.gc-im-contacts-list-item(href='#')
+              span.gc-im-contacts-list-item-avatar
+                img(src='app/images/portrait-2.jpg', alt='')
+              span.gc-im-contacts-list-item-name John Doe
+          li
+            a.gc-im-contacts-list-item.active(href='#')
+              span.gc-im-contacts-list-item-avatar
+                img(src='app/images/portrait-2.jpg', alt='')
+                span.gc-im-contacts-list-item-newmessage
+              span.gc-im-contacts-list-item-name John Doe
+          li
+            a.gc-im-contacts-list-item(href='#')
+              span.gc-im-contacts-list-item-avatar
+                img(src='app/images/portrait-2.jpg', alt='')
+              span.gc-im-contacts-list-item-name John Doe
+      .col-xs-9.gc-im-chat-wrapper
+        h3.gc-im-chat-title
+          | Conversation with
+          span John Doe
+        .gc-im-chat-messages
+          .gc-im-message.gc-im-message-from.clearfix
+            .gc-im-message-avatar-wrapper
+              .gc-im-message-avatar
+                img(src='app/images/portrait-2.jpg', alt='')
+            .gc-im-message-text-wrapper
+              .gc-im-message-text
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                | Esse assumenda quaerat, nisi deleniti provident architecto
+                | aspernatur officia reiciendis vitae iusto in. Nemo aperiam
+                | voluptatum, placeat, dolores esse molestias ad incidunt!
+              .gc-im-message-data.row
+                .col-xs-6 Sent 11/02/2014
+                .col-xs-6.text-right Read 17:43
+          .gc-im-message.gc-im-message-to.clearfix
+            .gc-im-message-avatar-wrapper
+              .gc-im-message-avatar
+                img(src='app/images/portrait-2.jpg', alt='')
+            .gc-im-message-text-wrapper
+              .gc-im-message-text
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                | Esse assumenda quaerat, nisi deleniti provident architecto
+                | aspernatur officia reiciendis vitae iusto in. Nemo aperiam
+                | voluptatum, placeat, dolores esse molestias ad incidunt!
+              .gc-im-message-data.row
+                .col-xs-6 Sent 11/02/2014
+                .col-xs-6.text-right Read 17:43
+          .gc-im-message.gc-im-message-from.clearfix
+            .gc-im-message-avatar-wrapper
+              .gc-im-message-avatar
+            .gc-im-message-text-wrapper
+              .gc-im-message-text
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                | Esse assumenda quaerat, nisi deleniti provident architecto
+                | aspernatur officia reiciendis vitae iusto in. Nemo aperiam
+                | voluptatum, placeat, dolores esse molestias ad incidunt!
+              .gc-im-message-data.row
+                .col-xs-6 Sent 11/02/2014
+                .col-xs-6.text-right Read 17:43
+          .gc-im-message.gc-im-message-to.clearfix
+            .gc-im-message-avatar-wrapper
+              .gc-im-message-avatar
+            .gc-im-message-text-wrapper
+              .gc-im-message-text
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                | Esse assumenda quaerat, nisi deleniti provident architecto
+                | aspernatur officia reiciendis vitae iusto in. Nemo aperiam
+                | voluptatum, placeat, dolores esse molestias ad incidunt!
+              .gc-im-message-data.row
+                .col-xs-6 Sent 11/02/2014
+                .col-xs-6.text-right Read 17:43
+        .gc-im-chat-send-wrapper.row
+          .col-xs-10
+            .input-group
+              .input-group-btn
+                a.btn.btn-default(href='')
+                  span.fa.fa-file-picture-o
+                a.btn.btn-default(href='')
+                  span.fa.fa-paperclip
+              input#gc-im-chat-send-text.form-control(type='text')
+              label(for='gc-im-chat-send-text') Enter your message...
+          .col-xs-2.gc-im-chat-send-button.text-center
+            a.btn.btn-link(href='#') Send
+            span or press ↵

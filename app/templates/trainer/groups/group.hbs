@@ -1,0 +1,170 @@
+<div class="gc-usercard-large row">
+  <div class="col-xs-12">
+    <div class="gc-usercard-avatar-wrapper text-center {{#if avatar_url}}gc-usercard-avatar-exist{{/if}}">
+      <img class="gc-usercard-avatar" src="{{avatar_url}}" alt="">
+    </div>
+    <div class="gc-usercard-info">
+      <h1 class="gc-usercard-name">{{name}}</h1>
+      <input type="text" value="http://gymcloud.com/clients/john-doe" class="gc-usercard-link" readonly="readonly">
+      <div class="btn-group gc-usercard-actions" role="group">
+        <button class="btn btn-default" data-toggle="modal" data-target="#gc-edit-group-modal">Edit profile</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="gc-main-workspace">
+  <div class="col-xs-10 gc-content-left">
+    <nav class="gc-content-nav-wrapper row">
+      <div class="col-xs-10">
+        <ul class="gc-content-nav">
+          <li>
+            <label class="gc-content-nav-checkall">
+              <input type="checkbox">
+            </label>
+          </li>
+          <li class="active"><a href="#">Members</a></li>
+          <li><a href="#">Exercises</a></li>
+          <li><a href="#">Workouts</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Calendar</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-2 gc-content-nav-actions text-right">
+          <div class="btn-group" role="group">
+          <button class="btn btn-default btn-primary">
+            <span class="fa fa-plus"></span>
+          </button>
+          <button class="btn btn-default btn-danger">
+            <span class="fa fa-trash"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="gc-clients-list-wrapper row">
+      <div class="col-xs-12">
+        <input type="text" class="gc-clients-list-add-input form-control" placeholder="Add clients to this group">
+        <ul class="gc-clients-list gc-clients-list-ind">
+          {{#each clients}}
+          <li class="row">
+            <div class="col-xs-12">
+              <label class="gc-clients-list-client-chb">
+                <input type="checkbox">
+              </label>
+              <a href="#" class="gc-clients-list-avatar-wrapper">
+                <img src="" alt="">
+              </a>
+              <a href="#" class="gc-clients-list-client-link">
+                {{first_name}} {{last_name}}
+              </a>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-2 gc-content-right">
+    <header>
+      <h3>
+        Recent activity
+      </h3>
+    </header>
+    <ul class="gc-calendar-activity">
+      <li class="row">
+        <div class="col-xs-2 text-right">
+          <span class="fa fa-clock-o"></span>
+        </div>
+        <div class="col-xs-10">
+          <h6>today</h6>
+          <p>
+            Has entered new
+            <a href="#">Workout</a>
+          </p>
+        </div>
+      </li>
+      <li class="row">
+        <div class="col-xs-2 text-right">
+          <span class="fa fa-clock-o"></span>
+        </div>
+        <div class="col-xs-10">
+          <h6>today</h6>
+          <p>
+            Has entered new
+            <a href="#">Workout</a>
+          </p>
+        </div>
+      </li>
+      <li class="row">
+        <div class="col-xs-2 text-right">
+          <span class="fa fa-clock-o"></span>
+        </div>
+        <div class="col-xs-10">
+          <h6>today</h6>
+          <p>
+            Has entered new
+            <a href="#">Workout</a>
+          </p>
+        </div>
+      </li>
+      <li class="row">
+        <div class="col-xs-2 text-right">
+          <span class="fa fa-clock-o"></span>
+        </div>
+        <div class="col-xs-10">
+          <h6>today</h6>
+          <p>
+            Has entered new
+            <a href="#">Workout</a>
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="modal fade gc-modal" id="gc-edit-group-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal"><span>Close</span></button>
+        <h4 class="modal-title">
+          <span><img src="app/images/icon-individuals.png" alt=""></span>
+          Edit Fitness group information
+        </h4>
+      </div>
+      <form class="form group-edit-form" role="form">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-3">
+              <div class="gc-edit-profile-modal-upload-wrapper">
+                <input type="file" class="gc-edit-profile-modal-upload-input">
+                <p href="#" class="gc-edit-profile-modal-upload-text">
+                  <span class="fa fa-plus"></span>
+                  Upload
+                  <br>
+                  photo
+                </p>
+                <img src="{{avatar_url}}" alt=" " class="gc-edit-profile-modal-avatar">
+              </div>
+            </div>
+            <div class="col-xs-9">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="form-group">
+                    <label for="">Group name</label>
+                    <input type="text" class="form-control" name="name" value="{{name}}">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="row">
+            <div class="col-xs-12 text-right"><button type="submit" class="btn btn-primary">Save</button></div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,85 @@
+.gc-dashboard
+  header.gc-dashboard-header
+    h1.title
+      | Dashboard
+    //-span.slogan
+      | “I always felt that my greatest asset was
+      br
+      | not my physical ability, it was my mental ability.”
+      br
+      b
+        | Bruce Jenner
+  .gc-dashboard-content
+    .dashboard-left-side
+      .top-section.clearfix
+        .workout-indicators
+          region(data-name='completion_ring_today')
+          region(data-name='completion_ring_this_week')
+        .workout-amounts
+          .workout-amount
+            span.counter
+            span.counter-text
+              | Workouts scheduled tomorrow
+          .workout-amount
+            span.counter
+            span.counter-progress.positive
+            span.counter-text
+              | Workouts scheduled this week vs. last week
+          button.btn.btn-primary.gc-custom.calendar-button My Calendar
+      .gc-dashboard-table
+        region(data-name='info_tables')
+    .dashboard-right-side.clearfix
+      .trainer-library.clearfix
+        i.icon
+        .right-side
+          h2.title
+            | Training Library
+          span.subtitle
+            | Exercises, Workouts &
+            br
+            | Programs
+
+      .ewp-links.clearfix
+        a.exercise-link(href=exercise_link)
+          | List of Exercises
+        a.workout-link(href=workout_link)
+          | List of Workouts
+        a.program-link(href=program_link)
+          | List of Programs
+
+      .gc-recent-activity.clearfix
+        span.title
+          | Recent Activity:
+        .gc-activity-block.message
+          .icon
+          .text
+            | GymCloud sent you a new
+            a(href="#")
+              | message
+        .gc-activity-block.comment
+          .icon
+          .text
+            | GymCloud sent you a new
+            a(href="#")
+              | comment
+        .gc-activity-block.event
+          .icon
+          .text
+            | Test Client1 has the
+            a(href="#")
+              | new event
+            | scheduled
+        .gc-activity-block.performed
+          .icon
+          .text
+            a(href="#")
+              | Meredith Romero
+            | performed Barbell Press
+        .gc-activity-block.entered-result
+          .icon
+          .text
+            | Meredith Romero entered new
+            a(href="#")
+              | result
+        a(href="#").load-more-activity
+          | Load more...

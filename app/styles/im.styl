@@ -1,0 +1,242 @@
+.gc-im-wrapper
+  margin: 0
+  background: #f5f5f5
+  position: relative
+  min-height: 100%
+  height: 100%
+
+.gc-im-contacts-wrapper
+  background: #f5f5f5
+
+.gc-im-contacts-search
+  margin: 25px 0px 15px 0px
+
+.gc-im-contacts-list
+  padding: 0
+  margin: 0
+
+  li
+    list-style-type: none
+    margin: 0 -15px
+    border-top: 1px solid #ededed
+    padding: 0 20px
+    line-height: 24px
+
+  li:first-child
+    border: none
+
+.gc-im-contacts-list-item
+  padding: 23px 20px
+  line-height: 24px
+  height: 70px
+  display: block
+  vertical-align: middle
+  color: #3a99d8
+  font-size: 12px
+  margin: 0 -20px
+
+  &:hover
+    text-decoration: none
+
+  > span
+    display: inline-block
+    vertical-align: middle
+    text-transform: uppercase
+
+  > span + span
+    margin-left: 15px
+
+  &.active
+    background: #fff
+
+.gc-im-contacts-list-item-avatar
+  display: inline-block
+  width: 24px
+  height: 24px
+  border-radius: 50px
+  background: green url('../images/icon-individual-right.png') center top no-repeat
+  background-size: contain
+  position: relative
+
+  img
+    display: block
+    width: 24px
+    height: 24px
+    border-radius: 50px
+
+.gc-im-contacts-list-item-newmessage
+  background: #2ecc71
+  position: absolute
+  display: inline-block
+  width: 5px
+  height: 5px
+  border-radius: 10px
+  top: -2px
+  right: -2px
+
+.gc-im-chat-wrapper
+  border-left: 1px solid #ededed
+  float: none
+  margin-left: 25%
+  background: #fff
+  padding-top: 20px
+  position: absolute
+  top: 0
+  bottom: 0
+
+.gc-im-chat-title
+  font-size: 12px
+  color: #757575
+  margin: 0 0 15px 0
+
+  span
+    text-transform: uppercase
+    color: #3a99d8
+
+.gc-im-chat-send-wrapper
+  height: 95px
+  border-top: 1px solid #ededed
+  position: absolute
+  bottom: 0
+  margin: 0
+  left: 0
+
+  .input-group
+    height: 34px
+    margin: 30px 0
+    position: relative
+
+    .btn,
+    .form-control
+      border: none
+      background: #fff
+      box-shadow: none
+
+    .btn
+      color: rgba(51, 152, 219, 0.5)
+
+  label
+    color: rgba(64, 68, 71, 0.5)
+    background: #fff
+    font-weight: normal
+    font-size: 12px
+    line-height: 34px
+    height: 34px
+    position: absolute
+    top: 0
+    left: 0
+    display: block
+    margin: 0
+    width: 100%
+    z-index: 10
+    cursor: text
+
+  input:focus + label,
+  input.active + label
+    display: none
+
+.gc-im-chat-send-button
+
+  .btn
+    text-transform: uppercase
+    color: #3a99d8
+    font-size: 12px
+    line-height: 12px
+    padding: 8px 10px
+    margin: 27px 0 0 0
+    display: inline-block
+    background: #fff
+    border-color: #3a99d8
+    border-radius: 50px
+    text-decoration: none
+
+  span
+    display: block
+    font-size: 10px
+    color: #99a6ac
+
+.gc-im-chat-messages
+  position: absolute
+  top: 48px
+  bottom: 95px
+  left: 0
+  right: 0
+  overflow-y: scroll
+
+.gc-im-message
+  margin: 0 25px 20px 25px
+
+.gc-im-message-avatar
+  display: inline-block
+  width: 40px
+  height: 40px
+  border-radius: 50px
+  background: green url('../images/icon-individual-right.png') center top no-repeat
+  background-size: contain
+  position: relative
+
+.gc-im-message-avatar img
+  display: block
+  width: 40px
+  height: 40px
+  border-radius: 50px
+
+.gc-im-message-text-wrapper
+  max-width: 500px
+  margin: 0 20px
+  float: left
+
+  .row
+    color: rgba(153, 166, 172, 0.5)
+    font-size: 10px
+    padding-top: 5px
+
+.gc-im-message-text
+  border-radius: 5px
+  min-height: 1em
+  padding: 15px 20px
+  position: relative
+
+  &:after
+    content: " "
+    display: block
+    position: absolute
+    top: 10px
+    left: -10px
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 10px 10px 10px 0
+    border-color: transparent #edfaff transparent transparent
+
+.gc-im-message-to
+
+  .gc-im-message-avatar
+    background-image: url('../images/icon-individual-left.png')
+
+  .gc-im-message-avatar-wrapper
+    float: right
+
+  .gc-im-message-text-wrapper
+    float: right
+
+  .gc-im-message-text
+    background: #f8f9f0
+
+    &:after
+      top: 10px
+      right: -10px
+      left: auto
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 10px 0 10px 10px
+      border-color: transparent transparent transparent #f8f9f0
+
+.gc-im-message-from
+
+  .gc-im-message-avatar-wrapper
+    float: left
+
+  .gc-im-message-text
+    background: #edfaff

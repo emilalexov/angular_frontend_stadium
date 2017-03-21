@@ -1,0 +1,29 @@
+{{#withProfile}}
+  <div class="gc-main-workspace">
+    <div class="gc-nav-wrapper row">
+      <div class="col-xs-7">
+        <a class="gc-content-nav-back">
+          <span class="fa fa-chevron-left"></span>
+        </a>
+        <div class="gc-workout-title">
+          <h2>{{../name}}</h2>
+        </div>
+      </div>
+      <div class="col-xs-5 text-right">
+        <button class="btn brn-primary enter-results">Enter Results</button>
+        <button class="btn brn-primary">Schedule</button>
+      </div>
+    </div>
+    <div class="gc-workspace-content">
+      <div class="row gc-inner-nav-wrapper">
+        <div class="col-xs-12">
+          <ul class="gc-inner-nav">
+            <li class="active" data-view="description"><a>Description</a></li>
+            <li data-view="video"><a>Video</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="workout-manage"></div>
+    </div>
+  </div>
+{{/withProfile}}

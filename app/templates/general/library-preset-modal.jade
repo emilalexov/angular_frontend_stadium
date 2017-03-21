@@ -1,0 +1,84 @@
+.modal-content.gc-preset-modal
+  .modal-body
+    .gc-step.gc-preset-intro.active
+      .gc-preset-body.gc-bg-primary
+        h1.title
+          b Preload from our Library
+        .row
+          .col-sm-6
+            img(src=require('app/images/preset-intro.png'), width='100%')
+          .col-sm-6
+            p.gc-preset-desc
+              | For the best gymcloud experience we recommend preloading you exercise workout, and program libaries
+      .gc-preset-footer
+        p.gc-preset-desc
+          | Would you like to preload the list of programs, workouts & exercises to you library?
+        a.btn(href='#', data-dismiss='modal')
+          | No
+        a.btn.next-button(href='#')
+          | Yes
+    .gc-step.gc-preset-step1
+      .gc-preset-header.gc-bg-primary.clearfix
+        img.pull-left(src=require('app/images/preset-intro.png'), width='80px')
+        h4.title.pull-left
+          b Step 1:
+          | Title of the screen
+        button.close(data-dismiss='modal') Close
+      .gc-preset-body
+        h4.title How would you like to organize your exerise?
+        p
+          | You will get a folders with programs, workouts, exercises organised due to your needs. In case, you can delete them from library.
+        ul.gc-modal-options
+          li
+            input(type='checkbox')
+            | Type of Equipment (barbell, kettlebell etc)
+          li
+            input(type='checkbox')
+            | Body Part (chest, arms, etc)
+          li
+            input(type='checkbox')
+            | Movement Pattern (Push, Pull)
+      .gc-preset-footer
+        a.btn.btn-link.previous-button(href='#')
+          | Previous
+        a.btn.next-button(href='#')
+          | Next
+    .gc-step.gc-preset-step2
+      .gc-preset-header.gc-bg-primary.clearfix
+        img.pull-left(src=require('app/images/preset-intro.png'), width='80px')
+        h4.title.pull-left
+          b Step 2:
+          | Title of the screen
+        button.close(data-dismiss='modal') Close
+      .gc-preset-body
+        h4.title Select what type of programs you'd like to preload:
+        ul.gc-modal-options
+          li
+            input(type='checkbox')
+            | Strength
+          li
+            input(type='checkbox')
+            | Muscle Building
+          li
+            input(type='checkbox')
+            | Keeping it fit
+        p
+          | Nothing here fit your requirements?
+          br
+          | You can use 
+          a(href='#') Global Search in GymCloud
+          | to search for a specific programs, workouts & exercise that will fit you more.
+      .gc-preset-footer
+        a.btn.btn-link.previous-button(href='#')
+          | Previous
+        a.btn.next-button(href='#')
+          | Next
+    .gc-step.gc-preset-success
+      .gc-preset-body.gc-bg-primary
+        h4.title
+          | Congratulations, you have successfully preloaded you GymCloud library!
+        img(src=require('app/images/preset-whistle.png'))
+        p
+          | Are you ready to get started?
+        a.btn.capitalize(href='#', data-dismiss='modal')
+          | Finish

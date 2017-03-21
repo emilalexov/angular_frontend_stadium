@@ -1,0 +1,11 @@
+if provider == 'google_oauth2'
+  .provider.google-provider
+    i.fa.fa-google
+else if provider == 'facebook'
+  .provider.facebook-provider
+    i.fa.fa-facebook
+.auth-info
+  | Connected with email: 
+  = email
+.remove-auth
+  i.glyphicon.glyphicon-remove

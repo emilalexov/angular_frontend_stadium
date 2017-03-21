@@ -1,0 +1,17 @@
+.page-wrap
+  header.gc-header-standard.gc-header-login
+    .container
+      .col-xs-12.col-sm-6.gc-login-form-wrapper
+        h1.text-center
+          | Resend Confirmation Instructions
+        form.gc-reset-password-form(role='form')
+          span.gc-resend-error-text.hidden
+          .gc-resend-success.hidden
+            p
+              | An email has been sent to your account. Please follow the steps to confirm your account.
+          .gc-resend-form-controls
+            .row.gc-resend-email-container
+              input.form-control(type='text', name='email', placeholder='Email Address')
+            .row.gc-resend-button-container
+              button.btn.btn-primary.resend-confirmation
+                | Resend Instructions

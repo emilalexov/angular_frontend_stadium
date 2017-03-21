@@ -1,0 +1,209 @@
+.gc-program-workouts-list
+  padding: 10px
+  list-style-type: none
+  position: relative
+  margin-bottom: 0px
+
+  &.empty
+    padding: 20px
+
+  .gc-workout-draggable
+    display: block
+
+  > .gc-workout-draggable:not(:last-child)
+      margin-bottom: 20px
+
+.gc-program-weeks-workouts-container
+  .gc-program-workouts-list
+    &.empty
+      border: 1px dashed rgba(40,45,48,0.1)
+
+.gc-workout-draggable
+  &.dragged
+    .gc-program-workout-item
+      cursor: move
+
+.gc-program-workout-item
+  display: flex
+  flex-direction: column
+  margin-bottom: 2rem
+
+  .gc-workout-header
+    position: relative
+    background: #3a99d8
+    line-height: 20px
+    padding: 20px
+    color: #fff
+    border: 1px solid #3a99d8
+    border-top-left-radius: 6px
+    border-top-right-radius: 6px
+
+    .gc-workout-title
+      margin: 0
+      font-size: 15px
+      line-height: 20px
+      font-weight: bold
+      padding-left: 20px
+
+  .gc-workout-bookmark
+    position: absolute
+    height: 29px
+    width: 14px
+    z-index: 1
+    background-image: url("../images/workout-bookmark-icon.png")
+    background-repeat: no-repeat
+    top: -1px
+    left: 20px
+    cursor: pointer
+
+  .gc-program-workout-sort
+    background-image: url("../images/sort-icon-white.png")
+    background-size: contain
+    background-repeat: no-repeat
+    position: absolute
+    width: 6px
+    height: 13px
+    cursor: move
+    display: inline-block
+    left: 8px
+    top: 23px
+
+  .gc-workout-body
+    padding: 10px 20px
+    background-color: #fff
+    border-left: 1px solid #ececec
+    border-right: 1px solid #ececec
+
+    .gc-workout-body-empty
+      padding: 40px 20px
+
+  .gc-workout-footer
+    padding: 5px
+    background: #fafafa
+    border: 1px solid #ededed
+    margin-left: 0px
+    margin-right: 0px
+    border-bottom-left-radius: 6px
+    border-bottom-right-radius: 6px
+
+  .gc-workout-body-nav
+    height: auto
+    border: none
+    padding: 0px
+    margin: 10px 0
+    li.active a
+      border-bottom-width: 1px
+    a
+      font-size: 14px
+      line-height: 18px
+
+  .gc-workout-empty-warmups
+    a.gc-quick-add
+      color: #3a99d8
+      outline: none
+      font-weight: normal
+
+  .gc-workout-actions
+    float: right
+    position: relative
+
+    button
+      margin-top: -5px
+      margin-right: 5px
+
+    .gc-cheevon-dropdown
+      background: url('../images/chevron-down-white.svg') no-repeat
+      background-size: contain
+      border: none
+      margin-top: -5px
+      background-color: transparent
+      box-shadow: none
+      color: #fff
+      padding: 4px 0px
+      height: 30px
+      width: 30px
+
+      &:hover
+        opacity: .7
+
+  .gc-workout-bookmark.active,
+  input[type=checkbox]:checked + .gc-workout-bookmark
+    background-image: url("../images/workout-bookmark-active-icon.png")
+
+  .gc-workout-empty-warmups,
+  .gc-workout-empty-video
+    background-color: #fafafa
+    padding: 30px 20px
+    text-align: center
+    color: #9ea0a1
+    font-weight: 300
+
+  &.personal
+    .gc-box-content,
+    .gc-workouts-exercises-view
+      margin: 0
+      padding: 0
+      
+    .gc-workout-body
+      border-bottom: 1px solid #ececec
+      border-bottom-left-radius: 8px
+      border-bottom-right-radius: 8px
+
+    .gc-workouts-exercises-view
+      border-radius: 0
+      border: none
+      border-top: 1px solid #ededed
+
+      .note
+        margin: 30px 0
+        
+    .gc-workout-title
+      padding-left: 0
+    
+    .gc-content-nav li
+      
+      &:first-child
+        margin-left 0
+    
+    .gc-workout-exercises-list
+      padding: 2px 14px
+
+.gc-workout-tab-content
+  .tab-pane
+    padding: 15px 0
+
+.gc-add-create-workout-wrapper
+  display: table
+  width: 100%
+
+  > div
+    display: table-cell
+    vertical-align: middle
+    position: relative
+
+    &:nth-child(2)
+      width: 30px
+      text-align: center
+    &:nth-child(3),
+    &:nth-child(4)
+      width: 100px
+
+  .gc-program-add-week
+    margin-left: 5px
+
+  .gc-clear-quick-add
+    font-size: 12px
+    text-transform: uppercase
+    position: absolute
+    border: none
+    background-color: transparent
+    color: #f00
+    right: 5px
+    top: 8px
+    outline: none
+    z-index: 100
+
+.gc-program-empty-placeholder
+  .gc-add-workout-controls
+    margin: 17% auto 0
+    width: 75%

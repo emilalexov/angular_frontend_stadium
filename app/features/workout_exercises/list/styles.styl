@@ -1,0 +1,254 @@
+.gc-workouts-exercises-view
+  border: 1px solid #ededed
+  border-radius: 10px
+  margin: 0 0 15px
+
+  .gc-program-workout-item &
+    margin: 0 -21px -18px
+    border-top-right-radius: 0
+    border-top-left-radius: 0
+
+ul.gc-workout-exercises-list
+  margin: 0
+  padding: 2px 22px
+  list-style-type: none
+
+  &:after
+    content: ''
+    clear: both
+    display: block
+
+  li
+    &.gc-workout-exercise-item
+      display: table
+      width: 100%
+      padding: 0
+      height: 60px
+      min-height: 60px
+      float: right
+
+    ul.workout-exercise-properties:after
+      display: block
+      clear: both
+      content: ''
+
+    label.gc-alt-checkbox
+      width: 0
+      position: relative
+      padding-left: 29px
+      cursor: pointer
+
+    .gc-exercises-cell,
+    .gc-clientpage-exercises-cell
+      display: table-cell
+      vertical-align: middle
+
+    > .gc-exercises-cell.drag-area
+      width: 10px
+
+    > .gc-exercises-cell
+
+      &.gc-cell-trash,
+      &.gc-cell-add
+        display: none
+        width: 30px
+        text-align: right
+
+      &.gc-cell-add
+        width: 40px
+
+        &.gc-set-property-checkbox-wrapper
+          display: table-cell
+
+          .gc-alt-checkbox
+
+            input[type="checkbox"]:not(:checked):not(:hover) + .gc-checkbox-clone
+              width: 30px
+              height: 30px
+              border-color: #999
+              opacity: .5
+              background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAKCAMAAACzB5/1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADZQTFRFkZGRxMTE9vb2hoaGnp6ekpKSz8/PkJCQampqzs7O1NTUh4eH9fX11dXV+fn5xcXFbm5u////c3BhiwAAABJ0Uk5T//////////////////////8A4r+/EgAAAERJREFUeNpUzUkWgCAQxNASnEE097+sjbY8ye6vIn4dlzoN6oTG0nSC4vR6r0I5qjQhcjK7jOZlc1US0up6SJi/2S3AAG6qCCwZ67fkAAAAAElFTkSuQmCC')
+              background-position: center
+              background-repeat: no-repeat
+
+            input[type="checkbox"]:hover + .gc-checkbox-clone,
+            input[type="checkbox"]:checked + .gc-checkbox-clone
+              border-color: #3a99d8
+
+    > .gc-workout-exercise-circle-cell
+      width: 20px
+
+    .gc-cell-property
+      text-align: right
+
+      .select-box
+        float: left
+        margin: 0 -1px
+        min-width: 3rem
+
+        button.gc-custom[data-toggle="dropdown"]
+          border-radius: 0
+
+    .gc-property
+      margin: 0!important
+
+    .gu-transit
+      position: relative
+      display: table
+      width: 100%
+      background-color: rgba(58,153,216,0.5)
+      opacity: 1
+      height: 40px
+
+      a
+        display: none
+
+      &:before
+        position: absolute
+        top: 5px
+        left: 5px
+        bottom: 5px
+        right: 5px
+        content: 'drop exercise here'
+        text-transform: uppercase
+        text-align: center
+        border: 1px dashed #fff
+        color: #fff
+        line-height: 27px
+
+  .dragged
+    position: absolute
+
+  .gc-delete-exercise
+    color: #acacac
+    font-size: 22px
+    line-height: 17px
+    opacity: 0.7
+    visibility: hidden
+
+  .gc-add-single-property-button
+    opacity: 0.7
+    visibility: hidden
+    margin-right: 6px
+    cursor: pointer
+
+  .gc-delete-exercise:hover,
+  .gc-add-single-property-button:hover
+    opacity: 1
+
+  li.hover-enabled
+
+    > .gc-cell-trash,
+    > .gc-cell-add
+      display: table-cell
+
+    .gc-hover-hidden
+      display: table-cell!important
+
+    &:hover
+
+      .gc-delete-exercise,
+      .gc-add-single-property-button
+        visibility: visible
+
+  li .gc-hover-hidden
+    visibility: hidden!important
+
+.gc-workout-exercise-item
+  &.gu-mirror
+    height: auto!important
+    background-color: rgba(255,255,255,0.5)
+    padding: 5px
+    border-radius: 5px
+    
+    .gc-exercises-cell
+      float: left
+    
+    > .gc-exercises-cell:first-child
+      margin-top: 4px
+    
+    .gc-workout-exercise-note,
+    > .gc-exercises-cell:not(:nth-child(3)):not(:first-child)
+      display: none
+
+.gc-workout-exercise-sort
+  background-image: url("../../../images/sort-icon.png")
+  background-size: contain
+  background-repeat: no-repeat
+  margin-right: 12px
+  width: 6px
+  height: 13px
+  cursor: move
+  opacity: 0.6
+  display: block
+
+  &:hover
+    opacity: 1
+
+.gc-workout-exercise-circle-cell
+  position: relative
+
+  .line-top,
+  .line-bottom
+    display: none
+    position: absolute
+    z-index: 1
+    content: ""
+    width: 3px
+    background: inherit
+    left: 13px
+
+  &[data-order_position=first],
+  &[data-order_position=middle]
+    .line-bottom
+      display: block
+      top: 50%
+      bottom: 0
+
+  &[data-order_position=middle],
+  &[data-order_position=last]
+    .line-top
+      display: block
+      top: 0
+      bottom: 50%
+
+.gc-workout-exercise-circle
+  display: block
+  position: relative
+  z-index: 2
+  padding: 0
+  border: 0 none
+  width: 30px
+  height: 30px
+  line-height: 30px
+  background-color: transparent
+  transition: background-color .3s ease
+  border-radius: 15px
+  color: #fff
+  font-size: 10px
+  font-weight: bold
+  text-align: center
+  text-transform: uppercase
+  &:active,
+  &:focus
+    box-shadow: 0 0 1px 3px rgba(0,0,0,0.3) inset
+
+.gc-workout-exercise-name
+  text-transform: uppercase
+  color: #3a99d8
+  font-size: 14px
+  margin-left: 15px
+  cursor: initial
+
+.gc-workout-exercise-note
+  margin-left: 15px
+  margin-bottom: 0px
+  line-height: 15px
+  height: 15px
+  cursor: auto
+  font-size: 12px
+  border: none
+  outline: none
+  display: block
+  width: 100%
+  background: transparent

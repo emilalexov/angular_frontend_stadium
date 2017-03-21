@@ -1,0 +1,55 @@
+.payment-notice
+  span.bucks-sign
+    | $
+  span.bucks-count
+    | 5.99
+  p
+    | Charged monthly for Fitness Professional Subscription Plan. See
+    a(href="#")
+      | &nbsp;Pricing page&nbsp;
+    | for additional payment terms and information.
+br
+.form-group.no-padding
+  label
+    | Card Number
+  input.form-control.number(type="text")
+.expiration-n-security-code
+  .expiration-month.form-group.no-padding
+    label
+      | Expiration Date
+    select.form-control.exp_month
+      option
+        | Month
+      each val in ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
+        option= val
+  .divider
+    | /
+  .expiration-year.form-group.no-padding
+    select.form-control.exp_year
+      option
+        | Year
+      each val in _.range(2016, 2026)
+        option= val
+
+  .space-filler
+  .security-code.form-group.no-padding
+    label
+      | Security code
+    input.form-control.cvc(type="text")
+  .question-in-circle
+    | ?
+br
+.form-group.no-padding
+  label
+    | Cardholder name
+  input.form-control.full-name(type="text")
+br
+.finish-block
+  .lock-img-mock
+  p.secure-payment.no-margin
+    | This is a secure 128-bit SSL
+    br
+    | encrypted payment.
+  .space-filler
+  button.btn.btn-default.no-margin(type="submit")
+    | Finish

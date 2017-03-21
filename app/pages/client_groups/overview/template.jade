@@ -1,0 +1,15 @@
+region(data-name='header')
+.gc-main-workspace
+  nav.gc-content-nav-wrapper.row
+    .col-xs-10
+
+      a.gc-content-nav-back
+        span.fa.fa-chevron-left
+      region(data-name='navigation_content_tabs')
+
+    .col-xs-2.gc-content-nav-actions.text-right
+      .btn-group(role='group')
+        button.btn.btn-default.btn-danger.gc-content-nav-delete
+          span.fa.fa-trash
+
+  region(data-name='page_content')

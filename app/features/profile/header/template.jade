@@ -1,0 +1,64 @@
+.gc-usercard-large.row.account_type(class="#{ is_pro ? 'gc-trainer-card' : 'gc-client-card' }")
+
+  .col-xs-9
+    .gc-usercard-avatar-wrapper.text-center
+      img.gc-usercard-avatar
+    .gc-usercard-info
+      h1.gc-usercard-name
+        span(data-bind='first_name')
+        span=" "
+        span(data-bind='last_name')
+      p.gc-usercard-address
+        span(data-bind='location')
+        span=" "
+        span(data-bind='zip')
+      input.gc-usercard-link(type='text', value='http://gymcloud.com/clients/john-doe', readonly='readonly')
+      .btn-group.gc-usercard-actions(role='group')
+        button.btn.btn-default.show-message-form
+          | New message
+        button.btn.btn-default.invite-client-button(
+          data-toggle='modal',
+          data-target='#gc-invite-client-modal'
+        )
+        a.btn.btn-default.show-client-form
+          | Edit profile
+
+  .col-xs-3.gc-usercard-params.text-right
+    dl
+      dt Height (ft' in")
+      dd(data-bind='height')
+      dt Weight (lbs)
+      dd(data-bind='weight')
+      dt Bodyfat (%)
+      dd(data-bind='bodyfat')
+      dt Age
+      dd(data-bind='birthday')
+      dt Gender
+      dd(data-bind='gender')
+
+#gc-invite-client-modal.modal.fade.gc-modal
+  .modal-dialog.modal-md
+    .modal-content
+      .modal-header
+        button.close(data-dismiss='modal')
+          span Close
+        h4.modal-title
+          span
+            img(src=require('app/images/icon-individuals.png'), alt='')
+          client-title
+      form.form.invite-client-form(role='form')
+        .modal-body
+          .row
+            .col-xs-12
+              .row
+                .col-xs-12
+                  .form-group
+                    label.client-title-label
+                    label.gc-error-message
+                    input.form-control(name='email', type='text')
+        .modal-footer
+          .row
+            .col-xs-12.text-right
+              button.btn.btn-primary(type='submit') Invite
+#gc-send-message-modal.modal.fade.gc-modal
+region#gc-edit-client-modal.modal.fade.gc-modal(data-name='client_form')

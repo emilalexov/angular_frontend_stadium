@@ -1,0 +1,167 @@
+.gc-trainer-cert-modal
+  
+  .modal-dialog
+    width: 517px
+
+  .modal-content
+    position: relative
+    height 457px
+
+  .modal-body
+    padding-top: 55px
+    transition: all .4s ease-in-out
+
+  .description,
+  .success-message
+    width: 70%
+    margin: 0 auto
+    font-size: 16px
+    line-height: 20px
+    text-align: center
+    color: #404447
+
+  .cert-upload-area
+    position: relative
+    height: 118px
+    margin-top: 62px
+    border: 1px solid #cbd4d7
+    border-radius: 5px
+    cursor: pointer
+    background: url('../images/certificat-upload.svg') no-repeat center center
+    transition: all .4s ease-in-out
+    
+    &:hover
+      border-style: dashed
+
+  .cert-progress-block
+    height: 70px
+    display: none
+    align-items: center
+    justify-content: space-between
+    opacity: 0
+    margin-top: 38px
+    padding: 0 20px
+    background-color: rgba(#459dd9, 0.2)
+    border-radius: 10px
+    transition: opacity .3s ease-in-out
+
+    .certificat-info
+      display: flex
+      align-items: center
+      
+      .icon
+        display: inline-block
+        width: 20px
+        height: 25px
+        background: url('../images/certificat-photo.svg') no-repeat
+
+      .certificat-file-name
+        margin-left: 16px
+        font-size: 16px
+        color: #404447
+    
+    .upload-progress
+      display: flex
+      align-items: center
+
+      .cancel-btn
+        width: 18px
+        height: 18px
+        margin: 0
+        padding: 0
+        background: url('../images/cancel-icon.svg') no-repeat
+        box-shadow: none !important
+        transform: rotate(47deg)
+
+      .progress-status
+        position: relative
+        display: inline-block
+        background-color: #cbd4d7
+        width: 150px
+        height: 4px
+        margin-right: 22px
+        border-radius: 3px
+        
+        span
+          position: absolute
+          display: inline-block
+          height: 4px
+          background-color: #2dc35d
+          border-radius: 3px
+          
+          &:before
+            content: ''attr(data-progress)''
+            position: absolute
+            top: -22px
+            display: block
+            text-align: center
+            font-size: 12px
+            color: #2dc35d
+            transform: translateX(70px)
+
+  .success-block
+    display: none
+    
+    .icon
+      display: block
+      width: 49px
+      height: 57px
+      margin: 0 auto 28px
+      background: url('../images/certificat.svg') no-repeat
+      background-size: contain
+
+  .modal-footer
+    position: absolute
+    bottom: 0
+    width: 100%
+    padding: 0 0 25px
+
+  .button
+    width: 169px
+  
+  .back-btn
+    display: block
+  
+  .submit-btn,
+  .finish-btn
+    display: none
+
+.in-upload
+  
+  .modal-body
+    padding-top: 25px
+  
+  .cert-upload-area
+    height: 70px
+    margin-top: 25px
+  
+  .cert-progress-block
+    display: flex
+    opacity: 1
+    
+  .submit-btn
+    display: block
+  
+  .back-btn,
+  .finish-btn
+    display: none
+
+.success-upload
+    
+  .cert-upload-area
+  .cert-progress-block
+  .description
+    display: none
+
+  .success-block
+    display: block
+
+  .modal-body
+    padding-top: 102px
+  
+  .finish-btn
+    display: block
+
+  .back-btn,
+  .submit-btn
+    display: none

@@ -1,0 +1,22 @@
+{{#withProfile}}
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="form-group {{#unless ../hasDescription}}hidden{{/unless}}">
+        <div class="gc-workout-description" type="text" placeholder="Start typing a description here...">{{../description}}</div>
+      </div>
+      <!-- Note Fields -->
+      <div class="form-group gc-workout-note-container {{#unless ../hasNote}}hidden{{/unless}}">
+        <label class="gc-workout-notes-label">Workout Notes</label>
+        <div class="gc-workout-description" type="text">{{../notes}}</div>
+      </div>
+      <!-- / Note Fields  -->
+    </div>
+  </div>
+  <div id="gc-exercises-list-region"></div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="form-group">
+      </div>
+    </div>
+  </div>
+{{/withProfile}}

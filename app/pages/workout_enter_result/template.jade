@@ -1,0 +1,178 @@
+.row.gc-nav-wrapper
+  .col-sm-8
+    a.gc-content-nav-back
+      span.fa.fa-chevron-left
+    region(data-name='breadcrumbs')
+  .col-xs-12.col-sm-4.text-sm-right
+.gc-workspace-content
+  region(data-name='page_content')
+    .gc-box-content
+      .gc-workout-enter-result-view
+        header.workout-enter-header
+          .row.flex-center-aligment
+            .col-md-4.flex-center-aligment
+              .avatar-section.clearfix
+                .gc-workout-exercise-circle(style='background-color:#f58838')
+                  | A1
+              .details-section.clearfix
+                a.gc-workout-exercise-name(href="#")
+                  | Cable Crunch
+            .col-md-8
+              .property-items
+                .property-item
+                  span
+                    | 4 Sets
+                .property-item
+                  span
+                    | 10 Sets
+        .workout-enter-middle
+          .row.middle-item
+            .col-md-4
+              .workout-enter-prev-result
+                span
+                  | Previout result
+                span 
+                  | 20/09/15  14:20 AM
+            .col-md-8
+              .property-items
+                .personal-best-check.active
+                .property-item
+                  span
+                    | 5 Sets
+                .property-item
+                  span
+                    | 12 Sets
+                button.gc-icon-trash.delete-button
+        footer.workout-enter-footer
+          .top-section
+            button.add-btn.comment-btn
+              | Add Comment
+            button.add-btn.result-btn
+              | Add New result
+      
+      .gc-workout-enter-result-view
+        header.workout-enter-header
+          .row.flex-center-aligment
+            .col-md-4.flex-center-aligment
+              .avatar-section.clearfix
+                .gc-workout-exercise-circle(style='background-color:#f58838')
+                  | A2
+              .details-section.clearfix
+                a.gc-workout-exercise-name(href="#")
+                  | Cable Crunch
+            .col-md-8
+              .property-items
+                .property-item
+                  span
+                    | 4 Sets
+                .property-item
+                  span
+                    | 10 Sets
+        .workout-enter-middle
+          .row.middle-item
+            .col-md-4
+              .workout-enter-prev-result
+                span
+                  | Previout result
+                span 
+                  | 20/09/15  14:20 AM
+            .col-md-8
+              .property-items
+                .personal-best-check
+                .property-item
+                  span
+                    | 5 Sets
+                .property-item
+                  span
+                    | 12 Sets
+                button.gc-icon-trash.delete-button
+        .workout-enter-results.opened
+          .row.flex-center-aligment
+            .col-md-4
+              span 
+                | Add new result
+            .col-md-8                  
+              .workouts-result-inputs
+                form
+                  .input-wrapper
+                    label
+                      | Sets
+                    input(type="text", placeholder='0')
+                  .input-wrapper
+                    label
+                      | Sets
+                    input(type="text", placeholder='0')
+                  button.gc-btn-round.gc-btn-plus.add-result-submit(type='submit')
+        footer.workout-enter-footer
+          .top-section
+            button.add-btn.comment-btn
+              | Add Comment
+            button.add-btn.result-btn.opened
+              | Add New result
+
+      .gc-workout-enter-result-view
+        header.workout-enter-header
+          .row.flex-center-aligment
+            .col-md-4.flex-center-aligment
+              .avatar-section.clearfix
+                .gc-workout-exercise-circle(style='background-color:#f58838')
+                  | A3
+              .details-section.clearfix
+                a.gc-workout-exercise-name(href="#")
+                  | Cable Crunch
+                span 
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            .col-md-8
+              .property-items
+                .property-item
+                  span
+                    | 4 Sets
+                .property-item
+                  span
+                    | 10 Sets
+        .workout-enter-middle
+          .row.middle-item
+            .col-md-4
+              .workout-enter-prev-result
+                span
+                  | Previout result
+                span 
+                  | 20/09/15  14:20 AM
+            .col-md-8
+              .property-items
+                .property-item
+                  span
+                    | 5 Sets
+                .property-item
+                  span
+                    | 12 Sets
+                button.gc-icon-trash.delete-button
+        footer.workout-enter-footer
+          .top-section
+            button.add-btn.comment-btn.opened
+              | Add Comment
+            button.add-btn.result-btn
+              | Add New result
+
+          .gc-comment-box.clearfix
+            .gc-comment
+              a.gc-comment-avatar
+                img(src='', alt='')
+              .gc-comment-right-section
+                .gc-comment-message
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores quis voluptatem debitis provident tenetur, iure nobis minima inventore. Saepe iure, quis reiciendis dolorem voluptatibus est nulla hic. Libero, expedita, totam.
+                .gc-comment-date
+                  span 
+                    | Sent 
+                  span 
+                    | 11/02/2014
+              .gc-comment-enter-message
+                textarea(placeholder='Start typing...')
+                button.btn.btn-primary.gc-custom(type='submit')
+                  | Send 
+
+      .gc-workout-enter-bottom-btns
+        button.btn.btn-danger.gc-action-button.type-delete
+          | Remove all results
+        button.btn.btn-primary.gc-custom
+          | Finished

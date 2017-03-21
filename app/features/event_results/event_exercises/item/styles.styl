@@ -1,0 +1,106 @@
+.gc-workout-enter-result-view
+  margin-top: 30px
+
+  .flex-center-aligment
+    display: flex
+    align-items: center
+
+  .workout-enter-header
+    padding: 20px 70px 20px 25px
+    background-color: #fafafa
+    border: 1px solid #ededed
+    border-radius: 10px 10px 0 0
+
+    .avatar-section,
+    .details-section
+      float: left
+
+    .details-section
+      margin-left: 15px
+      span
+        display: block
+        font-size: 12px
+
+    .gc-workout-exercise-name
+      margin-left: 0
+
+    .gc-workout-exercise-circle
+      float: left
+      width: 20px
+      height: 20px
+      line-height: 20px
+      font-size: 9px
+
+  .delete-button
+    display: none
+    position: absolute
+    top: 50%
+    right: -36px
+    border: 0
+    outline: none
+    color: #acacac
+    opacity: .8
+    font-size: 26px
+    background-color: transparent
+    transform: translate(0,-50%)
+
+    &:hover
+      opacity: 1
+
+  .personal-best-check
+    float: left
+    width: 16px
+    height: 18px
+    margin-right: 36px
+    background: url('../../../../images/personal-best.png') no-repeat
+    cursor: pointer
+    transition: background .3s ease-in-out
+
+    &.active,
+    &:hover
+      background-image: url('../../../../images/personal-best-active.png')
+
+    &.active
+      &:hover
+        background-image: url('../../../../images/personal-best.png')
+
+  .workout-enter-footer
+    padding: 15px 0px 15px 25px
+    border-radius: 0 0 10px 10px
+    border: 1px solid #ededed
+    background-color: #fafafa
+
+    .top-section
+      display: flex
+      padding-right: 70px
+      justify-content: space-between
+
+  .add-btn
+    padding-left: 24px
+    font-size: 12px
+    text-transform: uppercase
+    color: #3a99d8
+    background-color: transparent
+    background-position: left center
+    background-repeat: no-repeat
+    border: 0
+    outline: none !important
+    transition: all .2s ease-in-out
+
+    &.opened,
+    &:hover
+      color: #acb7bb
+
+    &.result-btn
+      background-image: url('../../../../images/new-plus-blue-icon.png')
+
+      &.opened,
+      &:hover
+        background-image: url('../../../../images/new-plus-gray-icon.png')
+
+    &.comment-btn
+      background-image: url('../../../../images/comment-icon-blue.png')
+
+      &:hover,
+      &.opened
+        background-image: url('../../../../images/comment-icon-gray.png')

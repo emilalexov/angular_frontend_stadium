@@ -1,0 +1,66 @@
+.gc-exercises-assign
+  .gc-folders-entity-list
+    overflow: auto
+    height: calc(100% - 320px)
+    
+
+.gc-folders-entity-list
+  padding: 0
+  position: relative
+  list-style-type: none
+
+  .gc-folder,
+  .gc-folder-item
+    display: flex
+    flex-wrap: nowrap
+    justify-content: space-between
+    list-style-type: none
+    border-bottom: 1px solid #ededed
+    padding: 15px 15px 15px 0
+    margin: 0
+
+    &:hover
+      background: #fbfbfb
+
+    &.active
+      background: rgba(51, 152, 219, 0.1)
+
+    &.padding-0
+      padding: 0
+
+    .item
+      display: flex
+      justify-content: flex-start
+      align-items: center
+
+      .gc-exercises-chb
+        position: initial
+        margin: 0 5px 0 0
+        padding: 0
+        width: auto
+        height: auto
+
+      .gc-exercises-item-icon
+        height: 20px
+
+      .gc-exercises-folder-icon
+        margin: 0 5px
+        width: 23px
+        height: 13px
+
+  .gc-exercises-link
+    display: inline-block
+    width: calc(100% - 60px)
+    margin: 0
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    color: #3a99d8
+    text-transform: uppercase
+    font-size: 14px
+    line-height: 30px
+
+  .gc-exercises-link:hover,
+  .gc-exercises-link:active,
+  .gc-exercises-link:focus
+    color: #282d30

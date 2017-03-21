@@ -1,0 +1,26 @@
+.popover.tutorial
+  .arrow
+  button.btn.btn-default.close(data-role='finish_tour')
+    | Exit Tour
+  .content
+    .order
+      | #{currentIndex} of #{totalCount}
+    .text
+      h3.popover-title
+        = title
+      .popover-content
+        = content
+  .buttons
+    a.docs.btn.btn-primary.gc-custom(
+      target='_blank'
+      href="http://gymcloud.freshdesk.com/solution/articles/#{docs}"
+    )
+      | Learn More
+    .popover-navigation
+      button.btn.btn-link(data-role='prev')
+        | Prev
+      button.btn.btn-primary.gc-custom(data-role='next')
+        if totalCount == currentIndex
+          | Finish
+        else
+          | Next

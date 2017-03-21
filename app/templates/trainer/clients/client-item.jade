@@ -1,0 +1,10 @@
+.col-xs-8
+  label.gc-clients-list-client-chb
+    input(data-id="#{id}", type='checkbox')
+  a.gc-clients-list-avatar-wrapper
+    img(alt=' ')
+  a.gc-clients-list-client-link(href="#users/#{id}")
+.col-xs-4.text-right.gc-clients-list-client-actions
+  a(class='gc-clients-list-client-move btn btn-link')
+    = 'Move to group'
+  a(class='gc-clients-list-client-delete btn btn-danger', data-id=id)

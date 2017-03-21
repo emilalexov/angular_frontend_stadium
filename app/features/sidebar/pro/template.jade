@@ -1,0 +1,46 @@
+.gc-sidebar-cat
+  a.row.toggle-menu(href='#clients')
+    span.col-xs-2
+      span.gc-sidebar-cat-icon.fix-bg-img-icon-clients
+    span.col-xs-8.gc-sidebar-cat-name.clients-title
+    .col-xs-2.toggle-it
+      .gc-menu-item-arrow.toggle-it
+
+  .gc-sidebar-sub
+
+    .gc-sidebar-cat
+      a.row.toggle-menu(href='#clients/individuals')
+        span.col-xs-2
+          span.gc-sidebar-cat-icon.fix-bg-img-icon-individuals
+        span.col-xs-10.gc-sidebar-cat-name
+          | Individuals
+
+    .gc-sidebar-cat
+      a.row.toggle-menu(href='#clients/groups')
+        span.col-xs-2
+          span.gc-sidebar-cat-icon.fix-bg-img-icon-groups
+        span.col-xs-10.gc-sidebar-cat-name
+          | Groups
+
+region(data-name='exercises')
+region(data-name='workout_templates')
+region(data-name='program_templates')
+
+.gc-sidebar-cat
+  a.row.toggle-menu(href='#videos')
+    span.col-xs-2
+      span.gc-sidebar-cat-icon.fix-bg-img-icon-videogallery
+    span.col-xs-10.gc-sidebar-cat-name
+      | Video Library
+.gc-sidebar-cat
+  a.row.toggle-menu(href='#personal_properties')
+    span.col-xs-2
+      span.gc-sidebar-cat-icon.fix-bg-img-icon-properties
+    span.col-xs-10.gc-sidebar-cat-name
+      | Properties
+.gc-sidebar-cat
+  a.row.toggle-menu(href='#users/me/')
+    span.col-xs-2
+      span.gc-sidebar-cat-icon.gc-topbar-dropdown-icon-trainigs
+    span.col-xs-10.gc-sidebar-cat-name
+      | My Training Log

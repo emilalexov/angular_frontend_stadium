@@ -1,0 +1,51 @@
+$border-color = #c0c0c0
+$text-color = #606060
+$bold-color = #303032
+$card-bgcolor = #fbfbf8
+
+.payment-methods
+  display: flex
+  flex-direction: column
+  min-height: 440px
+  border: 1px solid $border-color
+  border-radius: 3px
+  padding: 10px
+
+  .title
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  .add-card,
+  .credit-cards
+    border-top: 1px solid $border-color
+
+  .credit-cards
+
+    list
+      display: block
+      margin-top: 10px
+
+      .card
+        display: flex
+        justify-content: space-between
+        padding: 10px
+        background-color: $card-bgcolor
+        border-radius: 3px
+
+        .name
+          display: flex
+          align-items: center
+
+          .icon
+            width: 19px
+            height: 15px
+            margin-right: 5px
+            background-image: url('../../../images/payment_icon_blue.png')
+            background-size: contain
+            background-repeat: no-repeat
+            background-position: center
+
+        .delete
+          cursor: pointer
+          color: red

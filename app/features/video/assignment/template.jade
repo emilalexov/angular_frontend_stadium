@@ -1,0 +1,19 @@
+.row.gc-assign-video-upload
+  region.video-search.col-xs-10
+  .col-xs-2.upload-btn
+    button.btn.btn-primary.gc-custom.btn-block.btn-sm.gc-upload-video
+      i.gc-icon.upload
+      | upload video
+
+ul.gc-content-nav.gc-assign-video-filter
+  li.active
+    a(data-scope='mine') my library
+  li
+    a(data-scope='gymcloud') gymcloud
+  li
+    a(data-scope='youtube') youtube
+  li
+    a(data-scope='vimeo') vimeo
+
+region.gc-videos
+region(data-name='pagination')

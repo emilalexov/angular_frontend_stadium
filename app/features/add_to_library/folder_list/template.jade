@@ -1,0 +1,8 @@
+.gc-add-modal-cat.active(data-category=typeName)
+  if haveParent
+    .gc-add-modal-folder.parent
+      a.row(data-key=id)
+        span.fa.fa-folder-o.fa.fa-arrows
+        span.gc-add-modal-item-name
+          | Back to parent folder
+  .gc-add-modal-sub

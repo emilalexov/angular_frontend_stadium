@@ -1,0 +1,39 @@
+.gc-layout-main
+  display: flex
+  flex-flow: row wrap
+  height: 100%
+
+  .content-container
+    display: flex
+    flex-flow: row nowrap
+    height: calc(100% - 64px)
+    width: 100%
+
+  region[data-name='header'],
+  .gc-topbar
+    flex: 1 0 100%
+    -webkit-flex: auto
+
+  region[data-name='search-bar']
+    flex: 1
+
+.gc-sidebar-wrapper
+  flex: 1 0 0%
+  display: flex
+  min-width: 230px
+  background: #282d30
+  overflow: hidden
+  align-items: flex-start
+
+.gc-main
+  position: relative
+  height: 100%
+  width: 100%
+  background-color: #fff
+  display: flex
+  flex-direction: column
+  flex: 8 0 0%
+
+.gc-main > div
+  height: 100%
+  position: relative

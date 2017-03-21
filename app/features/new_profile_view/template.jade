@@ -1,0 +1,196 @@
+.profile-left-side
+  .profile-fullfillment
+    | Your profile is
+    span
+      | 70%
+    | ready
+  .profile-progress-bar
+    .profile-progress
+
+  .name
+
+  .avatar
+    .image-container
+      img
+    input.upload-avatar(type='file')
+    .avatar-overlay
+      .note
+        span.fa.fa-plus
+        br
+        | Upload
+        br
+        | photo
+
+  .space-filler
+
+  .account-and-payment
+    .account-type
+      .type-label
+        | Account type
+      .type
+        | Strength and Conditional Couch
+    .space-filler
+    p.mmmoney
+      sup
+        | $ &nbsp;
+      | 5.99
+  .control-links
+    a.change(href="#")
+      | CHANGE
+    .space-filler
+    a.history(href="#")
+      | PAYMENT HISTORY
+  .control-links
+    a.restart-tutorial(href="#")
+      | RESTART TUTORIAL
+
+.profile-right-side
+  .form-group
+    label
+      | Gender
+      .radio
+        label.gc-radio
+          input(type='radio', value='male', name='gender')
+          | Male
+          span.gc-radio-clone
+      .radio
+        label.gc-radio
+          input(type='radio', value='female', name='gender')
+          | Female
+          span.gc-radio-clone
+
+  .form-group
+    label(for='weight')
+      | Weight
+    input#weight.form-control(name='weight', type='text')
+    span.gc-valid-icon.fa.fa-check.hide
+
+  .form-group.profile-height-inputs
+    label(for='height')
+      | Height (ft' in")
+    .form-control
+      span.gc-height-value.height-feet(contenteditable='true')
+      span.gc-height-divider
+        | '
+      span.gc-height-value.height-inches(contenteditable='true')
+      span.gc-height-divider
+        | "
+    span.gc-valid-icon.fa.fa-check.hide
+
+  .form-group
+    label(for='bodyfat')
+      | Bodyfat
+    input.form-control(name='bodyfat', type='text')
+    span.gc-valid-icon.fa.fa-check.hide
+
+  .form-group
+    label(for='first_name')
+      | First name
+      span.gc-req *
+    label.gc-error-message
+    input.form-control(
+      name='first_name'
+      type='text'
+      maxlength='20'
+    )
+    span.gc-valid-icon.fa.fa-check.hide
+
+  .form-group
+    label(for='last_name')
+      | Last name
+      span.gc-req *
+    label.gc-error-message
+    input.form-control(
+      name='last_name'
+      type='text'
+      maxlength='20'
+    )
+    span.gc-valid-icon.fa.fa-check.hide
+
+  .form-group
+    label(for='email')
+      | Email
+      span.gc-req *
+    label.gc-error-message
+    input.form-control(
+      name='email'
+      type='text'
+      disabled
+      maxlength='50'
+    )
+    span.gc-valid-icon.fa.fa-check.hide
+
+  .form-group
+    label(for='timezone')
+      | Time Zone
+      span.gc-req *
+    label.gc-error-message
+    br
+    select(
+      name='timezone'
+    )
+    span.gc-valid-icon.fa.fa-check.hide
+
+  .row
+    .col-xs-8
+      .form-group
+        label(for='location')
+          | Location
+        label.gc-error-message
+        input.form-control(
+          name='location'
+          type='text'
+          maxlength='50'
+        )
+        span.gc-valid-icon.fa.fa-check.hide
+    .col-xs-4
+      .form-group
+        label(for='zip')
+          | ZIP
+        label.gc-error-message
+        input.form-control(
+          name='zip'
+          type='text'
+          maxlength='10'
+        )
+        span.gc-valid-icon.fa.fa-check.hide
+
+  .form-group
+    label(for='employer')
+      | Occupation
+    label.gc-error-message
+    input.form-control(
+      name='employer'
+      type='text'
+      maxlength='50'
+    )
+    span.gc-valid-icon.fa.fa-check.hide
+
+  .form-group
+    label(for='birthday')
+      | Date of birth
+    input.form-control(name='birthday', type='date')
+    span.gc-valid-icon.fa.fa-check.hide
+
+  .form-group.connected-accounts
+    label
+      | Connected accounts
+    region(data-name='user_authentications')
+    .gc-login-social
+      .row
+        .col-xs-12.text-xs-center.col-md-3.text-md-left
+          span.btn.btn-primary(data-social='fb')
+            i.fa.fa-facebook
+            | Connect Facebook account
+      .row
+        .col-xs-12.text-xs-center.col-md-3.text-md-left
+          span.btn.btn-danger(data-social='gplus')
+            i.fa.fa-google-plus
+            | Connect Google+ account
+
+  .space-filler
+
+  .row
+    .col-xs-12.text-right
+      button.btn.btn-primary.btn-lg.gc-custom(type='submit')
+        | Save profile

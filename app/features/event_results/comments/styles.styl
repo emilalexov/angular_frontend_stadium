@@ -1,0 +1,81 @@
+.gc-comment-enter-message
+  float: right
+  width: 96%
+  margin-top: 30px
+  padding: 15px 20px 30px
+  border: 1px solid #d0d8db
+  border-radius: 5px
+  background-color: #fff
+
+  textarea
+    resize: none
+    float: left
+    width: 85%
+    border: 0
+    outline: none
+
+  button[type='submit']
+    position: relative
+    padding-left: 25px
+    padding-right: 25px
+
+    &:after
+      content: 'or press  ⏎'
+      position: absolute
+      top: 35px
+      left: 3px
+      display: block
+      color: #a3afb4
+      font-size: 12px
+      text-transform: none
+
+.gc-comment-box
+  padding: 40px 25px 40px 0
+
+  .gc-comment-avatar
+    display: block
+    float: left
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background: #b8c84b url('../../../images/avatar-black-placeholder.png') no-repeat center center
+
+    img
+      border-radius: 50%
+      display: inline-block
+      width: inherit
+      height: inherit
+
+    img[src='']
+      display: none
+
+  .gc-comment-right-section
+    overflow: hidden
+    padding-left: 20px
+
+  .gc-comment-message
+    position: relative
+    padding: 20px 20px 40px
+    background-color: #fff
+    border: 4px solid #fff
+
+    &:after
+      left: -22px
+      top: 50%
+      border: solid transparent
+      content: ''
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
+
+    &:after
+      border-color: rgba(255, 255, 255, 0)
+      border-right-color: #fff
+      border-width: 9px
+      margin-top: -33px
+
+  .gc-comment-date
+    margin-top: 10px
+    font-size: 13px
+    color: #d2d6d9
